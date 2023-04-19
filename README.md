@@ -6,7 +6,6 @@
 - Stefano Herrejon Antuñano
 - Javier Pérez Santiago
 - Juan Pablo Zambrano Barajas
-
 ### Especificaciones del proyecto
 - Base de datos donde se encuentran los usuarios, sus direcciones, identificaciones y los derechos ARCO.
 - Dashboard donde podremos buscar a los clientes y modificar sus derechos ARCO.
