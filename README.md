@@ -13,3 +13,9 @@
 - Rectificación, donde podremos modificar la información del cliente en caso de un error
 - Cancelación, donde borramos los datos del cliente.
 - Oposición, donde el cliente puede especificar que sus datos personales no sean usados para otra razón que no sea el préstamo. 
+### Tecnologías usadas
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Node.js](https://nodejs.org/en)
+- [Express.js](https://expressjs.com/)
+
