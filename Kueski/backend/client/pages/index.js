@@ -1,6 +1,8 @@
 //import Image from 'next/image'
 import Head from 'next/head'
 import { Inter } from 'next/font/google'
+//Importar sql
+import { useEffect, useState } from 'react';
 
 import Header from '../components/Header'
 import Visualizer from '../components/Visualizer'
@@ -10,6 +12,20 @@ import Visualizer2 from '../components/Visualizer2'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  //Array de resultados del query
+  const [dataResult, setdataResult] = useState([]);
+  //funcion para hacer fetch y llenar el array
+  useEffect(() => {
+    async function getPageData(){
+      const apiUrlEndpoint = "http://localhost:3000/api/getData";
+      const response = await fetch(apiUrlEndpoint);
+      const res = await response.json();
+      console.log(res.names);
+      setdataResult(res.names);
+    }
+    //Corremos la funcion
+    getPageData();
+  }, []);
   return (
     <>
       <Head>
@@ -31,6 +47,15 @@ export default function Home() {
           <div className='mt-4'>
           <Visualizer2/>
           </div>
+        </div>
+        <div>
+          <p>test</p>
+          {dataResult.map((names) =>{
+              return(
+                <div key={names.EMP_NUM}>
+                </div>
+              )
+            })}
         </div>
       </div>
       </main>
