@@ -1,3 +1,4 @@
+
 //import Image from 'next/image'
 import Head from 'next/head'
 import { Inter } from 'next/font/google'
@@ -8,6 +9,7 @@ import Header from '../components/Header'
 import Visualizer from '../components/Visualizer'
 import Searchbar from '../components/SearchBar'
 import Visualizer2 from '../components/Visualizer2'
+import Visualizer3 from '../components/Visualizer3'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -48,15 +50,10 @@ export default function Home() {
           <Visualizer2/>
           </div>
         </div>
-        <div>
-          <p>test</p>
-          {dataResult.map((names) =>{
-              return(
-                <div key={names.EMP_NUM}>
-                </div>
-              )
-            })}
-        </div>
+          <div>
+            {dataResult.map((names) => names.FIRST_LAST_NAME)}
+            <p>test</p>
+          </div>
       </div>
       </main>
     </>
