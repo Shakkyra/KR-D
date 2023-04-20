@@ -47,11 +47,17 @@ export default function Home() {
           </div>
           {/* Agregamos la clase mt-4 para crear un margen superior de 16px */}
           <div className='mt-4'>
-          <Visualizer2/>
+            <Visualizer3/>
           </div>
         </div>
+        <p>ho</p>
           <div>
-            {dataResult.map((names) => names.FIRST_LAST_NAME)}
+            {dataResult.map((names) => {
+              return(
+                <div>{names.USER_ID}</div>
+                
+              )
+            })}
             <p>test</p>
           </div>
       </div>
