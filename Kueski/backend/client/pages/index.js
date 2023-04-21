@@ -22,7 +22,7 @@ export default function Home() {
       const apiUrlEndpoint = "http://localhost:3000/api/getData";
       const response = await fetch(apiUrlEndpoint);
       const res = await response.json();
-      console.log(res.names);
+      //console.log(res.names);
       setdataResult(res.names);
     }
     //Corremos la funcion
@@ -50,16 +50,6 @@ export default function Home() {
             <Visualizer3/>
           </div>
         </div>
-        <p>ho</p>
-          <div>
-            {dataResult.map((names) => {
-              return(
-                <div>{names.USER_ID}</div>
-                
-              )
-            })}
-            <p>test</p>
-          </div>
       </div>
       </main>
     </>
