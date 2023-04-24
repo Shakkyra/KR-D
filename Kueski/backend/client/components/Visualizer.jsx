@@ -15,12 +15,12 @@ const Visualizer = () => {
                         
                         <table className="min-w-full text-left text-sm font-light">
                         <thead className="border-b font-medium dark:border-neutral-500">
-                            <tr>
+                            <tr className="align-center">
                             <th scope="col" className="px-6 py-4">#</th>
                             <th scope="col" className="px-6 py-4">First</th>
                             <th scope="col" className="px-6 py-4">Last</th>
                             <th scope="col" className="px-6 py-4">Handle</th>
-                            <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900 font-bold">Acciones arco</th>
+                            <th scope="col" className="px-6 py-4">Operaciones ARCO</th>
                             </tr>
                         </thead>
                         <tbody>
