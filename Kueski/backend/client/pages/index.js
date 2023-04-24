@@ -49,7 +49,7 @@ export default function Home() {
             <Searchbar/>
           </div>
           {/* Agregamos la clase mt-4 para crear un margen superior de 16px */}
-          <div className='mt-4'>
+          <div className='mt-4 z-10'>
           <Visualizer/>
           <h1>Operaciones ARCO:</h1>
             <div className='mt-4 align-center bg-white'>
