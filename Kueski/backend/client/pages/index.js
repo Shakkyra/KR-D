@@ -13,6 +13,8 @@ import Visualizer3 from '../components/Visualizer3'
 import Acceso from '@/components/Acceso';
 import Rectificacion from '@/components/Rectificacion';
 import Cancelacion from '@/components/Cancelacion';
+import Oposicion from '@/components/Oposicion';
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -53,7 +55,7 @@ export default function Home() {
           <Visualizer/>
           <h1>Operaciones ARCO:</h1>
             <div className='mt-4 align-center bg-white'>
-              <Acceso/>
+              <Oposicion/>
             </div>
           </div>
         </div>
