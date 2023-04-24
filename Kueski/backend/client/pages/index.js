@@ -10,6 +10,7 @@ import Visualizer from '../components/Visualizer'
 import Searchbar from '../components/SearchBar'
 import Visualizer2 from '../components/Visualizer2'
 import Visualizer3 from '../components/Visualizer3'
+import Acceso from '@/components/Acceso';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -47,7 +48,7 @@ export default function Home() {
           </div>
           {/* Agregamos la clase mt-4 para crear un margen superior de 16px */}
           <div className='mt-4'>
-            <Visualizer3/>
+            <Acceso/>
           </div>
         </div>
       </div>
