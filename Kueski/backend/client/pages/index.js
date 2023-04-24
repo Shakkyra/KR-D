@@ -55,7 +55,7 @@ export default function Home() {
           <Visualizer/>
           <h1>Operaciones ARCO:</h1>
             <div className='mt-4 align-center bg-white'>
-              <Oposicion/>
+              <Rectificacion/>
             </div>
           </div>
         </div>
