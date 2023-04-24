@@ -2,7 +2,7 @@ import React from "react";
 //Importar sql
 import { useEffect, useState } from 'react';
 
-const Visualizer2 = () => {
+const Visualizer3 = () => {
     const [dataResult, setdataResult] = useState([]);
   //funcion para hacer fetch y llenar el array
   useEffect(() => {
@@ -66,4 +66,4 @@ const Visualizer2 = () => {
         </div>
     );
 } 
-export default Visualizer2;
+export default Visualizer3;
