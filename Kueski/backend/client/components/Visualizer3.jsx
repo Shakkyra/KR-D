@@ -46,21 +46,7 @@ const Visualizer3 = () => {
               </td>
             </tr>
 
-            {dataResult.map((names) => {
-            return(       
-                <tr>
-                    <td className="whitespace-nowrap px-4 py-2 text-gray-700">{names.USER_ID}</td>   
-                    <td className="whitespace-nowrap px-4 py-2 text-gray-700">{names.USER_NAME}</td>  
-                    <td className="whitespace-nowrap px-4 py-2 text-gray-700">{names.FIRST_LAST_NAME}</td> 
-                    <td className="whitespace-nowrap px-4 py-2 text-gray-700">{names.SECOND_LAST_NAME}</td> 
-                    <td className="whitespace-nowrap px-4 py-2 text-gray-700">{names.PHONE_NUMBER}</td> 
-                    <td className="whitespace-nowrap px-4 py-2 text-gray-700">{names.EMAIL}</td>   
-                    <td className="whitespace-nowrap px-4 py-2">
-                    <a href="#" className="inline-block rounded bg-indigo-600 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700">ExBttn</a>
-                    </td>
-                </tr>
-            )
-            })}      
+              
             </tbody>
         </table>
         </div>
