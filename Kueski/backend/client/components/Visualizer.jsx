@@ -1,7 +1,7 @@
 import React from "react";
 import Actions from "./Actions";
 
-const Visualizer = () => {
+const Visualizer = ({onButtonClick}) => {
     return (
         <div className="w-full col-span-1 relative lg:h-[70vh] h-[90vh] m-auto p-4 border rounded-lg bg-white overflow-scroll">
             <div>
@@ -31,8 +31,8 @@ const Visualizer = () => {
                             <td className="whitespace-nowrap px-6 py-4">Mark</td>
                             <td className="whitespace-nowrap px-6 py-4">Otto</td>
                             <td className="whitespace-nowrap px-6 py-4">@mdo</td>
-                            <td className="whitespace-nowrap px-4 py-2">
-                                <Actions/>
+                            <td className="whitespace-nowrap px-4 py-2 flex items-center justify-center" style={{ display: 'flex', alignItems: 'center' }}>
+                                <Actions onButtonClick={onButtonClick} />
                             </td>
                             </tr>
                             <tr
@@ -41,8 +41,8 @@ const Visualizer = () => {
                             <td className="whitespace-nowrap px-6 py-4">Mark</td>
                             <td className="whitespace-nowrap px-6 py-4">Otto</td>
                             <td className="whitespace-nowrap px-6 py-4">@mdo</td>
-                            <td className="whitespace-nowrap px-4 py-2">
-                                <Actions/>
+                            <td className="whitespace-nowrap px-4 py-2 flex items-center justify-center" style={{ display: 'flex', alignItems: 'center' }}>
+                                <Actions onButtonClick={onButtonClick} />
                             </td>
                             
                             </tr>
@@ -52,8 +52,8 @@ const Visualizer = () => {
                             <td className="whitespace-nowrap px-6 py-4">Mark</td>
                             <td className="whitespace-nowrap px-6 py-4">Otto</td>
                             <td className="whitespace-nowrap px-6 py-4">@mdo</td>
-                            <td className="whitespace-nowrap px-4 py-2">
-                                <Actions/>
+                            <td className="whitespace-nowrap px-4 py-2 flex items-center justify-center" style={{ display: 'flex', alignItems: 'center' }}>
+                                <Actions onButtonClick={onButtonClick} />
                             </td>
                             </tr>
                             <tr
@@ -62,8 +62,8 @@ const Visualizer = () => {
                             <td className="whitespace-nowrap px-6 py-4">Mark</td>
                             <td className="whitespace-nowrap px-6 py-4">Otto</td>
                             <td className="whitespace-nowrap px-6 py-4">@mdo</td>
-                            <td className="whitespace-nowrap px-4 py-2">
-                                <Actions/>
+                            <td className="whitespace-nowrap px-4 py-2 flex items-center justify-center" style={{ display: 'flex', alignItems: 'center' }}>
+                                <Actions onButtonClick={onButtonClick} />
                             </td>
                             </tr>
                             <tr
@@ -72,8 +72,8 @@ const Visualizer = () => {
                             <td className="whitespace-nowrap px-6 py-4">Mark</td>
                             <td className="whitespace-nowrap px-6 py-4">Otto</td>
                             <td className="whitespace-nowrap px-6 py-4">@mdo</td>
-                            <td className="whitespace-nowrap px-4 py-2">
-                                <Actions/>
+                            <td className="whitespace-nowrap px-4 py-2 flex items-center justify-center" style={{ display: 'flex', alignItems: 'center' }}>
+                                <Actions onButtonClick={onButtonClick} />
                             </td>
                             </tr>
                             <tr
@@ -82,8 +82,8 @@ const Visualizer = () => {
                             <td className="whitespace-nowrap px-6 py-4">Mark</td>
                             <td className="whitespace-nowrap px-6 py-4">Otto</td>
                             <td className="whitespace-nowrap px-6 py-4">@mdo</td>
-                            <td className="whitespace-nowrap px-4 py-2">
-                                <Actions/>
+                            <td className="whitespace-nowrap px-4 py-2 flex items-center justify-center" style={{ display: 'flex', alignItems: 'center' }}>
+                                <Actions onButtonClick={onButtonClick} />   
                             </td>
                             </tr>
                             <tr
@@ -92,8 +92,8 @@ const Visualizer = () => {
                             <td className="whitespace-nowrap px-6 py-4">Mark</td>
                             <td className="whitespace-nowrap px-6 py-4">Otto</td>
                             <td className="whitespace-nowrap px-6 py-4">@mdo</td>
-                            <td className="whitespace-nowrap px-4 py-2">
-                                <Actions/>
+                            <td className="whitespace-nowrap px-4 py-2 flex items-center justify-center" style={{ display: 'flex', alignItems: 'center' }}>
+                                <Actions onButtonClick={onButtonClick} />
                             </td>
                             </tr>
                             <tr
@@ -102,8 +102,8 @@ const Visualizer = () => {
                             <td className="whitespace-nowrap px-6 py-4">Mark</td>
                             <td className="whitespace-nowrap px-6 py-4">Otto</td>
                             <td className="whitespace-nowrap px-6 py-4">@mdo</td>
-                            <td className="whitespace-nowrap px-4 py-2">
-                                <Actions/>
+                            <td className="whitespace-nowrap px-4 py-2 flex items-center justify-center" style={{ display: 'flex', alignItems: 'center' }}>
+                                <Actions onButtonClick={onButtonClick} />
                             </td>
                             </tr>
                             <tr
@@ -112,8 +112,8 @@ const Visualizer = () => {
                             <td className="whitespace-nowrap px-6 py-4">Mark</td>
                             <td className="whitespace-nowrap px-6 py-4">Otto</td>
                             <td className="whitespace-nowrap px-6 py-4">@mdo</td>
-                            <td className="whitespace-nowrap px-4 py-2">
-                                <Actions/>
+                            <td className="whitespace-nowrap px-4 py-2 flex items-center justify-center" style={{ display: 'flex', alignItems: 'center' }}>
+                                <Actions onButtonClick={onButtonClick} />
                             </td>
                             </tr>
                             <tr
@@ -122,8 +122,8 @@ const Visualizer = () => {
                             <td className="whitespace-nowrap px-6 py-4">Mark</td>
                             <td className="whitespace-nowrap px-6 py-4">Otto</td>
                             <td className="whitespace-nowrap px-6 py-4">@mdo</td>
-                            <td className="whitespace-nowrap px-4 py-2">
-                                <Actions/>
+                            <td className="whitespace-nowrap px-4 py-2 flex items-center justify-center" style={{ display: 'flex', alignItems: 'center' }}>
+                                <Actions onButtonClick={onButtonClick} />
                             </td>
                             </tr>
                             <tr
@@ -132,8 +132,8 @@ const Visualizer = () => {
                             <td className="whitespace-nowrap px-6 py-4">Mark</td>
                             <td className="whitespace-nowrap px-6 py-4">Otto</td>
                             <td className="whitespace-nowrap px-6 py-4">@mdo</td>
-                            <td className="whitespace-nowrap px-4 py-2">
-                                <Actions/>
+                            <td className="whitespace-nowrap px-4 py-2 flex items-center justify-center" style={{ display: 'flex', alignItems: 'center' }}>
+                                <Actions onButtonClick={onButtonClick} />
                             </td>
                             </tr>
                             <tr
@@ -142,8 +142,8 @@ const Visualizer = () => {
                             <td className="whitespace-nowrap px-6 py-4">Mark</td>
                             <td className="whitespace-nowrap px-6 py-4">Otto</td>
                             <td className="whitespace-nowrap px-6 py-4">@mdo</td>
-                            <td className="whitespace-nowrap px-4 py-2">
-                                <Actions/>
+                            <td className="whitespace-nowrap px-4 py-2 flex items-center justify-center" style={{ display: 'flex', alignItems: 'center' }}>
+                                <Actions onButtonClick={onButtonClick} />
                             </td>
                             </tr>
                         </tbody>
