@@ -49,7 +49,7 @@ export default function Home() {
           </div>
           {/* Agregamos la clase mt-4 para crear un margen superior de 16px */}
           <div className='mt-4'>
-            <Rectificacion/>
+            <Visualizer/>
           </div>
         </div>
       </div>

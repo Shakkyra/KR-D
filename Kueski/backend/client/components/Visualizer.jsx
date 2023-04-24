@@ -4,70 +4,8 @@ const Visualizer = () => {
     return (
         <div className="w-full col-span-1 relative lg:h-[70vh] h-[90vh] m-auto p-4 border rounded-lg bg-white overflow-scroll">
             <div>
-  <div class="px-4 sm:px-0">
-    <h3 class="text-base font-semibold leading-7 text-gray-900">Applicant Information</h3>
-    <p class="mt-1 max-w-2xl text-sm leading-6 text-gray-500">Personal details and application.</p>
-  </div>
-  <div class="mt-6 border-t border-gray-100">
-    <dl class="divide-y divide-gray-100">
-      <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-        <dt class="text-sm font-medium leading-6 text-gray-900">Full name</dt>
-        <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">Margot Foster</dd>
-      </div>
-      <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-        <dt class="text-sm font-medium leading-6 text-gray-900">Application for</dt>
-        <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">Backend Developer</dd>
-      </div>
-      <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-        <dt class="text-sm font-medium leading-6 text-gray-900">Email address</dt>
-        <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">margotfoster@example.com</dd>
-      </div>
-      <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-        <dt class="text-sm font-medium leading-6 text-gray-900">Salary expectation</dt>
-        <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">$120,000</dd>
-      </div>
-      <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-        <dt class="text-sm font-medium leading-6 text-gray-900">About</dt>
-        <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">Fugiat ipsum ipsum deserunt culpa aute sint do nostrud anim incididunt cillum culpa consequat. Excepteur qui ipsum aliquip consequat sint. Sit id mollit nulla mollit nostrud in ea officia proident. Irure nostrud pariatur mollit ad adipisicing reprehenderit deserunt qui eu.</dd>
-      </div>
-      <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-        <dt class="text-sm font-medium leading-6 text-gray-900">Attachments</dt>
-        <dd class="mt-2 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
-          <ul role="list" class="divide-y divide-gray-100 rounded-md border border-gray-200">
-            <li class="flex items-center justify-between py-4 pl-4 pr-5 text-sm leading-6">
-              <div class="flex w-0 flex-1 items-center">
-                <svg class="h-5 w-5 flex-shrink-0 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                  <path fill-rule="evenodd" d="M15.621 4.379a3 3 0 00-4.242 0l-7 7a3 3 0 004.241 4.243h.001l.497-.5a.75.75 0 011.064 1.057l-.498.501-.002.002a4.5 4.5 0 01-6.364-6.364l7-7a4.5 4.5 0 016.368 6.36l-3.455 3.553A2.625 2.625 0 119.52 9.52l3.45-3.451a.75.75 0 111.061 1.06l-3.45 3.451a1.125 1.125 0 001.587 1.595l3.454-3.553a3 3 0 000-4.242z" clip-rule="evenodd" />
-                </svg>
-                <div class="ml-4 flex min-w-0 flex-1 gap-2">
-                  <span class="truncate font-medium">resume_back_end_developer.pdf</span>
-                  <span class="flex-shrink-0 text-gray-400">2.4mb</span>
-                </div>
-              </div>
-              <div class="ml-4 flex-shrink-0">
-                <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">Download</a>
-              </div>
-            </li>
-            <li class="flex items-center justify-between py-4 pl-4 pr-5 text-sm leading-6">
-              <div class="flex w-0 flex-1 items-center">
-                <svg class="h-5 w-5 flex-shrink-0 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                  <path fill-rule="evenodd" d="M15.621 4.379a3 3 0 00-4.242 0l-7 7a3 3 0 004.241 4.243h.001l.497-.5a.75.75 0 011.064 1.057l-.498.501-.002.002a4.5 4.5 0 01-6.364-6.364l7-7a4.5 4.5 0 016.368 6.36l-3.455 3.553A2.625 2.625 0 119.52 9.52l3.45-3.451a.75.75 0 111.061 1.06l-3.45 3.451a1.125 1.125 0 001.587 1.595l3.454-3.553a3 3 0 000-4.242z" clip-rule="evenodd" />
-                </svg>
-                <div class="ml-4 flex min-w-0 flex-1 gap-2">
-                  <span class="truncate font-medium">coverletter_back_end_developer.pdf</span>
-                  <span class="flex-shrink-0 text-gray-400">4.5mb</span>
-                </div>
-              </div>
-              <div class="ml-4 flex-shrink-0">
-                <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">Download</a>
-              </div>
-            </li>
-          </ul>
-        </dd>
-      </div>
-    </dl>
-  </div>
-</div>
+
+            </div>
             <h1>Clients</h1>
             <div>
             <div className="flex flex-col">
@@ -93,7 +31,32 @@ const Visualizer = () => {
                             <td className="whitespace-nowrap px-6 py-4">Otto</td>
                             <td className="whitespace-nowrap px-6 py-4">@mdo</td>
                             <td className="whitespace-nowrap px-4 py-2">
-                                <a href="#" className="inline-block rounded bg-indigo-600 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700">Acciones</a>
+                              <div class="relative inline-block text-left">
+                              <div>
+                                <button type="button" class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50" id="menu-button" aria-expanded="true" aria-haspopup="true">
+                                  Opciones
+                                  <svg class="-mr-1 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                                  </svg>
+                                </button>
+                              </div>
+                              <div class="absolute right-0 z-10 hidden mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+                                <div class="py-1" role="none">
+                                  <form method="POST" action="#" role="none">
+                                    <button type="submit" class="text-gray-700 block w-full px-4 py-2 text-left text-sm" role="menuitem" tabindex="-1" id="menu-item-3">Acceso</button>
+                                  </form>
+                                  <form method="POST" action="#" role="none">
+                                    <button type="submit" class="text-gray-700 block w-full px-4 py-2 text-left text-sm" role="menuitem" tabindex="-1" id="menu-item-3">Rectificación</button>
+                                  </form>
+                                  <form method="POST" action="#" role="none">
+                                    <button type="submit" class="text-gray-700 block w-full px-4 py-2 text-left text-sm" role="menuitem" tabindex="-1" id="menu-item-3">Cancelación</button>
+                                  </form>
+                                  <form method="POST" action="#" role="none">
+                                    <button type="submit" class="text-gray-700 block w-full px-4 py-2 text-left text-sm" role="menuitem" tabindex="-1" id="menu-item-3">Oposición</button>
+                                  </form>
+                                </div>
+                              </div>
+                              </div>
                             </td>
                             </tr>
                             <tr
