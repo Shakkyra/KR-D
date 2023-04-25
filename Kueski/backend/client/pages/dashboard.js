@@ -1,10 +1,40 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
 import Header from '../components/Header';
 import Searchbar from '../components/Searchbar';
+import Visualizer from '../components/Visualizer';
+import Oposicion from '../components/Oposicion';
+import Acceder from '../components/Acceso';
+import Rectificar from '../components/Rectificacion';
+import Cancelar from '../components/Cancelacion';
+import Hidder from '../components/Hidder';
 
 const Home = () => {
+  const [selectedComponent, setSelectedComponent] = useState(Hidder);
+
+  const handleButtonClick = (component) => {
+    setSelectedComponent(component);
+  };
+
+  let ComponentToRender;
+  switch (selectedComponent) {
+    case 'Oposicion':
+      ComponentToRender = Oposicion;
+      break;
+    case 'Acceder':
+      ComponentToRender = Acceder;
+      break;
+    case 'Rectificar':
+      ComponentToRender = Rectificar;
+      break;
+    case 'Cancelar':
+      ComponentToRender = Cancelar;
+      break;
+    default:
+      ComponentToRender = Hidder;
+  }
+
   return (
     <>
       <Head>
@@ -15,7 +45,6 @@ const Home = () => {
       </Head>
       <main className='bg-gray-100 min-h-screen'>
         <Header />
-        <h1 className='p-4'>HOME</h1>
         <div className='p-4'>
           {/* Agregamos las clases flex flex-col items-center para crear un contenedor flexible vertical y centrado */}
           <div className='flex flex-col'>
@@ -25,8 +54,10 @@ const Home = () => {
             </div>
             {/* Agregamos la clase mt-4 para crear un margen superior de 16px */}
             <div className='mt-4 z-10'>
-              <h1>Operaciones ARCO:</h1>
+              <Visualizer onButtonClick={handleButtonClick} />
+              <h1 className='p-4'>Operaciones ARCO:</h1>
               <div className='mt-4 align-center bg-white'>
+                <ComponentToRender/>
               </div>
             </div>
           </div>

@@ -15,7 +15,7 @@ const Home = () => {
       </Head>
       <main className='bg-gray-100 min-h-screen'>
         <Header />
-        <h1 className='p-4'>HOME</h1>
+        <h1 className='p-4'>AJUSTES</h1>
         <div className='p-4'>
           {/* Agregamos las clases flex flex-col items-center para crear un contenedor flexible vertical y centrado */}
           <div className='flex flex-col'>
