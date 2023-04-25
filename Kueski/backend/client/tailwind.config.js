@@ -15,7 +15,7 @@ module.exports = {
       display:['group-focus']
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 }
 
 
