@@ -31,7 +31,7 @@ const Visualizer = ({onButtonClick}) => {
                             <td className="whitespace-nowrap px-6 py-4">Mark</td>
                             <td className="whitespace-nowrap px-6 py-4">Otto</td>
                             <td className="whitespace-nowrap px-6 py-4">@mdo</td>
-                            <td className="whitespace-nowrap px-4 py-2 flex items-center justify-center" style={{ display: 'flex', alignItems: 'center' }}>
+                            <td className="whitespace-nowrap px-4 py-4">
                                 <Actions onButtonClick={onButtonClick} />
                             </td>
                             </tr>
@@ -41,7 +41,7 @@ const Visualizer = ({onButtonClick}) => {
                             <td className="whitespace-nowrap px-6 py-4">Mark</td>
                             <td className="whitespace-nowrap px-6 py-4">Otto</td>
                             <td className="whitespace-nowrap px-6 py-4">@mdo</td>
-                            <td className="whitespace-nowrap px-4 py-2 flex items-center justify-center" style={{ display: 'flex', alignItems: 'center' }}>
+                            <td className="whitespace-nowrap px-4 py-4">
                                 <Actions onButtonClick={onButtonClick} />
                             </td>
                             
@@ -52,7 +52,7 @@ const Visualizer = ({onButtonClick}) => {
                             <td className="whitespace-nowrap px-6 py-4">Mark</td>
                             <td className="whitespace-nowrap px-6 py-4">Otto</td>
                             <td className="whitespace-nowrap px-6 py-4">@mdo</td>
-                            <td className="whitespace-nowrap px-4 py-2 flex items-center justify-center" style={{ display: 'flex', alignItems: 'center' }}>
+                            <td className="whitespace-nowrap px-4 py-4">
                                 <Actions onButtonClick={onButtonClick} />
                             </td>
                             </tr>
@@ -62,7 +62,7 @@ const Visualizer = ({onButtonClick}) => {
                             <td className="whitespace-nowrap px-6 py-4">Mark</td>
                             <td className="whitespace-nowrap px-6 py-4">Otto</td>
                             <td className="whitespace-nowrap px-6 py-4">@mdo</td>
-                            <td className="whitespace-nowrap px-4 py-2 flex items-center justify-center" style={{ display: 'flex', alignItems: 'center' }}>
+                            <td className="whitespace-nowrap px-4 py-4">
                                 <Actions onButtonClick={onButtonClick} />
                             </td>
                             </tr>
@@ -72,7 +72,7 @@ const Visualizer = ({onButtonClick}) => {
                             <td className="whitespace-nowrap px-6 py-4">Mark</td>
                             <td className="whitespace-nowrap px-6 py-4">Otto</td>
                             <td className="whitespace-nowrap px-6 py-4">@mdo</td>
-                            <td className="whitespace-nowrap px-4 py-2 flex items-center justify-center" style={{ display: 'flex', alignItems: 'center' }}>
+                            <td className="whitespace-nowrap px-4 py-4">
                                 <Actions onButtonClick={onButtonClick} />
                             </td>
                             </tr>
@@ -82,7 +82,7 @@ const Visualizer = ({onButtonClick}) => {
                             <td className="whitespace-nowrap px-6 py-4">Mark</td>
                             <td className="whitespace-nowrap px-6 py-4">Otto</td>
                             <td className="whitespace-nowrap px-6 py-4">@mdo</td>
-                            <td className="whitespace-nowrap px-4 py-2 flex items-center justify-center" style={{ display: 'flex', alignItems: 'center' }}>
+                            <td className="whitespace-nowrap px-4 py-4">
                                 <Actions onButtonClick={onButtonClick} />   
                             </td>
                             </tr>
@@ -92,7 +92,7 @@ const Visualizer = ({onButtonClick}) => {
                             <td className="whitespace-nowrap px-6 py-4">Mark</td>
                             <td className="whitespace-nowrap px-6 py-4">Otto</td>
                             <td className="whitespace-nowrap px-6 py-4">@mdo</td>
-                            <td className="whitespace-nowrap px-4 py-2 flex items-center justify-center" style={{ display: 'flex', alignItems: 'center' }}>
+                            <td className="whitespace-nowrap px-4 py-4">
                                 <Actions onButtonClick={onButtonClick} />
                             </td>
                             </tr>
@@ -102,7 +102,7 @@ const Visualizer = ({onButtonClick}) => {
                             <td className="whitespace-nowrap px-6 py-4">Mark</td>
                             <td className="whitespace-nowrap px-6 py-4">Otto</td>
                             <td className="whitespace-nowrap px-6 py-4">@mdo</td>
-                            <td className="whitespace-nowrap px-4 py-2 flex items-center justify-center" style={{ display: 'flex', alignItems: 'center' }}>
+                            <td className="whitespace-nowrap px-4 py-4">
                                 <Actions onButtonClick={onButtonClick} />
                             </td>
                             </tr>
@@ -112,7 +112,7 @@ const Visualizer = ({onButtonClick}) => {
                             <td className="whitespace-nowrap px-6 py-4">Mark</td>
                             <td className="whitespace-nowrap px-6 py-4">Otto</td>
                             <td className="whitespace-nowrap px-6 py-4">@mdo</td>
-                            <td className="whitespace-nowrap px-4 py-2 flex items-center justify-center" style={{ display: 'flex', alignItems: 'center' }}>
+                            <td className="whitespace-nowrap px-4 py-4">
                                 <Actions onButtonClick={onButtonClick} />
                             </td>
                             </tr>
@@ -122,7 +122,7 @@ const Visualizer = ({onButtonClick}) => {
                             <td className="whitespace-nowrap px-6 py-4">Mark</td>
                             <td className="whitespace-nowrap px-6 py-4">Otto</td>
                             <td className="whitespace-nowrap px-6 py-4">@mdo</td>
-                            <td className="whitespace-nowrap px-4 py-2 flex items-center justify-center" style={{ display: 'flex', alignItems: 'center' }}>
+                            <td className="whitespace-nowrap px-4 py-4">
                                 <Actions onButtonClick={onButtonClick} />
                             </td>
                             </tr>
@@ -132,7 +132,7 @@ const Visualizer = ({onButtonClick}) => {
                             <td className="whitespace-nowrap px-6 py-4">Mark</td>
                             <td className="whitespace-nowrap px-6 py-4">Otto</td>
                             <td className="whitespace-nowrap px-6 py-4">@mdo</td>
-                            <td className="whitespace-nowrap px-4 py-2 flex items-center justify-center" style={{ display: 'flex', alignItems: 'center' }}>
+                            <td className="whitespace-nowrap px-4 py-4">
                                 <Actions onButtonClick={onButtonClick} />
                             </td>
                             </tr>
@@ -142,7 +142,7 @@ const Visualizer = ({onButtonClick}) => {
                             <td className="whitespace-nowrap px-6 py-4">Mark</td>
                             <td className="whitespace-nowrap px-6 py-4">Otto</td>
                             <td className="whitespace-nowrap px-6 py-4">@mdo</td>
-                            <td className="whitespace-nowrap px-4 py-2 flex items-center justify-center" style={{ display: 'flex', alignItems: 'center' }}>
+                            <td className="whitespace-nowrap px-4 py-4">
                                 <Actions onButtonClick={onButtonClick} />
                             </td>
                             </tr>
