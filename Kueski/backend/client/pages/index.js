@@ -10,7 +10,7 @@ import Rectificar from '../components/Rectificacion';
 import Cancelar from '../components/Cancelacion';
 
 const Home = () => {
-  const [selectedComponent, setSelectedComponent] = useState('Acceder');
+  const [selectedComponent, setSelectedComponent] = useState('Oposicion');
 
   const handleButtonClick = (component) => {
     setSelectedComponent(component);
