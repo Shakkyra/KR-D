@@ -88,4 +88,5 @@ const Visualizer = ({onButtonClick}) => {
     );
 }
 
-export default Visualizer
+export default Visualizer;
+
