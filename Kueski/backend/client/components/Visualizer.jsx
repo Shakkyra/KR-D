@@ -1,6 +1,5 @@
 import React from "react";
 import Actions from "./Actions";
-import Actions2 from "./Actions2";
 
 const Visualizer = ({onButtonClick}) => {
     return (
@@ -33,7 +32,7 @@ const Visualizer = ({onButtonClick}) => {
                             <td className="whitespace-nowrap px-6 py-4">Otto</td>
                             <td className="whitespace-nowrap px-6 py-4">@mdo</td>
                             <td className="whitespace-nowrap px-4 py-2 flex items-center justify-center" style={{ display: 'flex', alignItems: 'center' }}>
-                                <Actions2 onButtonClick={onButtonClick} />
+                                <Actions onButtonClick={onButtonClick} />
                             </td>
                             </tr>
                             <tr
