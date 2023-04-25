@@ -1,6 +1,8 @@
 import React from "react";
 
 import Popup from "./Popup";
+import Compartir from "./Compartir";
+
 
 const Acceso = () => {
     return(
@@ -123,6 +125,10 @@ const Acceso = () => {
                         <div className ="px-4 py-3">
                             <dt className="text-sm font-medium leading-6 text-gray-900">Numero de Identificación</dt>
                             <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">33 181 74 15</dd>
+                        </div>
+
+                        <div className="px-4 py-3">
+                            <Compartir/>
                         </div>
 
                         <div className="px-4 py-3">
