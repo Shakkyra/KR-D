@@ -31,32 +31,32 @@ const Acceso = () => {
 
                         <div className="px-4 py-3">
                             <dt className="text-sm font-medium leading-6 text-gray-900">Segundo Apellido</dt>
-                            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">Margot</dd>
+                            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">Tatcher</dd>
                         </div>
 
                         <div className="px-4 py-3">
                             <dt className="text-sm font-medium leading-6 text-gray-900">Estado de Nacimiento</dt>
-                            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">Margot</dd>
+                            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">Jalisco</dd>
                         </div>
 
                         <div className="px-4 py-3">
                             <dt className="text-sm font-medium leading-6 text-gray-900">Fecha de Nacimiento</dt>
-                            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">Margot</dd>
+                            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">17/09/1978</dd>
                         </div>
 
                         <div className="px-4 py-3">
                             <dt className="text-sm font-medium leading-6 text-gray-900">Nacionalidad</dt>
-                            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">Margot</dd>
+                            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">Mexicana</dd>
                         </div>                        
 
                         <div className="px-4 py-3">
                             <dt className="text-sm font-medium leading-6 text-gray-900">Activida Economica</dt>
-                            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">Margot</dd>
+                            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">Banquera</dd>
                         </div>
 
                         <div className="px-4 py-3">
                             <dt className="text-sm font-medium leading-6 text-gray-900">CURP</dt>
-                            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">Margot</dd>
+                            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">MGA08008j89</dd>
                         </div>
 
                         <div className ="px-4 py-3">
@@ -80,37 +80,37 @@ const Acceso = () => {
 
                         <div className ="px-4 py-3">
                             <dt className="text-sm font-medium leading-6 text-gray-900">Estado</dt>
-                            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">33 181 74 15</dd>
+                            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">Jalisco</dd>
                         </div>
 
                         <div className ="px-4 py-3">
                             <dt className="text-sm font-medium leading-6 text-gray-900">Ciudad</dt>
-                            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">33 181 74 15</dd>
+                            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">Zapopan</dd>
                         </div>
 
                         <div className ="px-4 py-3">
                             <dt className="text-sm font-medium leading-6 text-gray-900">Vecindario</dt>
-                            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">33 181 74 15</dd>
+                            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">Lomas del Monte</dd>
                         </div>
 
                         <div className ="px-4 py-3">
                             <dt className="text-sm font-medium leading-6 text-gray-900">Calle</dt>
-                            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">33 181 74 15</dd>
+                            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">Ceiba</dd>
                         </div>
 
                         <div className ="px-4 py-3">
                             <dt className="text-sm font-medium leading-6 text-gray-900">Numero exterior</dt>
-                            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">33 181 74 15</dd>
+                            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">85</dd>
                         </div>
 
                         <div className ="px-4 py-3">
                             <dt className="text-sm font-medium leading-6 text-gray-900">Numero Interior</dt>
-                            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">33 181 74 15</dd>
+                            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">33 </dd>
                         </div>
 
                         <div className ="px-4 py-3">
                             <dt className="text-sm font-medium leading-6 text-gray-900">C.P.</dt>
-                            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">33 181 74 15</dd>
+                            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">33 152</dd>
                         </div>
 
                         <div className="px-4 py-3 sm:col-span-4">
@@ -119,12 +119,12 @@ const Acceso = () => {
 
                         <div className ="px-4 py-3">
                             <dt className="text-sm font-medium leading-6 text-gray-900">Tipo de Identificación</dt>
-                            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">33 181 74 15</dd>
+                            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">Pasaporte</dd>
                         </div>
 
                         <div className ="px-4 py-3">
                             <dt className="text-sm font-medium leading-6 text-gray-900">Numero de Identificación</dt>
-                            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">33 181 74 15</dd>
+                            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">15148756</dd>
                         </div>
 
                         <div className="px-4 py-3">

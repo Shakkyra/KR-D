@@ -1,37 +1,53 @@
-import React from "react"
+import React from "react";
+
+import Cancelar from "./Cancelar.jsx";
 import Popup from "./Popup";
+
 
 const Cancelacion = () => {
     return(
-        <div className="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
-            <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
-            <div className="fixed inset-0 z-10 overflow-y-auto">
-                <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
-                    <div className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
-                        <div className="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
-                            <div className="sm:flex sm:items-start">
-                                <div className="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-red-100 sm:mx-0 sm:h-10 sm:w-10">
-                                    <svg className="h-6 w-6 text-red-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
-                                    </svg>
-                                </div>
-                                <div className="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
-                                    <h3 className="text-base font-semibold leading-6 text-gray-900" id="modal-title">¿ Estas seguro que quieres borras todos los datos de identificación ?</h3>
-                                    <div className="mt-2">
-                                        <p className="text-sm text-gray-500">Al presionar el boton de Borrar datos se borraran permanenetemente todos los datos.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
-                            <button type="button" className="inline-flex w-full justify-center rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 sm:ml-3 sm:w-auto">Borrar Datos</button>
-                            <button type="button" className="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto">Cancelar acción</button>
-                        </div>
-                    </div>
-                </div> 
+        <div className="flex flex-col space-y-0">
+            <div className="px-4 sm:px-0">
+                <h3 className="text-base font-semibold leading-7 text-gray-900">    Cancelar</h3>
             </div>
-            <div className="absolute z-20 right-60 bottom-20">
-                <Popup />
+            <div className="mt-6 border-t border-blue-100">
+                <dl className="divide-y divide-blue-100">
+                    
+                    <div className="sm:grid sm:grid-cols-4">
+                        
+                        <div className="px-4 py-3">
+                            <dt className="text-sm font-medium leading-6 text-gray-900">Nombre de Usuario</dt>
+                            <dd className="mt-1 text-sm leading-6 text-gray-700">Margot</dd>
+                        </div>
+
+                        <div className="px-4 py-3">
+                            <dt className="text-sm font-medium leading-6 text-gray-900">Primer Apellido</dt>
+                            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">Margot</dd>
+                        </div>
+
+                        <div className="px-4 py-3">
+                            <dt className="text-sm font-medium leading-6 text-gray-900">Segundo Apellido</dt>
+                            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">Tatcher</dd>
+                        </div>
+
+                        <div className="px-4 py-3">
+                            <dt className="text-sm font-medium leading-6 text-gray-900">Id de Usuario</dt>
+                            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">A00571180</dd>
+                        </div>
+
+                        <div className="px-4 py-3">
+                            <Cancelar/>
+                        </div>
+
+                        <div className="px-4 py-3">
+                            <Popup/>
+                        </div>
+
+                        <div className="px-4 py-3">
+                        </div>
+
+                    </div>
+                </dl>
             </div>
         </div>
     );
