@@ -1,8 +1,9 @@
 import React from "react";
 //Importar sql
 import { useEffect, useState } from 'react';
+import Actions from "./Actions";
 
-const Visualizer3 = () => {
+const Visualizer3 = ({onButtonClick}) => {
     const [dataResult, setdataResult] = useState([]);
   //funcion para hacer fetch y llenar el array
   useEffect(() => {
@@ -45,7 +46,21 @@ const Visualizer3 = () => {
                 <a href="#" className="inline-block rounded bg-indigo-600 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700">ExBttn</a>
               </td>
             </tr>
-
+            {dataResult.map((names) => {
+            return(       
+                <tr>
+                    <td className="whitespace-nowrap px-4 py-2 text-gray-700">{names.USER_ID}</td>   
+                    <td className="whitespace-nowrap px-4 py-2 text-gray-700">{names.USER_NAME}</td>  
+                    <td className="whitespace-nowrap px-4 py-2 text-gray-700">{names.FIRST_LAST_NAME}</td> 
+                    <td className="whitespace-nowrap px-4 py-2 text-gray-700">{names.SECOND_LAST_NAME}</td> 
+                    <td className="whitespace-nowrap px-4 py-2 text-gray-700">{names.PHONE_NUMBER}</td> 
+                    <td className="whitespace-nowrap px-4 py-2 text-gray-700">{names.EMAIL}</td>   
+                    <td className="whitespace-nowrap px-4 py-2">
+                    <a href="#" className="inline-block rounded bg-indigo-600 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700">ExBttn</a>
+                    </td>
+                </tr>
+            )
+            })}  
               
             </tbody>
         </table>

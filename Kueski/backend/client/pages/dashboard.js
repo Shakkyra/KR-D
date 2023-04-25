@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Header from '../components/Header';
 import Searchbar from '../components/Searchbar';
 import Visualizer from '../components/Visualizer';
+import Visualizer3 from '../components/Visualizer';
 import Oposicion from '../components/Oposicion';
 import Acceder from '../components/Acceso';
 import Rectificar from '../components/Rectificacion';
