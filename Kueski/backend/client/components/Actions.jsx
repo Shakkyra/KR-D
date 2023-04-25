@@ -8,7 +8,7 @@ const Actions = ({onButtonClick}) => {
                     <li><button onClick={() => onButtonClick('Acceder')}>Acceder</button></li>
                     <li><button onClick={() => onButtonClick('Rectificar')}>Rectificar</button></li>
                     <li><button onClick={() => onButtonClick('Cancelar')}>Cancelar</button></li>
-                    <li><button onClick={() => onButtonClick('Oponer')}>Oponer</button></li>
+                    <li><button onClick={() => onButtonClick('Oposicion')}>Oponer</button></li>
                 </ul>
         </div>
     );
