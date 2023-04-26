@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@prisma/client": "^4.13.0",
     "@tremor/react": "^2.1.0",
     "daisyui": "^2.51.6",
     "mysql2": "^3.2.3",

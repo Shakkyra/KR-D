@@ -5,13 +5,13 @@ const Searchbar = () => {
     <>
       {/* Heads up! 👋 Plugins: - @tailwindcss/forms */}
       <label
-        htmlFor="UserEmail"
+        htmlFor="Search"
         className="relative block overflow-hidden border-b border-gray-200 pt-3 focus-within:border-blue-600"
       >
         <input
           type="text"
-          id="UserEmail"
-          placeholder="Email"
+          id="Search"
+          placeholder="Search"
           className="peer h-8 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm"
         />
 
