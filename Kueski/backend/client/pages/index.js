@@ -17,8 +17,8 @@ const Home = () => {
         <link rel='icon' href='/kueskiLogo.png' />
       </Head>
         <Header />
+        <main className='bg-gray-100 min-h-screen'></main>
         <h1 className='p-4'>HOME</h1>
-        <main className='bg-gray-100 min-h-screen' style={{backgroundImage: `url(${kueski_fondo})`}}>
 
         <div className='p-4'>
           <Welcome/>
@@ -27,7 +27,7 @@ const Home = () => {
 
           </div>
         </div>
-      </main>
+      
     </>
   )
 };
