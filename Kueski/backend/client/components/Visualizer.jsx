@@ -17,10 +17,13 @@ const Visualizer = ({onButtonClick}) => {
                         <table className="min-w-full text-left text-sm font-light">
                         <thead className="border-b font-medium dark:border-neutral-500">
                             <tr className="align-center">
-                            <th scope="col" className="px-6 py-4">#</th>
-                            <th scope="col" className="px-6 py-4">First</th>
-                            <th scope="col" className="px-6 py-4">Last</th>
-                            <th scope="col" className="px-6 py-4">Handle</th>
+                            <th scope="col" className="px-6 py-4">Id</th>
+                            <th scope="col" className="px-6 py-4">Nombre</th>
+                            <th scope="col" className="px-6 py-4">P. Apellido</th>
+                            <th scope="col" className="px-6 py-4">S. Apellido</th>
+                            <th scope="col" className="px-6 py-4">CURP</th>
+                            <th scope="col" className="px-6 py-4">Telefono</th>
+                            <th scope="col" className="px-6 py-4">Correo Electronico</th>
                             <th scope="col" className="px-6 py-4">Operaciones ARCO</th>
                             </tr>
                         </thead>
@@ -28,9 +31,12 @@ const Visualizer = ({onButtonClick}) => {
                             <tr
                             className="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 gray:hover:bg-neutral-800">
                             <td className="whitespace-nowrap px-6 py-4 font-medium">1</td>
-                            <td className="whitespace-nowrap px-6 py-4">Mark</td>
-                            <td className="whitespace-nowrap px-6 py-4">Otto</td>
-                            <td className="whitespace-nowrap px-6 py-4">@mdo</td>
+                            <td className="whitespace-nowrap px-6 py-4">Juan</td>
+                            <td className="whitespace-nowrap px-6 py-4">Perez</td>
+                            <td className="whitespace-nowrap px-6 py-4">Herrejon</td>
+                            <td className="whitespace-nowrap px-6 py-4">LHR09173903</td>
+                            <td className="whitespace-nowrap px-6 py-4">33 181 13 67</td>
+                            <td className="whitespace-nowrap px-6 py-4">lily@gmail.com</td>
                             <td className="whitespace-nowrap px-4 py-4">
                                 <Actions onButtonClick={onButtonClick} />
                             </td>
@@ -38,9 +44,12 @@ const Visualizer = ({onButtonClick}) => {
                             <tr
                             className="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 gray:hover:bg-neutral-800">
                             <td className="whitespace-nowrap px-6 py-4 font-medium">1</td>
-                            <td className="whitespace-nowrap px-6 py-4">Mark</td>
-                            <td className="whitespace-nowrap px-6 py-4">Otto</td>
-                            <td className="whitespace-nowrap px-6 py-4">@mdo</td>
+                            <td className="whitespace-nowrap px-6 py-4">Juan</td>
+                            <td className="whitespace-nowrap px-6 py-4">Perez</td>
+                            <td className="whitespace-nowrap px-6 py-4">Herrejon</td>
+                            <td className="whitespace-nowrap px-6 py-4">LHR09173903</td>
+                            <td className="whitespace-nowrap px-6 py-4">33 181 13 67</td>
+                            <td className="whitespace-nowrap px-6 py-4">lily@gmail.com</td>
                             <td className="whitespace-nowrap px-4 py-4">
                                 <Actions onButtonClick={onButtonClick} />
                             </td>
@@ -49,9 +58,12 @@ const Visualizer = ({onButtonClick}) => {
                             <tr
                             className="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 gray:hover:bg-neutral-800">
                             <td className="whitespace-nowrap px-6 py-4 font-medium">1</td>
-                            <td className="whitespace-nowrap px-6 py-4">Mark</td>
-                            <td className="whitespace-nowrap px-6 py-4">Otto</td>
-                            <td className="whitespace-nowrap px-6 py-4">@mdo</td>
+                            <td className="whitespace-nowrap px-6 py-4">Juan</td>
+                            <td className="whitespace-nowrap px-6 py-4">Perez</td>
+                            <td className="whitespace-nowrap px-6 py-4">Herrejon</td>
+                            <td className="whitespace-nowrap px-6 py-4">LHR09173903</td>
+                            <td className="whitespace-nowrap px-6 py-4">33 181 13 67</td>
+                            <td className="whitespace-nowrap px-6 py-4">lily@gmail.com</td>
                             <td className="whitespace-nowrap px-4 py-4">
                                 <Actions onButtonClick={onButtonClick} />
                             </td>
@@ -59,9 +71,12 @@ const Visualizer = ({onButtonClick}) => {
                             <tr
                             className="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 gray:hover:bg-neutral-800">
                             <td className="whitespace-nowrap px-6 py-4 font-medium">1</td>
-                            <td className="whitespace-nowrap px-6 py-4">Mark</td>
-                            <td className="whitespace-nowrap px-6 py-4">Otto</td>
-                            <td className="whitespace-nowrap px-6 py-4">@mdo</td>
+                            <td className="whitespace-nowrap px-6 py-4">Juan</td>
+                            <td className="whitespace-nowrap px-6 py-4">Perez</td>
+                            <td className="whitespace-nowrap px-6 py-4">Herrejon</td>
+                            <td className="whitespace-nowrap px-6 py-4">LHR09173903</td>
+                            <td className="whitespace-nowrap px-6 py-4">33 181 13 67</td>
+                            <td className="whitespace-nowrap px-6 py-4">lily@gmail.com</td>
                             <td className="whitespace-nowrap px-4 py-4">
                                 <Actions onButtonClick={onButtonClick} />
                             </td>
@@ -69,9 +84,12 @@ const Visualizer = ({onButtonClick}) => {
                             <tr
                             className="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 gray:hover:bg-neutral-800">
                             <td className="whitespace-nowrap px-6 py-4 font-medium">1</td>
-                            <td className="whitespace-nowrap px-6 py-4">Mark</td>
-                            <td className="whitespace-nowrap px-6 py-4">Otto</td>
-                            <td className="whitespace-nowrap px-6 py-4">@mdo</td>
+                            <td className="whitespace-nowrap px-6 py-4">Juan</td>
+                            <td className="whitespace-nowrap px-6 py-4">Perez</td>
+                            <td className="whitespace-nowrap px-6 py-4">Herrejon</td>
+                            <td className="whitespace-nowrap px-6 py-4">LHR09173903</td>
+                            <td className="whitespace-nowrap px-6 py-4">33 181 13 67</td>
+                            <td className="whitespace-nowrap px-6 py-4">lily@gmail.com</td>
                             <td className="whitespace-nowrap px-4 py-4">
                                 <Actions onButtonClick={onButtonClick} />
                             </td>
@@ -79,9 +97,12 @@ const Visualizer = ({onButtonClick}) => {
                             <tr
                             className="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 gray:hover:bg-neutral-800">
                             <td className="whitespace-nowrap px-6 py-4 font-medium">1</td>
-                            <td className="whitespace-nowrap px-6 py-4">Mark</td>
-                            <td className="whitespace-nowrap px-6 py-4">Otto</td>
-                            <td className="whitespace-nowrap px-6 py-4">@mdo</td>
+                            <td className="whitespace-nowrap px-6 py-4">Juan</td>
+                            <td className="whitespace-nowrap px-6 py-4">Perez</td>
+                            <td className="whitespace-nowrap px-6 py-4">Herrejon</td>
+                            <td className="whitespace-nowrap px-6 py-4">LHR09173903</td>
+                            <td className="whitespace-nowrap px-6 py-4">33 181 13 67</td>
+                            <td className="whitespace-nowrap px-6 py-4">lily@gmail.com</td>
                             <td className="whitespace-nowrap px-4 py-4">
                                 <Actions onButtonClick={onButtonClick} />   
                             </td>
@@ -89,9 +110,12 @@ const Visualizer = ({onButtonClick}) => {
                             <tr
                             className="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 gray:hover:bg-neutral-800">
                             <td className="whitespace-nowrap px-6 py-4 font-medium">1</td>
-                            <td className="whitespace-nowrap px-6 py-4">Mark</td>
-                            <td className="whitespace-nowrap px-6 py-4">Otto</td>
-                            <td className="whitespace-nowrap px-6 py-4">@mdo</td>
+                            <td className="whitespace-nowrap px-6 py-4">Juan</td>
+                            <td className="whitespace-nowrap px-6 py-4">Perez</td>
+                            <td className="whitespace-nowrap px-6 py-4">Herrejon</td>
+                            <td className="whitespace-nowrap px-6 py-4">LHR09173903</td>
+                            <td className="whitespace-nowrap px-6 py-4">33 181 13 67</td>
+                            <td className="whitespace-nowrap px-6 py-4">lily@gmail.com</td>
                             <td className="whitespace-nowrap px-4 py-4">
                                 <Actions onButtonClick={onButtonClick} />
                             </td>
@@ -99,9 +123,12 @@ const Visualizer = ({onButtonClick}) => {
                             <tr
                             className="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 gray:hover:bg-neutral-800">
                             <td className="whitespace-nowrap px-6 py-4 font-medium">1</td>
-                            <td className="whitespace-nowrap px-6 py-4">Mark</td>
-                            <td className="whitespace-nowrap px-6 py-4">Otto</td>
-                            <td className="whitespace-nowrap px-6 py-4">@mdo</td>
+                            <td className="whitespace-nowrap px-6 py-4">Juan</td>
+                            <td className="whitespace-nowrap px-6 py-4">Perez</td>
+                            <td className="whitespace-nowrap px-6 py-4">Herrejon</td>
+                            <td className="whitespace-nowrap px-6 py-4">LHR09173903</td>
+                            <td className="whitespace-nowrap px-6 py-4">33 181 13 67</td>
+                            <td className="whitespace-nowrap px-6 py-4">lily@gmail.com</td>
                             <td className="whitespace-nowrap px-4 py-4">
                                 <Actions onButtonClick={onButtonClick} />
                             </td>
@@ -109,9 +136,12 @@ const Visualizer = ({onButtonClick}) => {
                             <tr
                             className="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 gray:hover:bg-neutral-800">
                             <td className="whitespace-nowrap px-6 py-4 font-medium">1</td>
-                            <td className="whitespace-nowrap px-6 py-4">Mark</td>
-                            <td className="whitespace-nowrap px-6 py-4">Otto</td>
-                            <td className="whitespace-nowrap px-6 py-4">@mdo</td>
+                            <td className="whitespace-nowrap px-6 py-4">Juan</td>
+                            <td className="whitespace-nowrap px-6 py-4">Perez</td>
+                            <td className="whitespace-nowrap px-6 py-4">Herrejon</td>
+                            <td className="whitespace-nowrap px-6 py-4">LHR09173903</td>
+                            <td className="whitespace-nowrap px-6 py-4">33 181 13 67</td>
+                            <td className="whitespace-nowrap px-6 py-4">lily@gmail.com</td>
                             <td className="whitespace-nowrap px-4 py-4">
                                 <Actions onButtonClick={onButtonClick} />
                             </td>
@@ -119,9 +149,12 @@ const Visualizer = ({onButtonClick}) => {
                             <tr
                             className="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 gray:hover:bg-neutral-800">
                             <td className="whitespace-nowrap px-6 py-4 font-medium">1</td>
-                            <td className="whitespace-nowrap px-6 py-4">Mark</td>
-                            <td className="whitespace-nowrap px-6 py-4">Otto</td>
-                            <td className="whitespace-nowrap px-6 py-4">@mdo</td>
+                            <td className="whitespace-nowrap px-6 py-4">Juan</td>
+                            <td className="whitespace-nowrap px-6 py-4">Perez</td>
+                            <td className="whitespace-nowrap px-6 py-4">Herrejon</td>
+                            <td className="whitespace-nowrap px-6 py-4">LHR09173903</td>
+                            <td className="whitespace-nowrap px-6 py-4">33 181 13 67</td>
+                            <td className="whitespace-nowrap px-6 py-4">lily@gmail.com</td>
                             <td className="whitespace-nowrap px-4 py-4">
                                 <Actions onButtonClick={onButtonClick} />
                             </td>
@@ -129,9 +162,12 @@ const Visualizer = ({onButtonClick}) => {
                             <tr
                             className="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 gray:hover:bg-neutral-800">
                             <td className="whitespace-nowrap px-6 py-4 font-medium">1</td>
-                            <td className="whitespace-nowrap px-6 py-4">Mark</td>
-                            <td className="whitespace-nowrap px-6 py-4">Otto</td>
-                            <td className="whitespace-nowrap px-6 py-4">@mdo</td>
+                            <td className="whitespace-nowrap px-6 py-4">Juan</td>
+                            <td className="whitespace-nowrap px-6 py-4">Perez</td>
+                            <td className="whitespace-nowrap px-6 py-4">Herrejon</td>
+                            <td className="whitespace-nowrap px-6 py-4">LHR09173903</td>
+                            <td className="whitespace-nowrap px-6 py-4">33 181 13 67</td>
+                            <td className="whitespace-nowrap px-6 py-4">lily@gmail.com</td>
                             <td className="whitespace-nowrap px-4 py-4">
                                 <Actions onButtonClick={onButtonClick} />
                             </td>
@@ -139,9 +175,12 @@ const Visualizer = ({onButtonClick}) => {
                             <tr
                             className="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 gray:hover:bg-neutral-800">
                             <td className="whitespace-nowrap px-6 py-4 font-medium">1</td>
-                            <td className="whitespace-nowrap px-6 py-4">Mark</td>
-                            <td className="whitespace-nowrap px-6 py-4">Otto</td>
-                            <td className="whitespace-nowrap px-6 py-4">@mdo</td>
+                            <td className="whitespace-nowrap px-6 py-4">Juan</td>
+                            <td className="whitespace-nowrap px-6 py-4">Perez</td>
+                            <td className="whitespace-nowrap px-6 py-4">Herrejon</td>
+                            <td className="whitespace-nowrap px-6 py-4">LHR09173903</td>
+                            <td className="whitespace-nowrap px-6 py-4">33 181 13 67</td>
+                            <td className="whitespace-nowrap px-6 py-4">lily@gmail.com</td>
                             <td className="whitespace-nowrap px-4 py-4">
                                 <Actions onButtonClick={onButtonClick} />
                             </td>
