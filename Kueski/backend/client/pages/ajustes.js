@@ -21,9 +21,6 @@ const Home = () => {
           {/* Agregamos las clases flex flex-col items-center para crear un contenedor flexible vertical y centrado */}
           <div className='flex flex-col'>
             {/* Agregamos la clase w-full para que el searchbar ocupe todo el ancho del contenedor */}
-            <div className='w-full'>
-              <Searchbar />
-            </div>
             {/* Agregamos la clase mt-4 para crear un margen superior de 16px */}
             <div className='mt-4 z-10'>
               <h1>Ajustes -- FAQS</h1>
