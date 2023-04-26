@@ -18,4 +18,5 @@
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Node.js](https://nodejs.org/en)
 - [Express.js](https://expressjs.com/)
+- [daisyUI](https://daisyui.com/)
 

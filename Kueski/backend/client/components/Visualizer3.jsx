@@ -1,55 +1,164 @@
 import React from "react";
-//Importar sql
-import { useEffect, useState } from 'react';
+import Actions from "./Actions";
 
-const Visualizer3 = () => {
-    const [dataResult, setdataResult] = useState([]);
-  //funcion para hacer fetch y llenar el array
-  useEffect(() => {
-    async function getPageData(){
-      const apiUrlEndpoint = "http://localhost:3000/api/getData";
-      const response = await fetch(apiUrlEndpoint);
-      const res = await response.json();
-      console.log(res.names);
-      setdataResult(res.names);
-    }
-    //Corremos la funcion
-    getPageData();
-    //console.log("HOLA DESDE VISUALIZER3.JSX");
-    }, []);
+const Visualizer = ({onButtonClick}) => {
     return (
-        <div className="overflow-x-auto bg-white">
-        <table className="min-w-full divide-y-2 divide-gray-200 text-sm">
-          <thead className="text-left">
-            <tr>
-              <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900 font-bold">ID</th>
-              <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900 font-bold">Nombre</th>
-              <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900 font-bold">Apellido materno</th>
-              <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900 font-bold">Apellido paterno</th>
-              <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900 font-bold">Numero telefonico</th>
-              <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900 font-bold">Correo electronico</th>
-              <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900 font-bold">Acciones arco</th>
-              <th className="px-4 py-2"></th>
-            </tr>
-          </thead>
-      
-          <tbody className="divide-y divide-gray-200">
-            <tr>
-              <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">0</td>
-              <td className="whitespace-nowrap px-4 py-2 text-gray-700">ExName</td>
-              <td className="whitespace-nowrap px-4 py-2 text-gray-700">ExLFName</td>
-              <td className="whitespace-nowrap px-4 py-2 text-gray-700">ExLSName</td>
-              <td className="whitespace-nowrap px-4 py-2 text-gray-700">ExPhNo</td>
-              <td className="whitespace-nowrap px-4 py-2 text-gray-700">ExEmail</td>
-              <td className="whitespace-nowrap px-4 py-2">
-                <a href="#" className="inline-block rounded bg-indigo-600 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700">ExBttn</a>
-              </td>
-            </tr>
+        <div className="w-full col-span-1 relative lg:h-[70vh] h-[90vh] m-auto p-4 border rounded-lg bg-white overflow-scroll">
+            <div>
 
-              
-            </tbody>
-        </table>
+            </div>
+            <h1>Clients</h1>
+            <div>
+            <div className="flex flex-col">
+                <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
+                    <div className="inline-block min-w-full py-2 sm:px-6 lg:px-8">
+                    <div className="overflow-hidden">
+                        
+                        <table className="min-w-full text-left text-sm font-light">
+                        <thead className="border-b font-medium dark:border-neutral-500">
+                            <tr className="align-center">
+                            <th scope="col" className="px-6 py-4">#</th>
+                            <th scope="col" className="px-6 py-4">First</th>
+                            <th scope="col" className="px-6 py-4">Last</th>
+                            <th scope="col" className="px-6 py-4">Handle</th>
+                            <th scope="col" className="px-6 py-4">Operaciones ARCO</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr
+                            className="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 gray:hover:bg-neutral-800">
+                            <td className="whitespace-nowrap px-6 py-4 font-medium">1</td>
+                            <td className="whitespace-nowrap px-6 py-4">Mark</td>
+                            <td className="whitespace-nowrap px-6 py-4">Otto</td>
+                            <td className="whitespace-nowrap px-6 py-4">@mdo</td>
+                            <td className="whitespace-nowrap px-4 py-4">
+                                <Actions onButtonClick={onButtonClick} />
+                            </td>
+                            </tr>
+                            <tr
+                            className="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 gray:hover:bg-neutral-800">
+                            <td className="whitespace-nowrap px-6 py-4 font-medium">1</td>
+                            <td className="whitespace-nowrap px-6 py-4">Mark</td>
+                            <td className="whitespace-nowrap px-6 py-4">Otto</td>
+                            <td className="whitespace-nowrap px-6 py-4">@mdo</td>
+                            <td className="whitespace-nowrap px-4 py-4">
+                                <Actions onButtonClick={onButtonClick} />
+                            </td>
+                            
+                            </tr>
+                            <tr
+                            className="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 gray:hover:bg-neutral-800">
+                            <td className="whitespace-nowrap px-6 py-4 font-medium">1</td>
+                            <td className="whitespace-nowrap px-6 py-4">Mark</td>
+                            <td className="whitespace-nowrap px-6 py-4">Otto</td>
+                            <td className="whitespace-nowrap px-6 py-4">@mdo</td>
+                            <td className="whitespace-nowrap px-4 py-4">
+                                <Actions onButtonClick={onButtonClick} />
+                            </td>
+                            </tr>
+                            <tr
+                            className="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 gray:hover:bg-neutral-800">
+                            <td className="whitespace-nowrap px-6 py-4 font-medium">1</td>
+                            <td className="whitespace-nowrap px-6 py-4">Mark</td>
+                            <td className="whitespace-nowrap px-6 py-4">Otto</td>
+                            <td className="whitespace-nowrap px-6 py-4">@mdo</td>
+                            <td className="whitespace-nowrap px-4 py-4">
+                                <Actions onButtonClick={onButtonClick} />
+                            </td>
+                            </tr>
+                            <tr
+                            className="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 gray:hover:bg-neutral-800">
+                            <td className="whitespace-nowrap px-6 py-4 font-medium">1</td>
+                            <td className="whitespace-nowrap px-6 py-4">Mark</td>
+                            <td className="whitespace-nowrap px-6 py-4">Otto</td>
+                            <td className="whitespace-nowrap px-6 py-4">@mdo</td>
+                            <td className="whitespace-nowrap px-4 py-4">
+                                <Actions onButtonClick={onButtonClick} />
+                            </td>
+                            </tr>
+                            <tr
+                            className="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 gray:hover:bg-neutral-800">
+                            <td className="whitespace-nowrap px-6 py-4 font-medium">1</td>
+                            <td className="whitespace-nowrap px-6 py-4">Mark</td>
+                            <td className="whitespace-nowrap px-6 py-4">Otto</td>
+                            <td className="whitespace-nowrap px-6 py-4">@mdo</td>
+                            <td className="whitespace-nowrap px-4 py-4">
+                                <Actions onButtonClick={onButtonClick} />   
+                            </td>
+                            </tr>
+                            <tr
+                            className="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 gray:hover:bg-neutral-800">
+                            <td className="whitespace-nowrap px-6 py-4 font-medium">1</td>
+                            <td className="whitespace-nowrap px-6 py-4">Mark</td>
+                            <td className="whitespace-nowrap px-6 py-4">Otto</td>
+                            <td className="whitespace-nowrap px-6 py-4">@mdo</td>
+                            <td className="whitespace-nowrap px-4 py-4">
+                                <Actions onButtonClick={onButtonClick} />
+                            </td>
+                            </tr>
+                            <tr
+                            className="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 gray:hover:bg-neutral-800">
+                            <td className="whitespace-nowrap px-6 py-4 font-medium">1</td>
+                            <td className="whitespace-nowrap px-6 py-4">Mark</td>
+                            <td className="whitespace-nowrap px-6 py-4">Otto</td>
+                            <td className="whitespace-nowrap px-6 py-4">@mdo</td>
+                            <td className="whitespace-nowrap px-4 py-4">
+                                <Actions onButtonClick={onButtonClick} />
+                            </td>
+                            </tr>
+                            <tr
+                            className="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 gray:hover:bg-neutral-800">
+                            <td className="whitespace-nowrap px-6 py-4 font-medium">1</td>
+                            <td className="whitespace-nowrap px-6 py-4">Mark</td>
+                            <td className="whitespace-nowrap px-6 py-4">Otto</td>
+                            <td className="whitespace-nowrap px-6 py-4">@mdo</td>
+                            <td className="whitespace-nowrap px-4 py-4">
+                                <Actions onButtonClick={onButtonClick} />
+                            </td>
+                            </tr>
+                            <tr
+                            className="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 gray:hover:bg-neutral-800">
+                            <td className="whitespace-nowrap px-6 py-4 font-medium">1</td>
+                            <td className="whitespace-nowrap px-6 py-4">Mark</td>
+                            <td className="whitespace-nowrap px-6 py-4">Otto</td>
+                            <td className="whitespace-nowrap px-6 py-4">@mdo</td>
+                            <td className="whitespace-nowrap px-4 py-4">
+                                <Actions onButtonClick={onButtonClick} />
+                            </td>
+                            </tr>
+                            <tr
+                            className="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 gray:hover:bg-neutral-800">
+                            <td className="whitespace-nowrap px-6 py-4 font-medium">1</td>
+                            <td className="whitespace-nowrap px-6 py-4">Mark</td>
+                            <td className="whitespace-nowrap px-6 py-4">Otto</td>
+                            <td className="whitespace-nowrap px-6 py-4">@mdo</td>
+                            <td className="whitespace-nowrap px-4 py-4">
+                                <Actions onButtonClick={onButtonClick} />
+                            </td>
+                            </tr>
+                            <tr
+                            className="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 gray:hover:bg-neutral-800">
+                            <td className="whitespace-nowrap px-6 py-4 font-medium">1</td>
+                            <td className="whitespace-nowrap px-6 py-4">Mark</td>
+                            <td className="whitespace-nowrap px-6 py-4">Otto</td>
+                            <td className="whitespace-nowrap px-6 py-4">@mdo</td>
+                            <td className="whitespace-nowrap px-4 py-4">
+                                <Actions onButtonClick={onButtonClick} />
+                            </td>
+                            </tr>
+                        </tbody>
+                        </table>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+            <ul>
+
+            </ul>
         </div>
     );
-} 
-export default Visualizer3;
+}
+
+export default Visualizer
