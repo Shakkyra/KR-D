@@ -3,6 +3,7 @@ import React from 'react';
 import Head from 'next/head';
 import Header from '../components/Header';
 import Searchbar from '../components/Searchbar';
+import Faqs from '../components/Faqs';
 
 const Home = () => {
   return (
@@ -25,7 +26,8 @@ const Home = () => {
             </div>
             {/* Agregamos la clase mt-4 para crear un margen superior de 16px */}
             <div className='mt-4 z-10'>
-              <h1>Operaciones ARCO:</h1>
+              <h1>Ajustes -- FAQS</h1>
+              <Faqs/>
               <div className='mt-4 align-center bg-white'>
               </div>
             </div>
