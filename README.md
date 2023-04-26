@@ -19,4 +19,9 @@
 - [Node.js](https://nodejs.org/en)
 - [Express.js](https://expressjs.com/)
 - [daisyUI](https://daisyui.com/)
+- [hyperUI](https://www.hyperui.dev/)
+
+### Para correrlo
+- `npm install`
+- `npm run dev`
 
