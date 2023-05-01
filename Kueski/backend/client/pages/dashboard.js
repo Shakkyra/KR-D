@@ -4,7 +4,6 @@ import Head from 'next/head';
 import Header from '../components/Header';
 import Searchbar from '../components/Searchbar';
 import Visualizer from '../components/Visualizer';
-import Visualizer3 from '../components/Visualizer';
 import Oposicion from '../components/Oposicion';
 import Acceder from '../components/Acceso';
 import Rectificar from '../components/Rectificacion';
@@ -13,6 +12,11 @@ import Hidder from '../components/Hidder';
 
 const Home = () => {
   const [selectedComponent, setSelectedComponent] = useState(Hidder);
+  const [searchValue, setSearchValue] = useState("");
+  const handleSearchChange = (value) => {
+    console.log("setSearchValue called with value:", value);
+    setSearchValue(value);
+  };
 
   const handleButtonClick = (component) => {
     setSelectedComponent(component);
@@ -51,11 +55,11 @@ const Home = () => {
           <div className='flex flex-col'>
             {/* Agregamos la clase w-full para que el searchbar ocupe todo el ancho del contenedor */}
             <div className='w-full'>
-              <Searchbar />
+              <Searchbar onSearchChange={handleSearchChange} />
             </div>
             {/* Agregamos la clase mt-4 para crear un margen superior de 16px */}
             <div className='mt-4 z-10'>
-              <Visualizer onButtonClick={handleButtonClick} />
+              <Visualizer searchValue={searchValue} onButtonClick={handleButtonClick} />
               <h1 className='p-4'>Operaciones ARCO:</h1>
               <div className='mt-4 align-center bg-white'>
                 <ComponentToRender/>

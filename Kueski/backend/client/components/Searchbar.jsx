@@ -1,6 +1,6 @@
 import React from "react";
 
-const Searchbar = () => {
+const Searchbar = ({onSearchChange}) => {
   return (
     <>
       {/* Heads up! 👋 Plugins: - @tailwindcss/forms */}
@@ -13,6 +13,7 @@ const Searchbar = () => {
           id="Search"
           placeholder="Search"
           className="peer h-8 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm"
+          onChange={(event) => onSearchChange(event.target.value)}
         />
 
         <span
