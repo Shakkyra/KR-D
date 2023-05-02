@@ -1,12 +1,8 @@
-import mysql from "mysql2/promise";
+import dbConnection from "@/db";
 
 export default async function handler(req, res) {
-    const dbconnection = await mysql.createConnection({
-        host: "localhost",
-        database: "kueskiarco",
-        user: "root",
-    });
     try{
+        const dbconnection = await dbConnection();
         const query = "SELECT USER_ID, USER_NAME, FIRST_LAST_NAME, SECOND_LAST_NAME, PHONE_NUMBER, EMAIL FROM USERS";
         const values = [];
         const [data] = await dbconnection.execute(query, values);
