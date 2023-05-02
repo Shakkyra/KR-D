@@ -3,8 +3,22 @@ import React from "react";
 import Popup from "./Popup";
 import Compartir from "./Compartir";
 
+//PROP NO user_ID
+const Acceso = ({ID_user}) => {
+    const [dataResult, setDataResult] = useState([]);
 
-const Acceso = () => {
+    useEffect(() => {
+        //console.log("searchValue en Visualizer:", searchValue);
+        async function getPageData() {
+        const apiUrlEndpoint = `/api/getDataAcceso?searchValue=${ID_user}`;
+        //console.log("URL de la API:", apiUrlEndpoint);
+        const response = await fetch(apiUrlEndpoint);
+        const res = await response.json();
+        //console.log("Datos devueltos por la API:", res.names);
+        setDataResult(res.names);
+    }
+    getPageData();
+    }, [searchValue]);
     return(
         <div className="flex flex-col space-y-0">
             <div className="px-4 sm:px-0">
