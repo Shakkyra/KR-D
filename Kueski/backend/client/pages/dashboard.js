@@ -14,7 +14,7 @@ const Home = () => {
   const [selectedComponent, setSelectedComponent] = useState(Hidder);
   const [searchValue, setSearchValue] = useState("");
   const handleSearchChange = (value) => {
-    console.log("setSearchValue called with value:", value);
+    console.log("Valor de searchValue en dashboard.js:", value);
     setSearchValue(value);
   };
 
