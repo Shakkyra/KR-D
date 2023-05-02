@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 
-const Searchbar = ({onSearchChange}) => {
+const Searchbar = ({ onSearchChange }) => {
+  const [data, setData] = useState([]);
+
+  const handleSearchChange = async (searchValue) => {
+    console.log("Valor del campo de búsqueda en searchbar.jsx:", searchValue);
+    const response = await fetch(`/api/getData2?searchValue=${searchValue}`);
+    const data = await response.json();
+    setData(data);
+    onSearchChange(searchValue);
+  };
+
   return (
     <>
-      {/* Heads up! 👋 Plugins: - @tailwindcss/forms */}
       <label
         htmlFor="Search"
         className="relative block overflow-hidden border-b border-gray-200 pt-3 focus-within:border-blue-600"
@@ -13,7 +22,7 @@ const Searchbar = ({onSearchChange}) => {
           id="Search"
           placeholder="Search"
           className="peer h-8 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm"
-          onChange={(event) => onSearchChange(event.target.value)}
+          onChange={(event) => handleSearchChange(event.target.value)}
         />
 
         <span
