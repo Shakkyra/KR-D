@@ -54,16 +54,18 @@ const Home = () => {
           {/* Agregamos las clases flex flex-col items-center para crear un contenedor flexible vertical y centrado */}
           <div className='flex flex-col'>
             {/* Agregamos la clase w-full para que el searchbar ocupe todo el ancho del contenedor */}
-            <div className='w-full'>
+            <div className='w-full mt-8'>
               <Searchbar onSearchChange={handleSearchChange} />
             </div>
             {/* Agregamos la clase mt-4 para crear un margen superior de 16px */}
             <div className='mt-4 z-10'>
               <Visualizer searchValue={searchValue} onButtonClick={handleButtonClick} />
-              <h1 className='p-4'>Operaciones ARCO:</h1>
-              <div className='mt-4 align-center bg-white'>
-                <ComponentToRender/>
-              </div>
+              <section id="Operations" className='mt-24'>
+                <h1 className='p-4'>Operaciones ARCO:</h1>
+                <div className='mt-12 align-center bg-white'>
+                  <ComponentToRender/>
+                </div>
+              </section>
             </div>
           </div>
         </div>
