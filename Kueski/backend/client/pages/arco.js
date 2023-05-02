@@ -4,9 +4,24 @@ import Header from '../components/Header';
 import kueski_fondo from '../public/imagenes/kueski_fondo.png';
 import Welcome from '@/components/Welcome';
 
-{/* Pagina de INICIO */}
-
 const Home = () => {
+    let ComponentToRender;
+    switch (selectedComponent) {
+        case 'Oposicion':
+        ComponentToRender = Oposicion;
+        break;
+        case 'Acceder':
+        ComponentToRender = Acceder;
+        break;
+        case 'Rectificar':
+        ComponentToRender = Rectificar;
+        break;
+        case 'Cancelar':
+        ComponentToRender = Cancelar;
+        break;
+        default:
+        ComponentToRender = Hidder;
+  }
   return (
     <>
       <Head>

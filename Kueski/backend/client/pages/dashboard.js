@@ -4,10 +4,6 @@ import Head from 'next/head';
 import Header from '../components/Header';
 import Searchbar from '../components/Searchbar';
 import Visualizer from '../components/Visualizer';
-import Oposicion from '../components/Oposicion';
-import Acceder from '../components/Acceso';
-import Rectificar from '../components/Rectificacion';
-import Cancelar from '../components/Cancelacion';
 import Hidder from '../components/Hidder';
 
 const Home = () => {
@@ -22,23 +18,7 @@ const Home = () => {
     setSelectedComponent(component);
   };
 
-  let ComponentToRender;
-  switch (selectedComponent) {
-    case 'Oposicion':
-      ComponentToRender = Oposicion;
-      break;
-    case 'Acceder':
-      ComponentToRender = Acceder;
-      break;
-    case 'Rectificar':
-      ComponentToRender = Rectificar;
-      break;
-    case 'Cancelar':
-      ComponentToRender = Cancelar;
-      break;
-    default:
-      ComponentToRender = Hidder;
-  }
+  
 
   return (
     <>
