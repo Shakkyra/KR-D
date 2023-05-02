@@ -7,7 +7,7 @@ const Visualizer = ({ searchValue, onButtonClick }) => {
   useEffect(() => {
     console.log("searchValue en Visualizer:", searchValue);
     async function getPageData() {
-      const apiUrlEndpoint = `/api/getData2?searchValue=${searchValue}`;
+      const apiUrlEndpoint = `/api/getData?searchValue=${searchValue}`;
       console.log("URL de la API:", apiUrlEndpoint);
       const response = await fetch(apiUrlEndpoint);
       const res = await response.json();
@@ -65,7 +65,7 @@ const Visualizer = ({ searchValue, onButtonClick }) => {
                                 {names.SECOND_LAST_NAME}
                               </td>
                               <td className="whitespace-nowrap px-6 py-4">
-                                {names.PHONE_NUMBER}
+                                {names.PHONE_NUMER}
                               </td>
                               <td className="whitespace-nowrap px-6 py-4">
                                 {names.EMAIL}

@@ -7,7 +7,7 @@ const Searchbar = ({ onSearchChange }) => {
   const handleSearchChange = async (searchValue) => {
     console.log("Valor del campo de búsqueda en searchbar.jsx:", searchValue);
     if (searchValue !== previousSearchValue) {
-      const response = await fetch(`/api/getData2?searchValue=${searchValue}`);
+      const response = await fetch(`/api/getData?searchValue=${searchValue}`);
       const data = await response.json();
       setData(data);
       setPreviousSearchValue(searchValue);
