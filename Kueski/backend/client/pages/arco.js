@@ -16,15 +16,17 @@ const Home = () => {
         <link rel='icon' href='/kueskiLogo.png' />
       </Head>
         <Header />
-        <h1 className='p-4'>HOME</h1>
+        <h1 className='p-4'>Bienvenido</h1>
         <Welcome/>
         <main className='bg-gray-100 min-h-screen' style={{backgroundImage: `url(${kueski_fondo})`}}>
 
         <div className='p-4'>
-          {/* Agregamos las clases flex flex-col items-center para crear un contenedor flexible vertical y centrado */}
-          <div className='flex flex-col'>
-
-          </div>
+            <section id="Operations" className='mt-24'>
+                <h1 className='p-4'>Operaciones ARCO:</h1>
+                <div className='mt-12 align-center bg-white'>
+                  <ComponentToRender/>
+                </div>
+            </section>
         </div>
       </main>
     </>

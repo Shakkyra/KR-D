@@ -12,8 +12,8 @@ export default async function handler(req, res) {
     console.log("Valor del parámetro de búsqueda en getData2.js:", searchValue);
 
     // Modificar la consulta para filtrar por el valor del parámetro de búsqueda
-    const query = "SELECT USER_ID, FIRST_LAST_NAME, SECOND_LAST_NAME, PHONE_NUMBER, EMAIL FROM USERS WHERE USER_ID LIKE ? OR PHONE_NUMBER LIKE ?";
-    const values = [`%${searchValue}%`, `%${searchValue}%`];
+    const query = "SELECT USER_ID, FIRST_LAST_NAME, SECOND_LAST_NAME, PHONE_NUMBER, EMAIL FROM USERS WHERE USER_ID LIKE ?";
+    const values = [`%${searchValue}%`];
     const [data] = await dbconnection.execute(query, values);
     dbconnection.end();
 

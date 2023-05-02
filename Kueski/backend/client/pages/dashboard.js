@@ -60,12 +60,6 @@ const Home = () => {
             {/* Agregamos la clase mt-4 para crear un margen superior de 16px */}
             <div className='mt-4 z-10'>
               <Visualizer searchValue={searchValue} onButtonClick={handleButtonClick} />
-              <section id="Operations" className='mt-24'>
-                <h1 className='p-4'>Operaciones ARCO:</h1>
-                <div className='mt-12 align-center bg-white'>
-                  <ComponentToRender/>
-                </div>
-              </section>
             </div>
           </div>
         </div>

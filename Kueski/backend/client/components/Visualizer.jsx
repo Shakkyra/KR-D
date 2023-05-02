@@ -29,7 +29,7 @@ const Visualizer = ({ searchValue, onButtonClick }) => {
                   <thead className="border-b font-medium dark:border-neutral-500">
                     <tr>
                       <th className="whitespace-nowrap px-6 py-4">ID</th>
-                      <th className="whitespace-nowrap px-6 py-4">User</th>
+                      {/* <th className="whitespace-nowrap px-6 py-4">User</th>*/}
                       <th className="whitespace-nowrap px-6 py-4">First Name</th>
                       <th className="whitespace-nowrap px-6 py-4">Last Name</th>
                       <th className="whitespace-nowrap px-6 py-4">Phone Number</th>
@@ -47,8 +47,7 @@ const Visualizer = ({ searchValue, onButtonClick }) => {
                       dataResult
                       .filter(
                         (names) =>
-                          String(names.USER_ID).toLowerCase().includes(String(searchValue).toLowerCase()) ||
-                          String(names.PHONE_NUMBER).toLowerCase().includes(String(searchValue).toLowerCase())
+                          String(names.USER_ID).toLowerCase().includes(String(searchValue).toLowerCase())
                       )
                         .map((names) => {
                           return (
@@ -56,9 +55,9 @@ const Visualizer = ({ searchValue, onButtonClick }) => {
                               <td className="whitespace-nowrap px-6 py-4">
                                 {names.USER_ID}
                               </td>
-                              <td className="whitespace-nowrap px-6 py-4">
+                              {/*<td className="whitespace-nowrap px-6 py-4">
                                 {names.user}
-                              </td>
+                              </td> */}
                               <td className="whitespace-nowrap px-6 py-4">
                                 {names.FIRST_LAST_NAME}
                               </td>
@@ -85,8 +84,7 @@ const Visualizer = ({ searchValue, onButtonClick }) => {
                       ) &&
                       dataResult.filter(
                         (names) =>
-                          String(names.USER_ID).toLowerCase().includes(String(searchValue).toLowerCase()) ||
-                          String(names.PHONE_NUMBER).toLowerCase().includes(String(searchValue).toLowerCase())
+                          String(names.USER_ID).toLowerCase().includes(String(searchValue).toLowerCase())
                       ).length === 0 && (
                         <p>No se encontraron resultados.</p>)
                     }
