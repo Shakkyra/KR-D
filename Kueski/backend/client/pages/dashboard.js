@@ -4,10 +4,6 @@ import Head from 'next/head';
 import Header from '../components/Header';
 import Searchbar from '../components/Searchbar';
 import Visualizer from '../components/Visualizer';
-import Oposicion from '../components/Oposicion';
-import Acceder from '../components/Acceso';
-import Rectificar from '../components/Rectificacion';
-import Cancelar from '../components/Cancelacion';
 import Hidder from '../components/Hidder';
 
 const Home = () => {
@@ -22,23 +18,7 @@ const Home = () => {
     setSelectedComponent(component);
   };
 
-  let ComponentToRender;
-  switch (selectedComponent) {
-    case 'Oposicion':
-      ComponentToRender = Oposicion;
-      break;
-    case 'Acceder':
-      ComponentToRender = Acceder;
-      break;
-    case 'Rectificar':
-      ComponentToRender = Rectificar;
-      break;
-    case 'Cancelar':
-      ComponentToRender = Cancelar;
-      break;
-    default:
-      ComponentToRender = Hidder;
-  }
+  
 
   return (
     <>
@@ -60,12 +40,6 @@ const Home = () => {
             {/* Agregamos la clase mt-4 para crear un margen superior de 16px */}
             <div className='mt-4 z-10'>
               <Visualizer searchValue={searchValue} onButtonClick={handleButtonClick} />
-              <section id="Operations" className='mt-24'>
-                <h1 className='p-4'>Operaciones ARCO:</h1>
-                <div className='mt-12 align-center bg-white'>
-                  <ComponentToRender/>
-                </div>
-              </section>
             </div>
           </div>
         </div>

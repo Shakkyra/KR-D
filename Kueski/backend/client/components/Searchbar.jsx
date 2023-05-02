@@ -1,14 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const Searchbar = ({ onSearchChange }) => {
   const [data, setData] = useState([]);
+  const [previousSearchValue, setPreviousSearchValue] = useState("");
 
   const handleSearchChange = async (searchValue) => {
     console.log("Valor del campo de búsqueda en searchbar.jsx:", searchValue);
-    const response = await fetch(`/api/getData2?searchValue=${searchValue}`);
-    const data = await response.json();
-    setData(data);
-    onSearchChange(searchValue);
+    if (searchValue !== previousSearchValue) {
+      const response = await fetch(`/api/getData?searchValue=${searchValue}`);
+      const data = await response.json();
+      setData(data);
+      setPreviousSearchValue(searchValue);
+      onSearchChange(searchValue);
+    }
   };
 
   return (
@@ -28,7 +32,7 @@ const Searchbar = ({ onSearchChange }) => {
         <span
           className="absolute start-0 top-2 -translate-y-1/2 text-xs text-gray-700 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-2 peer-focus:text-xs"
         >
-          Search
+          SearchbyID
         </span>
       </label>
     </>
