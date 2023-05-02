@@ -64,7 +64,7 @@ const Visualizer = ({onButtonClick}) => {
                                     <td className="whitespace-nowrap px-6 py-4">{names.USER_NAME}</td>  
                                     <td className="whitespace-nowrap px-6 py-4">{names.FIRST_LAST_NAME}</td> 
                                     <td className="whitespace-nowrap px-6 py-4">{names.SECOND_LAST_NAME}</td> 
-                                    <td className="whitespace-nowrap px-6 py-4">{names.PHONE_NUMBER}</td> 
+                                    <td className="whitespace-nowrap px-6 py-4">{names.PHONE_NUMER}</td> 
                                     <td className="whitespace-nowrap px-6 py-4">{names.EMAIL}</td>   
                                     <td className="whitespace-nowrap px-6 py-4">
                                         <Actions onButtonClick={onButtonClick} />
