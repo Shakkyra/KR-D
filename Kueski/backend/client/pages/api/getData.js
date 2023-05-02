@@ -2,12 +2,13 @@ import mysql from "mysql2/promise";
 
 export default async function handler(req, res) {
     const dbconnection = await mysql.createConnection({
-        host: "localhost",
-        database: "kueskiarco",
-        user: "root",
+        host: 'sql9.freesqldatabase.com',
+        database: 'sql9615348',
+        user: 'sql9615348',
+        password: 'ZTWkmRuMM2',
     });
     try{
-        const query = "SELECT USER_ID, USER_NAME, FIRST_LAST_NAME, SECOND_LAST_NAME, PHONE_NUMBER, EMAIL FROM USERS";
+        const query = "SELECT USER_ID, USER_NAME, FIRST_LAST_NAME, SECOND_LAST_NAME, PHONE_NUMER, EMAIL FROM USERS;";
         const values = [];
         const [data] = await dbconnection.execute(query, values);
         dbconnection.end();
