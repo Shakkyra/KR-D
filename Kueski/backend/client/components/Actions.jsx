@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
+import {Link} from "react-scroll";
 
 const Actions = ({ onButtonClick, hasOneResult, user }) => {
   const [menuPosition, setMenuPosition] = useState({ top: 0, left: 0 });
