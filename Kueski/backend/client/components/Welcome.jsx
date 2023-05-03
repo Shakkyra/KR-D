@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import KueskiLogo from "../public/kueski_fondo.png";
 const Welcome = () => {
     return (
@@ -8,9 +9,7 @@ const Welcome = () => {
         >
             <div className="mx-auto max-w-xl text-center">
                 <h1 className="text-3xl font-extrabold  sm:text-5xl">
-                    <strong className="font-extrabold text-blue-600 sm:block">
-                    Kueski
-                    </strong>  
+                <Image src={KueskiLogo} alt="Kueski logo"  />
                     <strong className="font-extrabold sm:block">
                     Derechos ARCO.
                     </strong>
