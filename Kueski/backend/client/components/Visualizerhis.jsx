@@ -8,7 +8,7 @@ const Visualizerhis = ({searchValue, onButtonClick}) => {
   useEffect(() => {
     console.log("searchValue en Visualizer:", searchValue);
     async function getPageData() {
-      const apiUrlEndpoint = `/api/getData?searchValue=${searchValue}`;
+      const apiUrlEndpoint = `/api/getArcoRequests?searchValue=${searchValue}`;
       console.log("URL de la API:", apiUrlEndpoint);
       const response = await fetch(apiUrlEndpoint);
       const res = await response.json();
@@ -36,9 +36,7 @@ const Visualizerhis = ({searchValue, onButtonClick}) => {
                             <th scope="col" className="px-6 py-4">P. Apellido</th>
                             <th scope="col" className="px-6 py-4">S. Apellido</th>
                             <th scope="col" className="px-6 py-4">Fecha</th>
-                            <th scope="col" className="px-6 py-4">Información completa</th>
-
-                            
+                            <th scope="col" className="px-6 py-4">Información completa</th>        
                             </tr>
                         </thead>
                         <tbody>
@@ -69,9 +67,6 @@ const Visualizerhis = ({searchValue, onButtonClick}) => {
                                 <Actionshis onButtonClick={onButtonClick} />
                             </td>
                             </tr>
-
-                            
-                           
                         </tbody>
                         </table>
                     </div>
