@@ -29,7 +29,6 @@ const Visualizer = ({ searchValue, onButtonClick }) => {
                   <thead className="border-b font-medium dark:border-neutral-500">
                     <tr>
                       <th className="whitespace-nowrap px-6 py-4">ID</th>
-                      {/* <th className="whitespace-nowrap px-6 py-4">User</th>*/}
                       <th className="whitespace-nowrap px-6 py-4">First Name</th>
                       <th className="whitespace-nowrap px-6 py-4">Last Name</th>
                       <th className="whitespace-nowrap px-6 py-4">Phone Number</th>
