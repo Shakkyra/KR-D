@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Actions from "./Actions";
 
-const Visualizer = ({ searchValue, onButtonClick }) => {
-  const [dataResult, setDataResult] = useState([]);
 
+
+const Visualizer = ({ searchValue}) => {
+  const [dataResult, setDataResult] = useState([]);
+  
   useEffect(() => {
     console.log("searchValue en Visualizer:", searchValue);
     async function getPageData() {
@@ -55,9 +57,6 @@ const Visualizer = ({ searchValue, onButtonClick }) => {
                               <td className="whitespace-nowrap px-6 py-4">
                                 {names.USER_ID}
                               </td>
-                              {/*<td className="whitespace-nowrap px-6 py-4">
-                                {names.user}
-                              </td> */}
                               <td className="whitespace-nowrap px-6 py-4">
                                 {names.FIRST_LAST_NAME}
                               </td>
@@ -71,7 +70,7 @@ const Visualizer = ({ searchValue, onButtonClick }) => {
                                 {names.EMAIL}
                               </td>
                               <td className="whitespace-nowrap px-6 py-4">
-                                <Actions onButtonClick={onButtonClick} />
+                                <Actions userId={names.USER_ID}/>
                               </td>
                             </tr>
                           );

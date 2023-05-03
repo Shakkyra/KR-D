@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Link from 'next/link';
 
-const Actions = ({ onButtonClick, hasOneResult, user }) => {
+const Actions = ({userId, onButtonClick, hasOneResult}) => {
   const [menuPosition, setMenuPosition] = useState({ top: 0, left: 0 });
 
   const handleButtonClick = (buttonName) => {
@@ -29,28 +29,28 @@ const Actions = ({ onButtonClick, hasOneResult, user }) => {
         }}
       >
         <li>
-          <a href={`ARCO/acceso/`}>
+          <a href={`ARCO/acceso/${userId}`}>
             <button onClick={() => handleButtonClick('Acceder')}>
               Acceder
             </button>
           </a>
         </li>
         <li>
-          <Link href={`ARCO/rectificacion/`}>
+          <Link href={`ARCO/rectificacion/${userId}`}>
             <button onClick={() => handleButtonClick('Rectificar')}>
               Rectificar
             </button>
           </Link>
         </li>
         <li>
-          <Link href={`ARCO/cancelacion/`}>
+          <Link href={`ARCO/cancelacion/${userId}`}>
             <button onClick={() => handleButtonClick('Cancelar')}>
               Cancelar
             </button>
           </Link>
         </li>
         <li>
-          <Link href={`ARCO/oposicion/`}>
+          <Link href={`ARCO/oposicion/${userId}`}>
             <button onClick={() => handleButtonClick('Oponer')}>
               Oponer
             </button>
