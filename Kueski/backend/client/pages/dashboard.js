@@ -4,17 +4,13 @@ import Head from 'next/head';
 import Header from '../components/Header';
 import Searchbar from '../components/Searchbar';
 import Visualizer from '../components/Visualizer';
-import Oposicion from '../components/Oposicion';
-import Acceder from '../components/Acceso';
-import Rectificar from '../components/Rectificacion';
-import Cancelar from '../components/Cancelacion';
 import Hidder from '../components/Hidder';
 
 const Home = () => {
   const [selectedComponent, setSelectedComponent] = useState(Hidder);
   const [searchValue, setSearchValue] = useState("");
   const handleSearchChange = (value) => {
-    console.log("setSearchValue called with value:", value);
+    console.log("Valor de searchValue en dashboard.js:", value);
     setSearchValue(value);
   };
 
@@ -22,23 +18,7 @@ const Home = () => {
     setSelectedComponent(component);
   };
 
-  let ComponentToRender;
-  switch (selectedComponent) {
-    case 'Oposicion':
-      ComponentToRender = Oposicion;
-      break;
-    case 'Acceder':
-      ComponentToRender = Acceder;
-      break;
-    case 'Rectificar':
-      ComponentToRender = Rectificar;
-      break;
-    case 'Cancelar':
-      ComponentToRender = Cancelar;
-      break;
-    default:
-      ComponentToRender = Hidder;
-  }
+  
 
   return (
     <>
@@ -54,16 +34,12 @@ const Home = () => {
           {/* Agregamos las clases flex flex-col items-center para crear un contenedor flexible vertical y centrado */}
           <div className='flex flex-col'>
             {/* Agregamos la clase w-full para que el searchbar ocupe todo el ancho del contenedor */}
-            <div className='w-full'>
+            <div className='w-full mt-8'>
               <Searchbar onSearchChange={handleSearchChange} />
             </div>
             {/* Agregamos la clase mt-4 para crear un margen superior de 16px */}
             <div className='mt-4 z-10'>
               <Visualizer searchValue={searchValue} onButtonClick={handleButtonClick} />
-              <h1 className='p-4'>Operaciones ARCO:</h1>
-              <div className='mt-4 align-center bg-white'>
-                <ComponentToRender/>
-              </div>
             </div>
           </div>
         </div>
@@ -71,5 +47,4 @@ const Home = () => {
     </>
   );
 };
-
 export default Home;
