@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Link from 'next/link';
+import { Link as ScrollLink } from "react-scroll";
 
-const Actions = ({ onButtonClick, hasOneResult, user }) => {
+const Actions = ({onButtonClick, hasOneResult}) => {
   const [menuPosition, setMenuPosition] = useState({ top: 0, left: 0 });
 
   const handleButtonClick = (buttonName) => {
@@ -29,32 +29,24 @@ const Actions = ({ onButtonClick, hasOneResult, user }) => {
         }}
       >
         <li>
-          <a href={`ARCO/acceso/`}>
-            <button onClick={() => handleButtonClick('Acceder')}>
-              Acceder
-            </button>
-          </a>
+          <ScrollLink to="Operations" smooth={true} onClick={() => handleButtonClick('Acceder')}>
+            Acceder
+          </ScrollLink>
         </li>
         <li>
-          <Link href={`ARCO/rectificacion/`}>
-            <button onClick={() => handleButtonClick('Rectificar')}>
-              Rectificar
-            </button>
-          </Link>
+          <ScrollLink to="Operations" smooth={true} onClick={() => handleButtonClick('Rectificar')}>
+            Rectificar
+          </ScrollLink>
         </li>
         <li>
-          <Link href={`ARCO/cancelacion/`}>
-            <button onClick={() => handleButtonClick('Cancelar')}>
-              Cancelar
-            </button>
-          </Link>
+          <ScrollLink to="Operations" smooth={true} onClick={() => handleButtonClick('Cancelar')}>
+            Cancelar
+          </ScrollLink>
         </li>
         <li>
-          <Link href={`ARCO/oposicion/`}>
-            <button onClick={() => handleButtonClick('Oponer')}>
-              Oponer
-            </button>
-          </Link>
+          <ScrollLink to="Operations" smooth={true} onClick={() => handleButtonClick('Oposicion')}>
+            Oponer
+          </ScrollLink>
         </li>
       </ul>
     </div>
