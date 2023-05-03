@@ -15,9 +15,16 @@ const Home = () => {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/kueskiLogo.png' />
       </Head>
-        <Header />
+      <main className='bg-gray-100 min-h-screen'>
+       <section className='flex justify-between px-4 pt-4'> 
+        
         <h1 className='p-4'>HOME</h1>
+        <Header />
+        
+        </section>
         <Welcome/>
+      </main>
+       
     </>
   );
 };

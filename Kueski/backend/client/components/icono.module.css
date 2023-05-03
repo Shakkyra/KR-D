@@ -1,0 +1,46 @@
+.myFunction {
+  background-color:#d8dbde ;
+  color: white;
+  padding: 10px;
+}
+
+.myFunction.clicked {
+  background-color:darkblue;
+}
+
+.bg-gray-100 {
+  background-color: #f7fafc;
+}
+
+.hover\:bg-gray-200:hover {
+  background-color: #edf2f7;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.p-3 {
+  padding: 0.1rem;
+}
+
+.rounded-lg {
+  border-radius: 2rem;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.align-center {
+  z-index: 100000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
