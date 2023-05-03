@@ -4,7 +4,7 @@ import Head from 'next/head';
 import Header from '../components/Header';
 import Searchbar from '../components/Searchbar';
 import Visualizer from '../components/Visualizer';
-import Hidder from '../components/Hidder';
+
 
 const Home = () => {
   const [searchValue, setSearchValue] = useState("");
@@ -13,11 +13,12 @@ const Home = () => {
     setSearchValue(value);
   };
 
+<<<<<<<<< Temporary merge branch 1
+=========
   const handleButtonClick = (component) => {
     setSelectedComponent(component);
   };
-
-  
+>>>>>>>>> Temporary merge branch 2
 
   return (
     <>
@@ -40,7 +41,6 @@ const Home = () => {
             <div className='mt-4 z-10'>
               <Visualizer searchValue={searchValue} />
             </div>
-            
           </div>
         </div>
       </main>

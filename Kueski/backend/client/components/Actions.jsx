@@ -1,8 +1,14 @@
 import React, { useState } from "react";
+<<<<<<< HEAD
 import { Link as ScrollLink } from "react-scroll";
 import {Link} from "react-scroll";
 
 const Actions = ({ onButtonClick, hasOneResult, user }) => {
+=======
+import Link from 'next/link';
+
+const Actions = ({userId, onButtonClick, hasOneResult}) => {
+>>>>>>> origin/JuanBackEnd
   const [menuPosition, setMenuPosition] = useState({ top: 0, left: 0 });
 
   const handleButtonClick = (buttonName) => {
@@ -30,7 +36,11 @@ const Actions = ({ onButtonClick, hasOneResult, user }) => {
         }}
       >
         <li>
+<<<<<<< HEAD
           <a href={`ARCO/acceso/`}>
+=======
+          <a href={`ARCO/acceso/${userId}`}>
+>>>>>>> origin/JuanBackEnd
             <button onClick={() => handleButtonClick('Acceder')}>
               Acceder
             </button>
