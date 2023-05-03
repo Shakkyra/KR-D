@@ -10,7 +10,7 @@ const Welcome = () => {
             <div className="mx-auto max-w-xl text-center">
                 <h1 className="text-3xl font-extrabold  sm:text-5xl">
                 <Image src={KueskiLogo} alt="Kueski logo"  />
-                    <strong className="font-extrabold sm:block">
+                    <strong className="font-bold sm:block">
                     Derechos ARCO.
                     </strong>
                 </h1>
@@ -29,6 +29,12 @@ const Welcome = () => {
 
                     <a
                     className="block w-full rounded px-12 py-3 text-sm font-medium text-red-600 shadow hover:text-red-700 focus:outline-none focus:ring active:text-red-500 sm:w-auto"
+                    href="/historial"
+                    >
+                    Acciones ARCO
+                    </a>
+                    <a
+                    className="block w-full rounded bg-red-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-red-700 focus:outline-none focus:ring active:bg-red-500 sm:w-auto"
                     href="/ajustes"
                     >
                     Ajustes
