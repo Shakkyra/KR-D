@@ -9,8 +9,8 @@ export default async function handler(req, res) {
         // Modificar la consulta para filtrar por el valor del parámetro de búsqueda
         //change query
         //const query = "SELECT ID_REQUEST, USER_ID, TYPE_REQUEST, FECHA FROM ARCO_REQUEST WHERE USER_ID LIKE ?";
-        const query = "SELECT USERS.USER_ID, USERS.FIRST_LAST_NAME, USERS.SECOND_LAST_NAME, USERS.USER_NAME, ARCO_REQUEST.TYPE_REQUEST, ARCO_REQUEST.FECHA FROM USERS JOIN ARCO_REQUEST WHERE USERS.USER_ID LIKE ?;";
-        const values = [searchValue];
+        const query = "SELECT USERS.USER_ID, USERS.FIRST_LAST_NAME, USERS.SECOND_LAST_NAME, USERS.USER_NAME, ARCO_REQUEST.TYPE_REQUEST, ARCO_REQUEST.FECHA FROM USERS JOIN ARCO_REQUEST ON USERS.USER_ID = ARCO_REQUEST.USER_ID;";
+        const values = [];
         const [data] = await dbconnection.execute(query, values);
         dbconnection.end();
     

@@ -8,10 +8,10 @@ const Visualizer = ({ searchValue, onButtonClick }) => {
     console.log("searchValue en Visualizer:", searchValue);
     async function getPageData() {
       const apiUrlEndpoint = `/api/getData?searchValue=${searchValue}`;
-      console.log("URL de la API:", apiUrlEndpoint);
+      //console.log("URL de la API:", apiUrlEndpoint);
       const response = await fetch(apiUrlEndpoint);
       const res = await response.json();
-      console.log("Datos devueltos por la API:", res.names);
+      //console.log("Datos devueltos por la API:", res.names);
       setDataResult(res.names);
     }
     getPageData();
