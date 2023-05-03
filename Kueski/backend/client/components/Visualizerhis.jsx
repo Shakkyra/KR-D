@@ -30,7 +30,7 @@ const Visualizerhis = ({searchValue, onButtonClick}) => {
                         <table className="min-w-full text-left text-sm font-light">
                         <thead className="border-b font-medium dark:border-neutral-500">
                             <tr className="align-center">
-                            <th scope="col" className="px-6 py-4">Id</th>
+                            <th scope="col" className="px-6 py-4">User ID</th>
                             <th scope="col" className="px-6 py-4">Accion ARCO</th>
                             <th scope="col" className="px-6 py-4">Nombre</th>
                             <th scope="col" className="px-6 py-4">P. Apellido</th>
@@ -41,12 +41,12 @@ const Visualizerhis = ({searchValue, onButtonClick}) => {
                         </thead>
                         <tbody>
                         {dataResult.map((result) => (
-                            <tr key={result.ID_REQUEST} className="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 gray:hover:bg-neutral-800">
+                            <tr key={result.USER_ID} className="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 gray:hover:bg-neutral-800">
                                 <td className="whitespace-nowrap px-6 py-4 font-medium">{result.USER_ID}</td>
                                 <td className="whitespace-nowrap px-6 py-4">{result.TYPE_REQUEST}</td>
+                                <td className="whitespace-nowrap px-6 py-4">{result.USER_NAME}</td>
                                 <td className="whitespace-nowrap px-6 py-4">{result.FIRST_LAST_NAME}</td>
                                 <td className="whitespace-nowrap px-6 py-4">{result.SECOND_LAST_NAME}</td>
-                                <td className="whitespace-nowrap px-6 py-4">{result.USER_NAME}</td>
                                 <td className="whitespace-nowrap px-6 py-4">{result.FECHA}</td>
                                 <td className="whitespace-nowrap px-4 py-4">
                                     <Actionshis onButtonClick={onButtonClick} />
