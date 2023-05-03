@@ -6,9 +6,7 @@ import Searchbar from '../components/Searchbar';
 import Visualizer from '../components/Visualizer';
 import Hidder from '../components/Hidder';
 
-
 const Home = () => {
-  const [selectedComponent, setSelectedComponent] = useState(Hidder);
   const [searchValue, setSearchValue] = useState("");
   const handleSearchChange = (value) => {
     console.log("Valor de searchValue en dashboard.js:", value);
@@ -18,6 +16,8 @@ const Home = () => {
   const handleButtonClick = (component) => {
     setSelectedComponent(component);
   };
+
+  
 
   return (
     <>
@@ -38,7 +38,7 @@ const Home = () => {
             </div>
             {/* Agregamos la clase mt-4 para crear un margen superior de 16px */}
             <div className='mt-4 z-10'>
-              <Visualizer searchValue={searchValue} onButtonClick={handleButtonClick} />
+              <Visualizer searchValue={searchValue} />
             </div>
             
           </div>
