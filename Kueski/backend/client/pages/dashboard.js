@@ -6,6 +6,7 @@ import Searchbar from '../components/Searchbar';
 import Visualizer from '../components/Visualizer';
 import Hidder from '../components/Hidder';
 
+
 const Home = () => {
   const [selectedComponent, setSelectedComponent] = useState(Hidder);
   const [searchValue, setSearchValue] = useState("");
@@ -41,6 +42,7 @@ const Home = () => {
             <div className='mt-4 z-10'>
               <Visualizer searchValue={searchValue} onButtonClick={handleButtonClick} />
             </div>
+            
           </div>
         </div>
       </main>

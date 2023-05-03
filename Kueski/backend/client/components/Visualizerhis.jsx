@@ -62,7 +62,7 @@ const Visualizerhis = ({searchValue, onButtonClick}) => {
                             <td className="whitespace-nowrap px-6 py-4">Acceso</td>
                             <td className="whitespace-nowrap px-6 py-4">Juan</td>
                             <td className="whitespace-nowrap px-6 py-4">Perez</td>
-                            <td className="whitespace-nowrap px-6 py-4">Herrejon</td>
+                            <td className="whitespace-nowrap px-6 py-4">Acceso</td>
                             <td className="whitespace-nowrap px-6 py-4">25/04/2023</td>
                             
                             <td className="whitespace-nowrap px-4 py-4">
