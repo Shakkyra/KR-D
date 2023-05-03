@@ -30,6 +30,7 @@ const Visualizerhis = ({searchValue, onButtonClick}) => {
                         <table className="min-w-full text-left text-sm font-light">
                         <thead className="border-b font-medium dark:border-neutral-500">
                             <tr className="align-center">
+                            <th scope="col" className="px-6 py-4">ARCO ID</th>
                             <th scope="col" className="px-6 py-4">User ID</th>
                             <th scope="col" className="px-6 py-4">Accion ARCO</th>
                             <th scope="col" className="px-6 py-4">Nombre</th>
@@ -41,8 +42,9 @@ const Visualizerhis = ({searchValue, onButtonClick}) => {
                         </thead>
                         <tbody>
                         {dataResult.map((result) => (
-                            <tr key={result.USER_ID} className="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 gray:hover:bg-neutral-800">
-                                <td className="whitespace-nowrap px-6 py-4 font-medium">{result.USER_ID}</td>
+                            <tr key={result.ID_REQUEST} className="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 gray:hover:bg-neutral-800">
+                                <td className="whitespace-nowrap px-6 py-4">{result.ID_REQUEST}</td>
+                                <td className="whitespace-nowrap px-6 py-4">{result.USER_ID}</td>
                                 <td className="whitespace-nowrap px-6 py-4">{result.TYPE_REQUEST}</td>
                                 <td className="whitespace-nowrap px-6 py-4">{result.USER_NAME}</td>
                                 <td className="whitespace-nowrap px-6 py-4">{result.FIRST_LAST_NAME}</td>
@@ -53,19 +55,6 @@ const Visualizerhis = ({searchValue, onButtonClick}) => {
                                 </td>
                             </tr>
                         ))}
-                            <tr
-                            className="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 gray:hover:bg-neutral-800">
-                            <td className="whitespace-nowrap px-6 py-4 font-medium">1</td>
-                            <td className="whitespace-nowrap px-6 py-4">Acceso</td>
-                            <td className="whitespace-nowrap px-6 py-4">Juan</td>
-                            <td className="whitespace-nowrap px-6 py-4">Perez</td>
-                            <td className="whitespace-nowrap px-6 py-4">Acceso</td>
-                            <td className="whitespace-nowrap px-6 py-4">25/04/2023</td>
-                            
-                            <td className="whitespace-nowrap px-4 py-4">
-                                <Actionshis onButtonClick={onButtonClick} />
-                            </td>
-                            </tr>
                         </tbody>
                         </table>
                     </div>
