@@ -36,14 +36,14 @@ const Actions = ({userId, onButtonClick, hasOneResult}) => {
           </a>
         </li>
         <li>
-          <Link href={`ARCO/rectificacion/${userId}`}>
+          <Link href={`ARCO/rectificacion/?userid=${userId}`}>
             <button onClick={() => handleButtonClick('Rectificar')}>
               Rectificar
             </button>
           </Link>
         </li>
         <li>
-          <Link href={`ARCO/cancelacion/${userId}`}>
+          <Link href={`ARCO/cancelacion/?userid=${userId}`}>
             <button onClick={() => handleButtonClick('Cancelar')}>
               Cancelar
             </button>
