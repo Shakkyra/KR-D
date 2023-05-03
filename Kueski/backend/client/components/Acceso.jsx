@@ -4,11 +4,11 @@ import Popup from "./Popup";
 import Compartir from "./Compartir";
 
 
-const Acceso = () => {
+const Acceso = ({searchIndex}) => {
     const [dataResult, setdataResult] = useState([]);
     useEffect(() => {
         async function getPageData(){
-          const apiUrlEndpoint = "http://localhost:3000/api/getDataAcceso";
+          const apiUrlEndpoint = `http://localhost:3000/api/getDataAcceso?searchValue=${searchIndex}`;
           const response = await fetch(apiUrlEndpoint);
           const res = await response.json();
           //console.log(res.names);
@@ -143,9 +143,6 @@ const Acceso = () => {
                             <dt className="text-sm font-medium leading-6 text-gray-900">Numero de Identificación</dt>
                             <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{names.IDENTIFICATION_NUMBER}</dd>
                         </div>
-
-                       
-
                         <div className="px-4 py-3">
                             <Compartir/>
                         </div>
