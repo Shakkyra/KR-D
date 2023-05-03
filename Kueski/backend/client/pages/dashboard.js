@@ -19,8 +19,6 @@ const Home = () => {
     setSelectedComponent(component);
   };
 
-  
-
   return (
     <>
       <Head>
