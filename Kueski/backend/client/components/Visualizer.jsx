@@ -1,17 +1,19 @@
 import React, { useEffect, useState } from "react";
 import Actions from "./Actions";
 
-const Visualizer = ({ searchValue, onButtonClick }) => {
-  const [dataResult, setDataResult] = useState([]);
 
+
+const Visualizer = ({ searchValue}) => {
+  const [dataResult, setDataResult] = useState([]);
+  
   useEffect(() => {
     console.log("searchValue en Visualizer:", searchValue);
     async function getPageData() {
       const apiUrlEndpoint = `/api/getData?searchValue=${searchValue}`;
-      console.log("URL de la API:", apiUrlEndpoint);
+      //console.log("URL de la API:", apiUrlEndpoint);
       const response = await fetch(apiUrlEndpoint);
       const res = await response.json();
-      console.log("Datos devueltos por la API:", res.names);
+      //console.log("Datos devueltos por la API:", res.names);
       setDataResult(res.names);
     }
     getPageData();
@@ -29,7 +31,6 @@ const Visualizer = ({ searchValue, onButtonClick }) => {
                   <thead className="border-b font-medium dark:border-neutral-500">
                     <tr>
                       <th className="whitespace-nowrap px-6 py-4">ID</th>
-                      {/* <th className="whitespace-nowrap px-6 py-4">User</th>*/}
                       <th className="whitespace-nowrap px-6 py-4">First Name</th>
                       <th className="whitespace-nowrap px-6 py-4">Last Name</th>
                       <th className="whitespace-nowrap px-6 py-4">Phone Number</th>
@@ -55,9 +56,6 @@ const Visualizer = ({ searchValue, onButtonClick }) => {
                               <td className="whitespace-nowrap px-6 py-4">
                                 {names.USER_ID}
                               </td>
-                              {/*<td className="whitespace-nowrap px-6 py-4">
-                                {names.user}
-                              </td> */}
                               <td className="whitespace-nowrap px-6 py-4">
                                 {names.FIRST_LAST_NAME}
                               </td>
@@ -71,7 +69,7 @@ const Visualizer = ({ searchValue, onButtonClick }) => {
                                 {names.EMAIL}
                               </td>
                               <td className="whitespace-nowrap px-6 py-4">
-                                <Actions onButtonClick={onButtonClick} />
+                                <Actions userId={names.USER_ID}/>
                               </td>
                             </tr>
                           );
