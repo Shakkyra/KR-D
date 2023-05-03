@@ -29,7 +29,7 @@ const Actions = ({userId, onButtonClick, hasOneResult}) => {
         }}
       >
         <li>
-          <a href={`ARCO/acceso/${userId}`}>
+          <a href={`ARCO/acceso/?userid=${userId}`}>
             <button onClick={() => handleButtonClick('Acceder')}>
               Acceder
             </button>

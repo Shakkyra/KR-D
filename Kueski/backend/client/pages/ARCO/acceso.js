@@ -7,7 +7,7 @@ import { useRouter } from 'next/router';
 
 const Acceso = () => {
   const router = useRouter();
-  const { userId } = router.query;
+  const { userid } = router.query;
 
   return (
     <>
@@ -22,7 +22,7 @@ const Acceso = () => {
       <div className='p-4'>
           {/* Agregamos las clases flex flex-col items-center para crear un contenedor flexible vertical y centrado */}
           <div className='flex flex-col'>
-            <h2>Bienvenido, {userId}!</h2>
+            <h2>Bienvenido, {userid}!</h2>
           </div>
         </div>
     </>
