@@ -5,7 +5,6 @@ import Header from '../components/Header';
 import Searchbar from '../components/Searchbar';
 import Visualizer from '../components/Visualizer';
 
-
 const Home = () => {
   const [searchValue, setSearchValue] = useState("");
   const handleSearchChange = (value) => {
@@ -35,7 +34,6 @@ const Home = () => {
             <div className='mt-4 z-10'>
               <Visualizer searchValue={searchValue} />
             </div>
-            
           </div>
         </div>
       </main>
