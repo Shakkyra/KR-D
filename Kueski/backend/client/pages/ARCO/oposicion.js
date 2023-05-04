@@ -2,7 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import Header from '../../components/Header';
 import { useRouter } from 'next/router';
-import AccesoCom from '@/components/AccesoCom';
 import Oposicion from '@/components/Oposicion';
 {/* Pagina de Acceso */}
 
@@ -25,7 +24,6 @@ const Acceso = () => {
             <h2>UserID: {userid}</h2>
           </div>
       </div>
-      {/*Añadir Componente Cancelación*/}
       <Oposicion/>
     </>
   );

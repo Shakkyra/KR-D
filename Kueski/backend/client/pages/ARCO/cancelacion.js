@@ -2,8 +2,8 @@ import React from 'react';
 import Head from 'next/head';
 import Header from '../../components/Header';
 import { useRouter } from 'next/router';
-import CancelacionCom from '../../components/CancelacionCom';
-{/* Pagina de Acceso */}
+import CancelacionCom from '@/components/CancelacionCom';
+import Advertencia from '@/components/Advertencia';
 
 const Cancelacion = () => {
   const router = useRouter();
@@ -18,14 +18,15 @@ const Cancelacion = () => {
         <link rel='icon' href='/kueskiLogo.png' />
       </Head>
       <Header />
-      <h1 className='p-4'>Acceso</h1>
+      <h1 className='text-lg font-bold p-4'>Cancelación</h1>
       <div className='p-4'>
-          {/* Agregamos las clases flex flex-col items-center para crear un contenedor flexible vertical y centrado */}
-          <div className='flex flex-col'>
-            <h2>Bienvenido, {userid}!</h2>
-          </div>
+        {/* Agregamos las clases flex flex-col items-center para crear un contenedor flexible vertical y centrado */}
+        {/*<h2>UserID: {userid}</h2>*/}
+        <div className='flex flex-col items-center'>
+          <Advertencia />
+          <CancelacionCom searchIndex={userid} />
+        </div>
       </div>
-      <CancelacionCom searchIndex={userid}/>
     </>
   );
 };
