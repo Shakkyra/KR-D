@@ -5,7 +5,7 @@ const Actions = ({userId, onButtonClick, hasOneResult}) => {
   const [menuPosition, setMenuPosition] = useState({ top: 0, left: 0 });
 
   const handleButtonClick = (buttonName) => {
-    onButtonClick(buttonName);
+    //onButtonClick(buttonName);
     if (hasOneResult) {
       const visualizer = document.querySelector('.visualizer');
       const { top, left, height } = visualizer.getBoundingClientRect();

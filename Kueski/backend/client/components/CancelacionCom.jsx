@@ -1,14 +1,14 @@
 import React from "react";
 
 import Cancelar from "./Cancelar.jsx";
-import Popup from "./Popup";
+import Popup from "./Popup.jsx";
 
 
 const Cancelacion = () => {
     return(
         <div className="flex flex-col space-y-0">
             <div className="px-4 sm:px-0">
-                <h3 className="text-base font-semibold leading-7 text-gray-900">    Cancelar</h3>
+                <h3 className="text-base font-semibold leading-7 text-gray-900"> Cancelar</h3>
             </div>
             <div className="mt-6 border-t border-blue-100">
                 <dl className="divide-y divide-blue-100">

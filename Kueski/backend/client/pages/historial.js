@@ -10,7 +10,7 @@ import Hidder from '../components/Hidder';
 import Oposicion from '../components/Oposicion';
 import Acceder from '../components/AccesoCom';
 import Rectificar from '../components/Rectificacion';
-import Cancelar from '../components/Cancelacion';
+import Cancelar from '../components/CancelacionCom';
 
 const Home = () => {
   const [selectedComponent, setSelectedComponent] = useState(Hidder);
