@@ -12,13 +12,9 @@ const Home = () => {
     console.log("Valor de searchValue en dashboard.js:", value);
     setSearchValue(value);
   };
-
-<<<<<<<<< Temporary merge branch 1
-=========
   const handleButtonClick = (component) => {
     setSelectedComponent(component);
   };
->>>>>>>>> Temporary merge branch 2
 
   return (
     <>

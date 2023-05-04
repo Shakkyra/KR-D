@@ -1,12 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
 import Header from '../../components/Header';
-<<<<<<<<< Temporary merge branch 1
 import kueski_fondo from '@/public/imagenes/kueski_fondo.png';
 import { useRouter } from 'next/router';
-=========
 import Acceso from '@/components/Acceso';
->>>>>>>>> Temporary merge branch 2
 
 {/* Pagina de Acceso */}
 
@@ -22,7 +19,6 @@ const Acceso = () => {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/kueskiLogo.png' />
       </Head>
-<<<<<<<<< Temporary merge branch 1
       <Header />
       <h1 className='p-4'>Acceso</h1>
       <main className='bg-gray-100 min-h-screen' style={{backgroundImage: `url(${kueski_fondo})`}}>
@@ -33,13 +29,10 @@ const Acceso = () => {
           </div>
         </div>
       </main>
-=========
         <Header />
         <h1 className='p-4'>HOME</h1>
         <Acceso/>
-        
->>>>>>>>> Temporary merge branch 2
-    </>
+        </>
   );
 };
 

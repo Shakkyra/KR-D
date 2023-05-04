@@ -1,14 +1,7 @@
 import React, { useState } from "react";
-<<<<<<< HEAD
-import { Link as ScrollLink } from "react-scroll";
-import {Link} from "react-scroll";
-
-const Actions = ({ onButtonClick, hasOneResult, user }) => {
-=======
 import Link from 'next/link';
 
 const Actions = ({userId, onButtonClick, hasOneResult}) => {
->>>>>>> origin/JuanBackEnd
   const [menuPosition, setMenuPosition] = useState({ top: 0, left: 0 });
 
   const handleButtonClick = (buttonName) => {
@@ -36,32 +29,28 @@ const Actions = ({userId, onButtonClick, hasOneResult}) => {
         }}
       >
         <li>
-<<<<<<< HEAD
-          <a href={`ARCO/acceso/`}>
-=======
           <a href={`ARCO/acceso/${userId}`}>
->>>>>>> origin/JuanBackEnd
             <button onClick={() => handleButtonClick('Acceder')}>
               Acceder
             </button>
           </a>
         </li>
         <li>
-          <Link href={`ARCO/rectificacion/`}>
+          <Link href={`ARCO/rectificacion/${userId}`}>
             <button onClick={() => handleButtonClick('Rectificar')}>
               Rectificar
             </button>
           </Link>
         </li>
         <li>
-          <Link href={`ARCO/cancelacion/`}>
+          <Link href={`ARCO/cancelacion/${userId}`}>
             <button onClick={() => handleButtonClick('Cancelar')}>
               Cancelar
             </button>
           </Link>
         </li>
         <li>
-          <Link href={`ARCO/oposicion/`}>
+          <Link href={`ARCO/oposicion/${userId}`}>
             <button onClick={() => handleButtonClick('Oponer')}>
               Oponer
             </button>
