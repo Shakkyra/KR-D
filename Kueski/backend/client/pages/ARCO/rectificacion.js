@@ -20,7 +20,6 @@ const Acceso = () => {
       <Header />
       <h1 className='p-4'>Rectificación</h1>
       <div className='p-4'>
-          {/* Agregamos las clases flex flex-col items-center para crear un contenedor flexible vertical y centrado */}
           <div className='flex flex-col'>
             <h2>UserID: {userid}</h2>
           </div>
