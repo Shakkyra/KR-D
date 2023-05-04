@@ -1,53 +1,78 @@
-import React from "react";
-import { useState, useEffect } from "react";
-import Popup from "./Popup";
-import Compartir from "./Compartir";
+import React from 'react';
+import useSWR from 'swr';
 
+const fetcher = async (url) => {
+  const res = await fetch(url);
+  if (!res.ok) {
+    throw new Error(`An error occurred while fetching data: ${res.statusText}`);
+  }
+  return res.json();
+};
 
-const AccesoCom = ({searchIndex}) => {
-    const [dataResult, setdataResult] = useState([]);
-    useEffect(() => {
-        async function getPageData(){
-          //const apiUrlEndpoint = `/api/getDataAcceso?searchValue=${searchIndex}`;
-          const apiUrlEndpoint = `/api/getDataAcceso?searchValue=${searchIndex}`;
-          
-          const response = await fetch(apiUrlEndpoint);
-          const res = await response.json();
-          console.log(res.names);
-          setdataResult(res.names);
-        }
-        //Corremos la funcion
-        getPageData();
-    }, []);
+const AccesoCom = ({ searchIndex }) => {
+  console.log('AccesoCom: searchIndex:', searchIndex);
 
-    return(
-        <div className="flex flex-col space-y-0">
-            <div className="px-4 sm:px-0">
-                <h3 className="text-base font-semibold leading-7 text-gray-900">Información Acceso</h3>
-            </div>
-            <div className="mt-6 border-t border-blue-100">
-                <dl className="divide-y divide-blue-100">
-                    <div className="sm:grid sm:grid-cols-4">
-                        <div className="px-4 py-3 sm:col-span-4">
-                            <dt className="text-sm font-medium leading-6 text-gray-900">Información Usuarios</dt>
-                        </div>
-                        
-                        <div className="px-4 py-3">
-                            <dt className="text-sm font-medium leading-6 text-gray-900">Nombre</dt>
-                            <dd className="mt-1 text-sm leading-6 text-gray-700">h</dd>
-                        </div>
+  const apiUrlEndpoint = `/api/getDataAcceso?searchValue=${searchIndex}`;
+  const { data, error } = useSWR(apiUrlEndpoint, fetcher);
 
-                        <div className="px-4 py-3">
-                            <dt className="text-sm font-medium leading-6 text-gray-900">Primer Apellido</dt>
-                            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">h</dd>
-                        </div>
+  console.log('AccesoCom: data:', data);
+  console.log('AccesoCom: error:', error);
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
+
+  if (!data) {
+    return <div>Cargando...</div>;
+  }
+
+  const dataResult = data.names && data.names.length > 0 && data.names[0].length > 0 ? data.names[0][0] : null;
+
+  console.log('AccesoCom: dataResult:', dataResult);
+
+  if (!dataResult) {
+    return <div>Error: No se encontraron datos para esta consulta.</div>;
+  }
+
+  return (
+    <div className="flex flex-col space-y-0">
+      <div className="px-4 sm:px-0">
+        <h3 className="text-base font-semibold leading-7 text-gray-900">Información Acceso</h3>
+      </div>
+      <div className="mt-6 border-t border-blue-100">
+        <table className="w-full">
+          <tbody className="divide-y divide-blue-100">
+            {Object.keys(dataResult).map((key) => (
+              <tr key={key}>
+                <td className="px-4 py-3 text-sm font-medium text-gray-900">{key}:</td>
+                <td className="px-4 py-3 text-sm text-gray-500">
+                  {typeof dataResult[key] === 'object' ? JSON.stringify(dataResult[key]) : dataResult[key]}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+};
+
+export default AccesoCom;
+
+  /*
+  {dataResult ? dataResult.map((user, index) => (
+                <React.Fragment key={index}>
+                    {['USER_NAME', 'FIRST_LAST_NAME', 'SECOND_LAST_NAME', 'STATE_OF_BIRTH', 'BORN_DATE', 'NACIONALITY', 'ECONOMIC_ACTIVITY', 'CURP', 'EMAIL', 'PHONE_NUMER', 'COUNTRY', 'STATE', 'CITY', 'NEIGHBORHOOD', 'STREET', 'EXT_NUMBER', 'INT_NUMBER', 'ZIP_CODE', 'IDENTIFICATION_TYPE', 'IDENTIFICATION_NUMBER'].map(key => (
+                    <div className="px-4 py-3" key={key}>
+                        <dt className="text-sm font-medium leading-6 text-gray-900">{key}</dt>
+                        <dd className="mt-1 text-sm leading-6 text-gray-700">{user[key]}</dd>
                     </div>
+                    ))}
+                </React.Fragment>
+                )) : null}
+  */
 
-                </dl>
-                </div>
-                </div>
-    )
-    /*
+/*
     return(
         <div className="flex flex-col space-y-0">
             <div className="px-4 sm:px-0">
@@ -184,6 +209,4 @@ const AccesoCom = ({searchIndex}) => {
         </div>
     ); 
 }
-*/}
-
-export default AccesoCom;
+*/
