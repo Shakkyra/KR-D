@@ -1,53 +1,53 @@
-import React from "react";
-import { useState, useEffect } from "react";
-import Popup from "./Popup";
-import Compartir from "./Compartir";
-
+import React, { useState, useEffect } from 'react';
 
 const AccesoCom = ({searchIndex}) => {
     const [dataResult, setdataResult] = useState([]);
+    
     useEffect(() => {
-        async function getPageData(){
-          //const apiUrlEndpoint = `/api/getDataAcceso?searchValue=${searchIndex}`;
-          const apiUrlEndpoint = `/api/getDataAcceso?searchValue=${searchIndex}`;
-          
-          const response = await fetch(apiUrlEndpoint);
-          const res = await response.json();
-          console.log(res.names);
-          setdataResult(res.names);
-        }
-        //Corremos la funcion
-        getPageData();
-    }, []);
-
+      async function getPageData(){
+        const apiUrlEndpoint = `/api/getDataAcceso?searchValue=${searchIndex}`;
+        const response = await fetch(apiUrlEndpoint);
+        const res = await response.json();
+        console.log(res.names);
+        setdataResult(res.names);
+      }
+      getPageData();
+    }, [searchIndex]);
+  
     return(
-        <div className="flex flex-col space-y-0">
-            <div className="px-4 sm:px-0">
-                <h3 className="text-base font-semibold leading-7 text-gray-900">Información Acceso</h3>
+      <div className="flex flex-col space-y-0">
+        <div className="px-4 sm:px-0">
+          <h3 className="text-base font-semibold leading-7 text-gray-900">Información Acceso</h3>
+        </div>
+        <div className="mt-6 border-t border-blue-100">
+          <dl className="divide-y divide-blue-100">
+            <div className="sm:grid sm:grid-cols-4">
+              <div className="px-4 py-3 sm:col-span-4">
+                <dt className="text-sm font-medium leading-6 text-gray-900">Información Usuarios</dt>
+              </div>
+              
+              {dataResult.map((user, index) => (
+                <React.Fragment key={index}>
+                  <div className="px-4 py-3">
+                    <dt className="text-sm font-medium leading-6 text-gray-900">Nombre</dt>
+                    <dd className="mt-1 text-sm leading-6 text-gray-700">{user.USER_NAME}</dd>
+                  </div>
+  
+                  <div className="px-4 py-3">
+                    <dt className="text-sm font-medium leading-6 text-gray-900">Primer Apellido</dt>
+                    <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{user.USER_LASTNAME}</dd>
+                  </div>
+                </React.Fragment>
+              ))}
             </div>
-            <div className="mt-6 border-t border-blue-100">
-                <dl className="divide-y divide-blue-100">
-                    <div className="sm:grid sm:grid-cols-4">
-                        <div className="px-4 py-3 sm:col-span-4">
-                            <dt className="text-sm font-medium leading-6 text-gray-900">Información Usuarios</dt>
-                        </div>
-                        
-                        <div className="px-4 py-3">
-                            <dt className="text-sm font-medium leading-6 text-gray-900">Nombre</dt>
-                            <dd className="mt-1 text-sm leading-6 text-gray-700">h</dd>
-                        </div>
-
-                        <div className="px-4 py-3">
-                            <dt className="text-sm font-medium leading-6 text-gray-900">Primer Apellido</dt>
-                            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">h</dd>
-                        </div>
-                    </div>
-
-                </dl>
-                </div>
-                </div>
+          </dl>
+        </div>
+      </div>
     )
-    /*
+  }
+  
+  export default AccesoCom;
+/*
     return(
         <div className="flex flex-col space-y-0">
             <div className="px-4 sm:px-0">
@@ -184,6 +184,4 @@ const AccesoCom = ({searchIndex}) => {
         </div>
     ); 
 }
-*/}
-
-export default AccesoCom;
+*/
