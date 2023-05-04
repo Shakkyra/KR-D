@@ -1,8 +1,19 @@
-import React from "react";
+import React,{useState, useEffect} from "react";
 import Popup from "./Popup";
 
-const Oposicion = () => {
+const Oposicion = ({searchIndex}) => {
+    const [dataResult, setdataResult] = useState([]);
     
+    useEffect(() => {
+      async function getPageData(){
+        const apiUrlEndpoint = `/api/getDataOposicion?searchValue=${searchIndex}`;
+        const response = await fetch(apiUrlEndpoint);
+        const res = await response.json();
+        console.log(res.names);
+        setdataResult(res.names);
+      }
+      getPageData();
+    }, [searchIndex]);
     return(
         <div className="flex flex-col space-y-0">
             <div className="px-4 sm:px-0">

@@ -25,7 +25,7 @@ const Acceso = () => {
           </div>
       </div>
       {/*Añadir Componente Cancelación*/}
-      <Oposicion/>
+      <Oposicion searchIndex={userid}/>
     </>
   );
 };
