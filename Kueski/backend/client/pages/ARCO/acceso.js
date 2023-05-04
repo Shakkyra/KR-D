@@ -22,11 +22,10 @@ const Acceso = () => {
       <div className='p-4'>
           {/* Agregamos las clases flex flex-col items-center para crear un contenedor flexible vertical y centrado */}
           <div className='flex flex-col'>
-            <h2>Bienvenido, {userid}!</h2>
+            <h2>UserID: {userid}</h2>
           </div>
       </div>
       <AccesoCom searchIndex={userid}/>
-      <p>prube</p>
     </>
   );
 };
