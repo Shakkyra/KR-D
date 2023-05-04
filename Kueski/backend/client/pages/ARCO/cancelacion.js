@@ -25,8 +25,7 @@ const Cancelacion = () => {
             <h2>Bienvenido, {userid}!</h2>
           </div>
       </div>
-      <CancelacionCom />
-      <p>prube</p>
+      <CancelacionCom searchIndex={userid}/>
     </>
   );
 };

@@ -34,12 +34,12 @@ const AccesoCom = ({searchIndex}) => {
                         
                         <div className="px-4 py-3">
                             <dt className="text-sm font-medium leading-6 text-gray-900">Nombre</dt>
-                            <dd className="mt-1 text-sm leading-6 text-gray-700">{names.USER_NAME}</dd>
+                            <dd className="mt-1 text-sm leading-6 text-gray-700">h</dd>
                         </div>
 
                         <div className="px-4 py-3">
                             <dt className="text-sm font-medium leading-6 text-gray-900">Primer Apellido</dt>
-                            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{names.USER_NAME}</dd>
+                            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">h</dd>
                         </div>
                     </div>
 
