@@ -5,7 +5,7 @@ const Oposicion = () => {
     return(
         <div className="flex flex-col space-y-0">
             <div className="px-4 sm:px-0">
-                <h3 className="text-base font-semibold leading-7 text-gray-900">Oposicion</h3>
+                <h3 className="p-4 text-base font-semibold leading-7 text-gray-900">Selecciona las opciones disponibles</h3>
             </div>
             <div className="mt-6 border-t border-blue-100">
                 <dl className="divide-y divide-blue-100">

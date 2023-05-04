@@ -50,7 +50,7 @@ const Actions = ({userId, onButtonClick, hasOneResult}) => {
           </Link>
         </li>
         <li>
-          <Link href={`ARCO/oposicion/${userId}`}>
+          <Link href={`ARCO/oposicion/?userid=${userId}`}>
             <button onClick={() => handleButtonClick('Oponer')}>
               Oponer
             </button>
