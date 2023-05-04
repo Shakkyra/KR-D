@@ -46,14 +46,14 @@ const Home = () => {
           {/* Agregamos las clases flex flex-col items-center para crear un contenedor flexible vertical y centrado */}
           <div className='flex flex-col'>
             {/* Agregamos la clase w-full para que el searchbar ocupe todo el ancho del contenedor */}
-            <div className='w-full z-10'>
+            <div className='w-full mt-8'>
               <Searchbar />
             </div>
             {/* Agregamos la clase mt-4 para crear un margen superior de 16px */}
             <div className='mt-4 z-10'>
               <Visualizerhis onButtonClick={handleButtonClick} />
               <h1 className='p-4'>Reporte completo</h1>
-              <div className='mt-4 align-center bg-white'>
+              <div className='mt-4 align-centeer bg-white'>
                 <ComponentToRender/>
               </div>
             </div>

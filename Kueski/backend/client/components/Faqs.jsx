@@ -125,7 +125,7 @@ const Faqs = () => {
                 </summary>
 
                 <p className="mt-4 leading-relaxed text-gray-700">
-                    Contacte a los siguientes correos. A0057172@tec.mx
+                    Contacte a los siguientes correos: A0057172@tec.mx
                 </p>
             </details>
         </div>

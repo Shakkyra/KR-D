@@ -35,8 +35,7 @@ const Welcome = () => {
                     Acciones ARCO
                     </a>
                     <a
-                    className="block w-full rounded bg-blue-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-blue-700 focus:outline-none focus:ring active:bg-blue-500 sm:w-auto border-2 border-blue-350 hover:border-blue-350 focus:border-blue-350 
-                    hover:shadow-md focus:shadow-md active:shadow-none"
+                    className="block w-full rounded bg-blue-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-blue-700 focus:outline-none focus:ring active:bg-blue-500 sm:w-auto hover:shadow-md focus:shadow-md active:shadow-non"
                     
                     href="/ajustes"
                     >

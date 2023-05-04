@@ -37,7 +37,7 @@
   display: inline-block;
 }
 
-.align-center {
+.align-centeer {
   z-index: 100000;
   display: flex;
   align-items: center;

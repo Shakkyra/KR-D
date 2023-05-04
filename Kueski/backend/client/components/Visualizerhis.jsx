@@ -19,10 +19,10 @@ const Visualizerhis = ({searchValue, onButtonClick}) => {
     });
 
     return (
-        <div className="w-full col-span-1 relative lg:h-[70vh] h-[90vh] m-auto p-4 border rounded-lg bg-white overflow-scroll z-10">
+        <div className="w-full col-span-1 relative lg:h-[70vh] h-[90vh] m-auto p-4 border rounded-lg bg-white overflow-scroll">
             <h1>Clients</h1>
             <div>
-            <div className="flex flex-col z-10">
+            <div className="flex flex-col">
                 <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
                     <div className="inline-block min-w-full py-2 sm:px-6 lg:px-8">
                     <div className="overflow-hidden">
