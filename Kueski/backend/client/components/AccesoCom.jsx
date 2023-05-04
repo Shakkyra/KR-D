@@ -8,15 +8,16 @@ const AccesoCom = ({searchIndex}) => {
     const [dataResult, setdataResult] = useState([]);
     useEffect(() => {
         async function getPageData(){
-          const apiUrlEndpoint = `http://localhost:3000/api/getDataAcceso?searchValue=${searchIndex}`;
+          //const apiUrlEndpoint = `/api/getDataAcceso?searchValue=${searchIndex}`;
+          const apiUrlEndpoint = `/api/getDataAcceso?searchValue=${searchIndex}`;
+          
           const response = await fetch(apiUrlEndpoint);
           const res = await response.json();
-          //console.log(res.names);
+          console.log(res.names);
           setdataResult(res.names);
         }
         //Corremos la funcion
         getPageData();
-        console.log("HOLA DESDE accesocom.JSX");
     }, []);
 
     return(
@@ -38,7 +39,7 @@ const AccesoCom = ({searchIndex}) => {
 
                         <div className="px-4 py-3">
                             <dt className="text-sm font-medium leading-6 text-gray-900">Primer Apellido</dt>
-                            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{names.FIRST_LAST_NAME}</dd>
+                            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{names.USER_NAME}</dd>
                         </div>
                     </div>
 
