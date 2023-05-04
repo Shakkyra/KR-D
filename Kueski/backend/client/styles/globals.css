@@ -2,15 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.blur {
-  backdrop-filter: blur(5px);
-}
-.modal {
-  position: relative;
-  z-index: 9999;
-}
-
-
 
 
 
