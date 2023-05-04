@@ -4,23 +4,22 @@ import Popup from "./Popup";
 import Compartir from "./Compartir";
 
 
-const Acceso = ({searchIndex}) => {
+const AccesoCom = ({searchIndex}) => {
     const [dataResult, setdataResult] = useState([]);
     useEffect(() => {
         async function getPageData(){
-          const apiUrlEndpoint = `http://localhost:3000/api/getDataAcceso?searchValue=${searchIndex}`;
+          //const apiUrlEndpoint = `/api/getDataAcceso?searchValue=${searchIndex}`;
+          const apiUrlEndpoint = `/api/getDataAcceso?searchValue=${searchIndex}`;
+          
           const response = await fetch(apiUrlEndpoint);
           const res = await response.json();
-          //console.log(res.names);
+          console.log(res.names);
           setdataResult(res.names);
         }
         //Corremos la funcion
         getPageData();
-        //console.log("HOLA DESDE VISUALIZER3.JSX");
     }, []);
 
-
-    {dataResult.map((names) =>{
     return(
         <div className="flex flex-col space-y-0">
             <div className="px-4 sm:px-0">
@@ -28,10 +27,35 @@ const Acceso = ({searchIndex}) => {
             </div>
             <div className="mt-6 border-t border-blue-100">
                 <dl className="divide-y divide-blue-100">
-                    
                     <div className="sm:grid sm:grid-cols-4">
-                    
+                        <div className="px-4 py-3 sm:col-span-4">
+                            <dt className="text-sm font-medium leading-6 text-gray-900">Información Usuarios</dt>
+                        </div>
+                        
+                        <div className="px-4 py-3">
+                            <dt className="text-sm font-medium leading-6 text-gray-900">Nombre</dt>
+                            <dd className="mt-1 text-sm leading-6 text-gray-700">h</dd>
+                        </div>
 
+                        <div className="px-4 py-3">
+                            <dt className="text-sm font-medium leading-6 text-gray-900">Primer Apellido</dt>
+                            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">h</dd>
+                        </div>
+                    </div>
+
+                </dl>
+                </div>
+                </div>
+    )
+    /*
+    return(
+        <div className="flex flex-col space-y-0">
+            <div className="px-4 sm:px-0">
+                <h3 className="text-base font-semibold leading-7 text-gray-900">Información Acceso</h3>
+            </div>
+            <div className="mt-6 border-t border-blue-100">
+                <dl className="divide-y divide-blue-100">
+                    <div className="sm:grid sm:grid-cols-4">
                         <div className="px-4 py-3 sm:col-span-4">
                             <dt className="text-sm font-medium leading-6 text-gray-900">Información Usuarios</dt>
                         </div>
@@ -159,7 +183,7 @@ const Acceso = ({searchIndex}) => {
             </div>
         </div>
     ); 
-    })} 
 }
+*/}
 
-export default Acceso;
+export default AccesoCom;
