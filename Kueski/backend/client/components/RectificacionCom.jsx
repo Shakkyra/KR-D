@@ -1,32 +1,28 @@
-import React,{useState} from "react";
+import React from "react";
+import { useState, useEffect } from "react";
+import Popup from "./Popup";
+import Compartir from "./Compartir";
+import Rectificacion from "./Rectificacion";
 
-const Rectificacion = () => {
-    const [nombre, setNombre] = useState('');
-    const [PApellido, setPApellido] = useState('');
-    const [SApellido, setSApellido] = useState('');
-    const [FNacimiento, setFNacimiento] = useState('');
-    const [nacionalidad, setNacionalidad] = useState('');
-    const [ENacimiento, setENacimiento] = useState('');
-    const [Aeconomica, setAeconomica] = useState('');
-    const [telefono, setTelefono] = useState('');
-    const [correo, setCorreo] = useState('');
-    const [curp,setCurp] = useState('');
+
+const RectificacionCom = ({searchIndex}) => {
+    const [dataResult, setdataResult] = useState([]);
+    useEffect(() => {
+        async function getPageData(){
+          //const apiUrlEndpoint = `/api/getDataAcceso?searchValue=${searchIndex}`;
+          const apiUrlEndpoint = `/api/getDataAcceso?searchValue=${searchIndex}`;
+          
+          const response = await fetch(apiUrlEndpoint);
+          const res = await response.json();
+          console.log(res.names);
+          setdataResult(res.names);
+        }
+        //Corremos la funcion
+        getPageData();
+    }, []);
 
     return(
-        <form onSubmit={ev => {
-            ev.preventDefault();
-            setNombre(ev.target.nombre.value);
-            setPApellido(ev.target.PApellido.value);
-            setSApellido(ev.target.SApellido.value);
-            setFNacimiento(ev.target.FNacimiento.value);
-            setNacionalidad(ev.target.nacionalidad.value);
-            setENacimiento(ev.target.ENacimiento.value);
-            setAeconomica(ev.target.Aeconomica.value);
-            setTelefono(ev.target.telefono.value);
-            setCorreo(ev.target.correo.value);
-            setCurp(ev.target.curp.value);
-        }}>
-            <div className="flex flex-col space-y-0">
+        <div className="flex flex-col space-y-0">
             <div className="px-4 sm:px-0">
                 <h3 className="text-base font-semibold leading-7 text-gray-900">Rectificación</h3>
             </div>
@@ -241,8 +237,6 @@ const Rectificacion = () => {
                 </dl>
             </div>
         </div>
-        </form>
-    );
+    )
 }
-
-export default Rectificacion
+export default RectificacionCom;

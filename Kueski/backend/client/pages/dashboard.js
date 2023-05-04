@@ -5,13 +5,16 @@ import Header from '../components/Header';
 import Searchbar from '../components/Searchbar';
 import Visualizer from '../components/Visualizer';
 
+
 const Home = () => {
   const [searchValue, setSearchValue] = useState("");
   const handleSearchChange = (value) => {
     console.log("Valor de searchValue en dashboard.js:", value);
     setSearchValue(value);
   };
-
+  const handleButtonClick = (component) => {
+    setSelectedComponent(component);
+  };
 
   return (
     <>
