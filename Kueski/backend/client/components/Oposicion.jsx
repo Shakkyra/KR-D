@@ -37,6 +37,16 @@ const Oposicion = () => {
                         </div>
 
                         <div className="px-4 py-3">
+                            <dt className="text-sm font-medium leading-6 text-gray-900">Prestación de los servicios y/o comercialización de los bienes de que se trate.</dt>
+                            
+                            <label class="relative inline-flex items-center cursor-pointer">
+                            <input type="checkbox" value="" class="sr-only peer"></input>
+                            <div class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                            </label>
+
+                        </div>
+
+                        <div className="px-4 py-3">
                             <dt className="text-sm font-medium leading-6 text-gray-900">Gestión, control, administración y procesamiento de las solicitudes del solicitante y/o cliente.</dt>
                             <label class="relative inline-flex items-center cursor-pointer">
                             <input type="checkbox" value="" class="sr-only peer"></input>
