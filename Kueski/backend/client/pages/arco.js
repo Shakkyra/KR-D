@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import Header from '../components/Header';
-import kueski_fondo from '../public/imagenes/kueski_fondo.png';
 import Welcome from '@/components/Welcome';
 
 const Home = () => {

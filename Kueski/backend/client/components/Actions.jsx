@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { Link as ScrollLink } from "react-scroll";
+import Link from 'next/link';
 
-const Actions = ({onButtonClick, hasOneResult}) => {
+const Actions = ({userId, onButtonClick, hasOneResult}) => {
   const [menuPosition, setMenuPosition] = useState({ top: 0, left: 0 });
 
   const handleButtonClick = (buttonName) => {
-    onButtonClick(buttonName);
+    //onButtonClick(buttonName);
     if (hasOneResult) {
       const visualizer = document.querySelector('.visualizer');
       const { top, left, height } = visualizer.getBoundingClientRect();
@@ -29,24 +29,32 @@ const Actions = ({onButtonClick, hasOneResult}) => {
         }}
       >
         <li>
-          <ScrollLink to="Operations" smooth={true} onClick={() => handleButtonClick('Acceder')}>
-            Acceder
-          </ScrollLink>
+          <Link href={`ARCO/acceso/?userid=${userId}`}>
+            <button onClick={() => handleButtonClick('Acceder')}>
+              Acceder
+            </button>
+          </Link>
         </li>
         <li>
-          <ScrollLink to="Operations" smooth={true} onClick={() => handleButtonClick('Rectificar')}>
-            Rectificar
-          </ScrollLink>
+          <Link href={`ARCO/rectificacion/?userid=${userId}`}>
+            <button onClick={() => handleButtonClick('Rectificar')}>
+              Rectificar
+            </button>
+          </Link>
         </li>
         <li>
-          <ScrollLink to="Operations" smooth={true} onClick={() => handleButtonClick('Cancelar')}>
-            Cancelar
-          </ScrollLink>
+          <Link href={`ARCO/cancelacion/?userid=${userId}`}>
+            <button onClick={() => handleButtonClick('Cancelar')}>
+              Cancelar
+            </button>
+          </Link>
         </li>
         <li>
-          <ScrollLink to="Operations" smooth={true} onClick={() => handleButtonClick('Oposicion')}>
-            Oponer
-          </ScrollLink>
+          <Link href={`ARCO/oposicion/${userId}`}>
+            <button onClick={() => handleButtonClick('Oponer')}>
+              Oponer
+            </button>
+          </Link>
         </li>
       </ul>
     </div>
