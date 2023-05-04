@@ -50,11 +50,7 @@ const Actions = ({userId, onButtonClick, hasOneResult}) => {
           </Link>
         </li>
         <li>
-<<<<<<< Updated upstream
           <Link href={`ARCO/oposicion/?userid=${userId}`}>
-=======
-          <Link href={`ARCO/oposicion?userid=${userId}`}>
->>>>>>> Stashed changes
             <button onClick={() => handleButtonClick('Oponer')}>
               Oponer
             </button>
