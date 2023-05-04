@@ -29,33 +29,21 @@ const Actions = ({userId, onButtonClick, hasOneResult}) => {
         }}
       >
         <li>
-<<<<<<< Updated upstream
-          <a href={`ARCO/acceso/${userId}`}>
-=======
           <Link href={`ARCO/acceso/?userid=${userId}`}>
->>>>>>> Stashed changes
             <button onClick={() => handleButtonClick('Acceder')}>
               Acceder
             </button>
           </Link>
         </li>
         <li>
-<<<<<<< Updated upstream
-          <Link href={`ARCO/rectificacion/${userId}`}>
-=======
           <Link href={`ARCO/rectificacion/?userid=${userId}`}>
->>>>>>> Stashed changes
             <button onClick={() => handleButtonClick('Rectificar')}>
               Rectificar
             </button>
           </Link>
         </li>
         <li>
-<<<<<<< Updated upstream
-          <Link href={`ARCO/cancelacion/${userId}`}>
-=======
           <Link href={`ARCO/cancelacion/?userid=${userId}`}>
->>>>>>> Stashed changes
             <button onClick={() => handleButtonClick('Cancelar')}>
               Cancelar
             </button>

@@ -1,15 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 import Header from '../../components/Header';
-<<<<<<< Updated upstream
-import kueski_fondo from '@/public/imagenes/kueski_fondo.png';
-import { useRouter } from 'next/router';
-import Acceso from '@/components/Acceso';
-
-=======
 import { useRouter } from 'next/router';
 import AccesoCom from '@/components/AccesoCom';
->>>>>>> Stashed changes
 {/* Pagina de Acceso */}
 
 const Acceso = () => {
@@ -31,19 +24,10 @@ const Acceso = () => {
           <div className='flex flex-col'>
             <h2>Bienvenido, {userid}!</h2>
           </div>
-<<<<<<< Updated upstream
-        </div>
-      </main>
-        <Header />
-        <h1 className='p-4'>HOME</h1>
-        <Acceso/>
-        </>
-=======
       </div>
       <AccesoCom searchIndex={userid}/>
       <p>prube</p>
     </>
->>>>>>> Stashed changes
   );
 };
 
