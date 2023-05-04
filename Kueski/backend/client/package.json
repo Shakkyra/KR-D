@@ -19,6 +19,7 @@
     "react-icons": "^4.8.0",
     "react-scroll": "^1.8.9",
     "react-spring": "^9.7.1",
+    "react-springs": "^1.1.0",
     "swr": "^2.1.5"
   },
   "devDependencies": {
