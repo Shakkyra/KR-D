@@ -2,7 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import Header from '../../components/Header';
 import { useRouter } from 'next/router';
-import AccesoCom from '@/components/AccesoCom';
 import Oposicion from '@/components/OposicionCom';
 {/* Pagina de Acceso */}
 
