@@ -2,51 +2,69 @@ import React, { useState, useEffect } from 'react';
 
 const AccesoCom = ({searchIndex}) => {
     const [dataResult, setdataResult] = useState([]);
+    const [error, setError] = useState(false);
     
     useEffect(() => {
-      async function getPageData(){
-        const apiUrlEndpoint = `/api/getDataAcceso?searchValue=${searchIndex}`;
-        const response = await fetch(apiUrlEndpoint);
-        const res = await response.json();
-        console.log(res.names);
-        setdataResult(res.names);
-      }
-      getPageData();
+        async function getPageData(){
+            const apiUrlEndpoint = `/api/getDataAcceso?searchValue=${searchIndex}`;
+            const response = await fetch(apiUrlEndpoint);
+            const res = await response.json();
+            if (res.names && res.names.length > 0) {
+                setdataResult(res.names[0]);
+            } else {
+                setError(true);
+            }
+        }
+        getPageData();
     }, [searchIndex]);
   
     return(
-      <div className="flex flex-col space-y-0">
-        <div className="px-4 sm:px-0">
-          <h3 className="text-base font-semibold leading-7 text-gray-900">Información Acceso</h3>
-        </div>
-        <div className="mt-6 border-t border-blue-100">
-          <dl className="divide-y divide-blue-100">
-            <div className="sm:grid sm:grid-cols-4">
-              <div className="px-4 py-3 sm:col-span-4">
-                <dt className="text-sm font-medium leading-6 text-gray-900">Información Usuarios</dt>
-              </div>
-              
-              {dataResult.map((user, index) => (
-                <React.Fragment key={index}>
-                  <div className="px-4 py-3">
-                    <dt className="text-sm font-medium leading-6 text-gray-900">Nombre</dt>
-                    <dd className="mt-1 text-sm leading-6 text-gray-700">{user.USER_NAME}</dd>
-                  </div>
-  
-                  <div className="px-4 py-3">
-                    <dt className="text-sm font-medium leading-6 text-gray-900">Primer Apellido</dt>
-                    <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{user.FIRST_LAST_NAME}</dd>
-                  </div>
-                </React.Fragment>
-              ))}
+        <div className="flex flex-col space-y-0">
+            <div className="px-4 sm:px-0">
+                <h3 className="text-base font-semibold leading-7 text-gray-900">Información Acceso</h3>
             </div>
-          </dl>
+            {error ? (
+                <div>Error: No se encontraron datos para esta consulta.</div>
+            ) : (
+                <div className="mt-6 border-t border-blue-100">
+                    <table className="w-full">
+                        <thead>
+                            <tr className="bg-gray-100">
+                                <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Campo</th>
+                                <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Valor</th>
+                            </tr>
+                        </thead>
+                        <tbody className="divide-y divide-blue-100">
+                            {dataResult ? Object.entries(dataResult).map(([key, value]) => (
+                                <tr key={key}>
+                                    <td className="px-4 py-3 text-sm font-medium text-gray-900">{key}</td>
+                                    <td className="px-4 py-3 text-sm text-gray-500">{typeof value === 'object' ? JSON.stringify(value) : value}</td>
+                                </tr>
+                            )) : null}
+                        </tbody>
+                    </table>
+                </div>
+            )}
         </div>
-      </div>
     )
-  }
-  
-  export default AccesoCom;
+}
+
+export default AccesoCom;
+
+
+  /*
+  {dataResult ? dataResult.map((user, index) => (
+                <React.Fragment key={index}>
+                    {['USER_NAME', 'FIRST_LAST_NAME', 'SECOND_LAST_NAME', 'STATE_OF_BIRTH', 'BORN_DATE', 'NACIONALITY', 'ECONOMIC_ACTIVITY', 'CURP', 'EMAIL', 'PHONE_NUMER', 'COUNTRY', 'STATE', 'CITY', 'NEIGHBORHOOD', 'STREET', 'EXT_NUMBER', 'INT_NUMBER', 'ZIP_CODE', 'IDENTIFICATION_TYPE', 'IDENTIFICATION_NUMBER'].map(key => (
+                    <div className="px-4 py-3" key={key}>
+                        <dt className="text-sm font-medium leading-6 text-gray-900">{key}</dt>
+                        <dd className="mt-1 text-sm leading-6 text-gray-700">{user[key]}</dd>
+                    </div>
+                    ))}
+                </React.Fragment>
+                )) : null}
+  */
+
 /*
     return(
         <div className="flex flex-col space-y-0">
