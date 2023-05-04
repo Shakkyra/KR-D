@@ -5,7 +5,7 @@ const Actions = ({userId, onButtonClick, hasOneResult}) => {
   const [menuPosition, setMenuPosition] = useState({ top: 0, left: 0 });
 
   const handleButtonClick = (buttonName) => {
-    onButtonClick(buttonName);
+    //onButtonClick(buttonName);
     if (hasOneResult) {
       const visualizer = document.querySelector('.visualizer');
       const { top, left, height } = visualizer.getBoundingClientRect();
@@ -29,21 +29,21 @@ const Actions = ({userId, onButtonClick, hasOneResult}) => {
         }}
       >
         <li>
-          <a href={`ARCO/acceso/${userId}`}>
+          <Link href={`ARCO/acceso/?userid=${userId}`}>
             <button onClick={() => handleButtonClick('Acceder')}>
               Acceder
             </button>
-          </a>
+          </Link>
         </li>
         <li>
-          <Link href={`ARCO/rectificacion/${userId}`}>
+          <Link href={`ARCO/rectificacion/?userid=${userId}`}>
             <button onClick={() => handleButtonClick('Rectificar')}>
               Rectificar
             </button>
           </Link>
         </li>
         <li>
-          <Link href={`ARCO/cancelacion/${userId}`}>
+          <Link href={`ARCO/cancelacion/?userid=${userId}`}>
             <button onClick={() => handleButtonClick('Cancelar')}>
               Cancelar
             </button>

@@ -10,10 +10,10 @@ const Visualizer = ({ searchValue}) => {
     console.log("searchValue en Visualizer:", searchValue);
     async function getPageData() {
       const apiUrlEndpoint = `/api/getData?searchValue=${searchValue}`;
-      console.log("URL de la API:", apiUrlEndpoint);
+      //console.log("URL de la API:", apiUrlEndpoint);
       const response = await fetch(apiUrlEndpoint);
       const res = await response.json();
-      console.log("Datos devueltos por la API:", res.names);
+      //console.log("Datos devueltos por la API:", res.names);
       setDataResult(res.names);
     }
     getPageData();
@@ -31,7 +31,7 @@ const Visualizer = ({ searchValue}) => {
                   <thead className="border-b font-medium dark:border-neutral-500">
                     <tr>
                       <th className="whitespace-nowrap px-6 py-4">ID</th>
-                      {/* <th className="whitespace-nowrap px-6 py-4">User</th>*/}
+                      <th className="whitespace-nowrap px-6 py-4">Full Name</th>
                       <th className="whitespace-nowrap px-6 py-4">First Name</th>
                       <th className="whitespace-nowrap px-6 py-4">Last Name</th>
                       <th className="whitespace-nowrap px-6 py-4">Phone Number</th>
@@ -56,6 +56,9 @@ const Visualizer = ({ searchValue}) => {
                             <tr key={names.USER_ID} className="border-b transition duration-300 ease-in-out hover:bg-neutral-100 dark:border-neutral-500 gray:hover:bg-neutral-800">
                               <td className="whitespace-nowrap px-6 py-4">
                                 {names.USER_ID}
+                              </td>
+                              <td className="whitespace-nowrap px-6 py-4">
+                                {names.USER_NAME}
                               </td>
                               <td className="whitespace-nowrap px-6 py-4">
                                 {names.FIRST_LAST_NAME}

@@ -1,10 +1,13 @@
 import React from 'react';
 import Head from 'next/head';
 import Header from '../../components/Header';
-import kueski_fondo from '@/public/imagenes/kueski_fondo.png';
-import Acceso from '@/components/Acceso';
+import { useRouter } from 'next/router';
+import AccesoCom from '@/components/AccesoCom';
+{/* Pagina de Acceso */}
 
-{/* Pagina de INICIO */}
+const Acceso = () => {
+  const router = useRouter();
+  const { userid } = router.query;
 
 const Home = () => {
   return (
@@ -15,18 +18,16 @@ const Home = () => {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/kueskiLogo.png' />
       </Head>
-        <Header />
-        <h1 className='p-4'>HOME</h1>
-        <Acceso/>
-        <main className='bg-gray-100 min-h-screen' style={{backgroundImage: `url(${kueski_fondo})`}}>
-
-        <div className='p-4'>
+      <Header />
+      <h1 className='p-4'>Acceso</h1>
+      <div className='p-4'>
           {/* Agregamos las clases flex flex-col items-center para crear un contenedor flexible vertical y centrado */}
           <div className='flex flex-col'>
-
+            <h2>Bienvenido, {userid}!</h2>
           </div>
-        </div>
-      </main>
+      </div>
+      <AccesoCom searchIndex={userid}/>
+      <p>prube</p>
     </>
   );
 };
