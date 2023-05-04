@@ -1,6 +1,5 @@
 import React from "react";
 import { useSpring, animated } from 'react-spring';
-import kueski_fondo from '../public/imagenes/kueski_fondo.png';
 
 //import './Imagen.css';
 
@@ -9,14 +8,11 @@ const Welcome = () => {
     const fadeIn = useSpring({ opacity: 10, from: { opacity: 0 } });
 
     return (
-        <section className="bg-gray-50">
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
-            <img src="/imagenes/kueski_fondo.png" width="700" height="500" alt="Kueski" />
-            </div>                  
+        <section className="bg-gray-50">                
         
-        <div        
+            <div        
             className="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center"
-        >
+            >
             <div className="mx-auto max-w-xl text-center">
 
             
