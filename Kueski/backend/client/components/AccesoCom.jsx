@@ -4,7 +4,7 @@ import Popup from "./Popup";
 import Compartir from "./Compartir";
 
 
-const Acceso = ({searchIndex}) => {
+const AccesoCom = ({searchIndex}) => {
     const [dataResult, setdataResult] = useState([]);
     useEffect(() => {
         async function getPageData(){
@@ -16,11 +16,9 @@ const Acceso = ({searchIndex}) => {
         }
         //Corremos la funcion
         getPageData();
-        //console.log("HOLA DESDE VISUALIZER3.JSX");
+        console.log("HOLA DESDE accesocom.JSX");
     }, []);
 
-
-    {dataResult.map((names) =>{
     return(
         <div className="flex flex-col space-y-0">
             <div className="px-4 sm:px-0">
@@ -28,10 +26,35 @@ const Acceso = ({searchIndex}) => {
             </div>
             <div className="mt-6 border-t border-blue-100">
                 <dl className="divide-y divide-blue-100">
-                    
                     <div className="sm:grid sm:grid-cols-4">
-                    
+                        <div className="px-4 py-3 sm:col-span-4">
+                            <dt className="text-sm font-medium leading-6 text-gray-900">Información Usuarios</dt>
+                        </div>
+                        
+                        <div className="px-4 py-3">
+                            <dt className="text-sm font-medium leading-6 text-gray-900">Nombre</dt>
+                            <dd className="mt-1 text-sm leading-6 text-gray-700">{names.USER_NAME}</dd>
+                        </div>
 
+                        <div className="px-4 py-3">
+                            <dt className="text-sm font-medium leading-6 text-gray-900">Primer Apellido</dt>
+                            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{names.FIRST_LAST_NAME}</dd>
+                        </div>
+                    </div>
+
+                </dl>
+                </div>
+                </div>
+    )
+    /*
+    return(
+        <div className="flex flex-col space-y-0">
+            <div className="px-4 sm:px-0">
+                <h3 className="text-base font-semibold leading-7 text-gray-900">Información Acceso</h3>
+            </div>
+            <div className="mt-6 border-t border-blue-100">
+                <dl className="divide-y divide-blue-100">
+                    <div className="sm:grid sm:grid-cols-4">
                         <div className="px-4 py-3 sm:col-span-4">
                             <dt className="text-sm font-medium leading-6 text-gray-900">Información Usuarios</dt>
                         </div>
@@ -159,7 +182,7 @@ const Acceso = ({searchIndex}) => {
             </div>
         </div>
     ); 
-    })} 
 }
+*/}
 
-export default Acceso;
+export default AccesoCom;

@@ -8,7 +8,7 @@ import Reporte from '../components/Reporte';
 import Hidder from '../components/Hidder';
 
 import Oposicion from '../components/Oposicion';
-import Acceder from '../components/Acceso';
+import Acceder from '../components/AccesoCom';
 import Rectificar from '../components/Rectificacion';
 import Cancelar from '../components/Cancelacion';
 
