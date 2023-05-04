@@ -2,6 +2,9 @@ import React from "react";
 import Link from "next/link";
 import {RxCube, RxDashboard, RxCounterClockwiseClock} from 'react-icons/rx'
 import {FiSettings} from 'react-icons/fi'
+import Image from 'next/image';
+import icono from '../public/kueskiLogo.png';
+
 
 const Sidebar = ({children}) => {
     return (
@@ -10,7 +13,7 @@ const Sidebar = ({children}) => {
                 <div className="flex flex-col items-center">
                     <Link href='/'>
                         <div className="bg-blue-800 text-white p-3 rounded -lg inline-block">
-                            <RxCube size={20}/> 
+                        <Image src={icono} alt="Icono" width={25}height={25}/> 
                         </div>
                     </Link>
                     <span className="border-b-[1px] border-gray-200 w-full p-2"></span>

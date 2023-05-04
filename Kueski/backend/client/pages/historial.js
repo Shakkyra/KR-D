@@ -6,6 +6,7 @@ import Searchbar from '../components/Searchbar';
 import Visualizerhis from '../components/Visualizerhis';
 import Reporte from '../components/Reporte';
 import Hidder from '../components/Hidder';
+import Header from '../components/Header';
 
 import Oposicion from '../components/Oposicion';
 import Acceder from '../components/AccesoCom';
@@ -37,7 +38,13 @@ const Home = () => {
         <link rel='icon' href='/kueskiLogo.png' />
       </Head>
       <main className='bg-gray-100 min-h-screen'>
-        <Headerhis />
+      <section className='flex justify-between px-4 pt-4'> 
+        
+        <h1 className='p-4'>Historial</h1>
+        <Header />
+        
+        </section>     
+
         <div className='p-4'>
           {/* Agregamos las clases flex flex-col items-center para crear un contenedor flexible vertical y centrado */}
           <div className='flex flex-col'>
