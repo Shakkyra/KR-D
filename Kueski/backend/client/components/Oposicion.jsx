@@ -175,5 +175,5 @@ const Oposicion = () => {
     );
 }
 
-export default Oposicion
+export default Oposicion;
 
