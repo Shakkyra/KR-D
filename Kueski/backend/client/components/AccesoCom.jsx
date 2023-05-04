@@ -35,7 +35,7 @@ const AccesoCom = ({searchIndex}) => {
   
                   <div className="px-4 py-3">
                     <dt className="text-sm font-medium leading-6 text-gray-900">Primer Apellido</dt>
-                    <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{user.USER_LASTNAME}</dd>
+                    <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{user.FIRST_LAST_NAME}</dd>
                   </div>
                 </React.Fragment>
               ))}
