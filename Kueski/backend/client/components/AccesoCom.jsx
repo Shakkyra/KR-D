@@ -1,25 +1,52 @@
-import React from "react";
-import { useState, useEffect } from "react";
-import Popup from "./Popup";
-import Compartir from "./Compartir";
+import React from 'react';
+import useSWR from 'swr';
 
+const fetcher = async (url) => {
+  const res = await fetch(url);
+  if (!res.ok) {
+    throw new Error(`An error occurred while fetching data: ${res.statusText}`);
+  }
+  return res.json();
+};
 
-const AccesoCom = ({searchIndex}) => {
+const AccesoCom = ({ searchIndex }) => {
+  console.log('AccesoCom: searchIndex:', searchIndex);
+
+  const apiUrlEndpoint = `/api/getDataAcceso?searchValue=${searchIndex}`;
+  const { data, error } = useSWR(apiUrlEndpoint, fetcher);
+
+  console.log('AccesoCom: data:', data);
+  console.log('AccesoCom: error:', error);
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
+
+  if (!data) {
+    return <div>Cargando...</div>;
+  }
+
+  const dataResult = data.names && data.names.length > 0 && data.names[0].length > 0 ? data.names[0][0] : null;
+
+  console.log('AccesoCom: dataResult:', dataResult);
+
+const Acceso = ({searchIndex}) => {
     const [dataResult, setdataResult] = useState([]);
     useEffect(() => {
         async function getPageData(){
-          //const apiUrlEndpoint = `/api/getDataAcceso?searchValue=${searchIndex}`;
-          const apiUrlEndpoint = `/api/getDataAcceso?searchValue=${searchIndex}`;
-          
+          const apiUrlEndpoint = `http://localhost:3000/api/getDataAcceso?searchValue=${searchIndex}`;
           const response = await fetch(apiUrlEndpoint);
           const res = await response.json();
-          console.log(res.names);
+          //console.log(res.names);
           setdataResult(res.names);
         }
         //Corremos la funcion
         getPageData();
+        //console.log("HOLA DESDE VISUALIZER3.JSX");
     }, []);
 
+
+    {dataResult.map((names) =>{
     return(
         <div className="flex flex-col space-y-0">
             <div className="px-4 sm:px-0">
@@ -28,34 +55,8 @@ const AccesoCom = ({searchIndex}) => {
             <div className="mt-6 border-t border-blue-100">
                 <dl className="divide-y divide-blue-100">
                     <div className="sm:grid sm:grid-cols-4">
-                        <div className="px-4 py-3 sm:col-span-4">
-                            <dt className="text-sm font-medium leading-6 text-gray-900">Información Usuarios</dt>
-                        </div>
-                        
-                        <div className="px-4 py-3">
-                            <dt className="text-sm font-medium leading-6 text-gray-900">Nombre</dt>
-                            <dd className="mt-1 text-sm leading-6 text-gray-700">h</dd>
-                        </div>
+                    
 
-                        <div className="px-4 py-3">
-                            <dt className="text-sm font-medium leading-6 text-gray-900">Primer Apellido</dt>
-                            <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">h</dd>
-                        </div>
-                    </div>
-
-                </dl>
-                </div>
-                </div>
-    )
-    /*
-    return(
-        <div className="flex flex-col space-y-0">
-            <div className="px-4 sm:px-0">
-                <h3 className="text-base font-semibold leading-7 text-gray-900">Información Acceso</h3>
-            </div>
-            <div className="mt-6 border-t border-blue-100">
-                <dl className="divide-y divide-blue-100">
-                    <div className="sm:grid sm:grid-cols-4">
                         <div className="px-4 py-3 sm:col-span-4">
                             <dt className="text-sm font-medium leading-6 text-gray-900">Información Usuarios</dt>
                         </div>
@@ -184,6 +185,5 @@ const AccesoCom = ({searchIndex}) => {
         </div>
     ); 
 }
-*/}
 
-export default AccesoCom;
+export default Acceso;
