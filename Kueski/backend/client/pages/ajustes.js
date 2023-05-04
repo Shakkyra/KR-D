@@ -14,9 +14,13 @@ const Home = () => {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/kueskiLogo.png' />
       </Head>
+
       <main className='bg-gray-100 min-h-screen'>
-        <Header />
+      <section className='flex justify-between px-4 pt-4'> 
+        
         <h1 className='p-4'>AJUSTES</h1>
+        <Header />
+        </section>
         <div className='p-4'>
           {/* Agregamos las clases flex flex-col items-center para crear un contenedor flexible vertical y centrado */}
           <div className='flex flex-col'>
