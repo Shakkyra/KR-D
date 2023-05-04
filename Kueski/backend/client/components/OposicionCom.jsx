@@ -33,7 +33,7 @@ const Oposicion = ({searchIndex}) => {
                                 <div className="px-4 py-3">
                                 <dt className="text-sm font-medium leading-6 text-gray-900">Identificación del solicitante y/o cliente, según sea el caso.</dt>
                                 <label class="relative inline-flex items-center cursor-pointer">
-                                <input type="checkbox" value="" checked={options.OPPOSITION_TYPE_1===1} class="sr-only peer"></input>
+                                <input type="checkbox" value="" defaultChecked={options.OPPOSITION_TYPE_1===1} class="sr-only peer"></input>
                                 <div class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
                                 </label>
                                 </div>
@@ -42,7 +42,7 @@ const Oposicion = ({searchIndex}) => {
                             <dt className="text-sm font-medium leading-6 text-gray-900">Integración del expediente de información de nuestro cliente.</dt>
                             
                             <label class="relative inline-flex items-center cursor-pointer">
-                            <input type="checkbox" value="" checked={options.OPPOSITION_TYPE_2===1} class="sr-only peer"></input>
+                            <input type="checkbox" value="" defaultChecked={options.OPPOSITION_TYPE_2===1} class="sr-only peer"></input>
                             <div class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
                             </label>
 
@@ -52,7 +52,7 @@ const Oposicion = ({searchIndex}) => {
                             <dt className="text-sm font-medium leading-6 text-gray-900">Prestación de los servicios y/o comercialización de los bienes de que se trate.</dt>
                             
                             <label class="relative inline-flex items-center cursor-pointer">
-                            <input type="checkbox" value="" checked={options.OPPOSITION_TYPE_3===1} class="sr-only peer"></input>
+                            <input type="checkbox" value="" defaultChecked={options.OPPOSITION_TYPE_3===1} class="sr-only peer"></input>
                             <div class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
                             </label>
 
@@ -61,42 +61,42 @@ const Oposicion = ({searchIndex}) => {
                         <div className="px-4 py-3">
                             <dt className="text-sm font-medium leading-6 text-gray-900">Gestión, control, administración y procesamiento de las solicitudes del solicitante y/o cliente.</dt>
                             <label class="relative inline-flex items-center cursor-pointer">
-                            <input type="checkbox" value="" checked={options.OPPOSITION_TYPE_4===1} class="sr-only peer"></input>
+                            <input type="checkbox" value="" defaultChecked={options.OPPOSITION_TYPE_4===1} class="sr-only peer"></input>
                             <div class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
                             </label>                        </div>                        
 
                         <div className="px-4 py-3">
                             <dt className="text-sm font-medium leading-6 text-gray-900">Gestión, control, administración, ejecución y cumplimiento del contrato celebrado con el cliente conforme a la solicitud correspondiente.</dt>
                             <label class="relative inline-flex items-center cursor-pointer">
-                            <input type="checkbox" value="" checked={options.OPPOSITION_TYPE_5===1} class="sr-only peer"></input>
+                            <input type="checkbox" value="" defaultChecked={options.OPPOSITION_TYPE_5===1} class="sr-only peer"></input>
                             <div class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
                             </label>                        </div>
 
                         <div className="px-4 py-3">
                             <dt className="text-sm font-medium leading-6 text-gray-900">Gestión, control y administración de la cobranza administrativa (a través de cualquier medio de contacto otorgado en la solicitud), extrajudicial y, en su caso, judicial derivada de los servicios proporcionados por Kueski.</dt>
                             <label class="relative inline-flex items-center cursor-pointer">
-                            <input type="checkbox" value="" checked={options.OPPOSITION_TYPE_6===1} class="sr-only peer"></input>
+                            <input type="checkbox" value="" defaultChecked={options.OPPOSITION_TYPE_6===1} class="sr-only peer"></input>
                             <div class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
                             </label>                        </div>
 
                         <div className ="px-4 py-3">
                             <dt className="text-sm font-medium leading-6 text-gray-900">Investigación de cambios en el perfil transaccional del cliente.</dt>
                             <label class="relative inline-flex items-center cursor-pointer">
-                            <input type="checkbox" value="" checked={options.OPPOSITION_TYPE_7===1} class="sr-only peer"></input>
+                            <input type="checkbox" value="" defaultChecked={options.OPPOSITION_TYPE_7===1} class="sr-only peer"></input>
                             <div class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
                             </label>                        </div>
 
                         <div className ="px-4 py-3">
                             <dt className="text-sm font-medium leading-6 text-gray-900">Cumplimiento a obligaciones de carácter fiscal o comercial.</dt>
                             <label class="relative inline-flex items-center cursor-pointer">
-                            <input type="checkbox" value="" checked={options.OPPOSITION_TYPE_8===1} class="sr-only peer"></input>
+                            <input type="checkbox" value="" defaultChecked={options.OPPOSITION_TYPE_8===1} class="sr-only peer"></input>
                             <div class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
                             </label>                        </div>
 
                         <div className="px-4 py-3">
                             <dt className="text-sm font-medium leading-6 text-gray-900">Atención de consultas, dudas, aclaraciones o quejas del cliente.</dt>
                             <label class="relative inline-flex items-center cursor-pointer">
-                            <input type="checkbox" value="" checked={options.OPPOSITION_TYPE_9===1} class="sr-only peer"></input>
+                            <input type="checkbox" value="" defaultChecked={options.OPPOSITION_TYPE_9===1} class="sr-only peer"></input>
                             <div class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
                             </label>
                         </div>
@@ -104,28 +104,28 @@ const Oposicion = ({searchIndex}) => {
                         <div className ="px-4 py-3">
                             <dt className="text-sm font-medium leading-6 text-gray-900">Estadística y registro histórico de usuarios y clientes.</dt>
                             <label class="relative inline-flex items-center cursor-pointer">
-                            <input type="checkbox" value="" checked={options.OPPOSITION_TYPE_10===1} class="sr-only peer"></input>
+                            <input type="checkbox" value="" defaultChecked={options.OPPOSITION_TYPE_10===1} class="sr-only peer"></input>
                             <div class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
                             </label>                        </div>
 
                         <div className ="px-4 py-3">
                             <dt className="text-sm font-medium leading-6 text-gray-900">Creación, mantenimiento y entrenamiento de los modelos de riesgo predictivos de Kueski.</dt>
                             <label class="relative inline-flex items-center cursor-pointer">
-                            <input type="checkbox" value="" checked={options.OPPOSITION_TYPE_11===1} class="sr-only peer"></input>
+                            <input type="checkbox" value="" defaultChecked={options.OPPOSITION_TYPE_11===1} class="sr-only peer"></input>
                             <div class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
                             </label>                        </div>
 
                         <div className ="px-4 py-3">
                             <dt className="text-sm font-medium leading-6 text-gray-900">Mantener la seguridad de la información y de la operación.</dt>
                             <label class="relative inline-flex items-center cursor-pointer">
-                            <input type="checkbox" value="" checked={options.OPPOSITION_TYPE_12===1} class="sr-only peer"></input>
+                            <input type="checkbox" value="" defaultChecked={options.OPPOSITION_TYPE_12===1} class="sr-only peer"></input>
                             <div class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
                             </label>                        </div>
 
                         <div className ="px-4 py-3">
                             <dt className="text-sm font-medium leading-6 text-gray-900">Protección ante casos de robo de identidad.</dt>
                             <label class="relative inline-flex items-center cursor-pointer">
-                            <input type="checkbox" value="" checked={options.OPPOSITION_TYPE_13===1} class="sr-only peer"></input>
+                            <input type="checkbox" value="" defaultChecked={options.OPPOSITION_TYPE_13===1} class="sr-only peer"></input>
                             <div class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
                             </label>                        </div>
 
@@ -136,14 +136,14 @@ const Oposicion = ({searchIndex}) => {
                         <div className ="px-4 py-3">
                             <dt className="text-sm font-medium leading-6 text-gray-900">Fines mercadotécnicos, publicitarios y/o de prospección comercial.</dt>
                             <label class="relative inline-flex items-center cursor-pointer">
-                            <input type="checkbox" value="" checked={options.OPPOSITION_TYPE_14===1} class="sr-only peer"></input>
+                            <input type="checkbox" value="" defaultChecked={options.OPPOSITION_TYPE_14===1} class="sr-only peer"></input>
                             <div class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
                             </label>                        </div>
 
                         <div className ="px-4 py-3">
                             <dt className="text-sm font-medium leading-6 text-gray-900">Otorgamiento de estímulos o reconocimientos a clientes, cuando participen en nuestras campañas publicitarias, mercadológicas o comerciales.</dt>
                             <label class="relative inline-flex items-center cursor-pointer">
-                            <input type="checkbox" value="" checked={options.OPPOSITION_TYPE_15===1} class="sr-only peer"></input>
+                            <input type="checkbox" value="" defaultChecked={options.OPPOSITION_TYPE_15===1} class="sr-only peer"></input>
                             <div class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
                             </label>
                         </div>
@@ -151,7 +151,7 @@ const Oposicion = ({searchIndex}) => {
                         <div className ="px-4 py-3">
                             <dt className="text-sm font-medium leading-6 text-gray-900">Uso de imágenes y testimonios de clientes y/o usuarios para fines publicitarios y de ofertas comerciales referentes a productos y/o servicios ofrecidos o relacionados con productos y/o servicios contratados.</dt>
                             <label class="relative inline-flex items-center cursor-pointer">
-                            <input type="checkbox" value="" checked={options.OPPOSITION_TYPE_16===1} class="sr-only peer"></input>
+                            <input type="checkbox" value="" defaultChecked={options.OPPOSITION_TYPE_16===1} class="sr-only peer"></input>
                             <div class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
                             </label>                        
                             </div>
@@ -159,7 +159,7 @@ const Oposicion = ({searchIndex}) => {
                         <div className ="px-4 py-3">
                             <dt className="text-sm font-medium leading-6 text-gray-900">Mejoras en el servicio de atención y trato con el cliente.</dt>
                             <label class="relative inline-flex items-center cursor-pointer">
-                            <input type="checkbox" value="" checked={options.OPPOSITION_TYPE_17===1} class="sr-only peer"></input>
+                            <input type="checkbox" value="" defaultChecked={options.OPPOSITION_TYPE_17===1} class="sr-only peer"></input>
                             <div class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
                             </label>                        
                             </div>
