@@ -1,14 +1,13 @@
 import React from 'react';
 import Head from 'next/head';
 import Header from '../../components/Header';
-
 import { useRouter } from 'next/router';
-
+import AccesoCom from '@/components/AccesoCom';
 {/* Pagina de Acceso */}
 
-const Acceso = ({userid}) => {
+const Acceso = () => {
   const router = useRouter();
-  const { userId } = router.query;
+  const { userid } = router.query;
 
   return (
     <>
@@ -23,10 +22,11 @@ const Acceso = ({userid}) => {
       <div className='p-4'>
           {/* Agregamos las clases flex flex-col items-center para crear un contenedor flexible vertical y centrado */}
           <div className='flex flex-col'>
-            <h2>Bienvenido, {userId}!</h2>
+            <h2>Bienvenido, {userid}!</h2>
           </div>
-        </div>
-        
+      </div>
+      <AccesoCom searchIndex={userid}/>
+      <p>prube</p>
     </>
   );
 };
