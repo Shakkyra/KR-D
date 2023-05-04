@@ -36,7 +36,7 @@ const Rectificacion = () => {
                     <div className="sm:grid sm:grid-cols-6">
 
                     <div className="px-4 py-3 sm:col-span-6">
-                            <dt className="text-sm font-medium leading-6 text-gray-900">Inforamción Personal</dt>
+                            <dt className="text-sm font-medium leading-6 text-gray-900">Información Personal</dt>
                         </div>
                         
                         <div className="px-4 py-2 sm:col-span-2 sm:grid sm:grid-cols-2">                           
