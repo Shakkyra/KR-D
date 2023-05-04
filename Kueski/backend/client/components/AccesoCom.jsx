@@ -1,56 +1,63 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import useSWR from 'swr';
 
-const AccesoCom = ({searchIndex}) => {
-    const [dataResult, setdataResult] = useState([]);
-    const [error, setError] = useState(false);
-    
-    useEffect(() => {
-        async function getPageData(){
-            const apiUrlEndpoint = `/api/getDataAcceso?searchValue=${searchIndex}`;
-            const response = await fetch(apiUrlEndpoint);
-            const res = await response.json();
-            if (res.names && res.names.length > 0) {
-                setdataResult(res.names[0]);
-            } else {
-                setError(true);
-            }
-        }
-        getPageData();
-    }, [searchIndex]);
-  
-    return(
-        <div className="flex flex-col space-y-0">
-            <div className="px-4 sm:px-0">
-                <h3 className="text-base font-semibold leading-7 text-gray-900">Información Acceso</h3>
-            </div>
-            {error ? (
-                <div>Error: No se encontraron datos para esta consulta.</div>
-            ) : (
-                <div className="mt-6 border-t border-blue-100">
-                    <table className="w-full">
-                        <thead>
-                            <tr className="bg-gray-100">
-                                <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Campo</th>
-                                <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Valor</th>
-                            </tr>
-                        </thead>
-                        <tbody className="divide-y divide-blue-100">
-                            {dataResult ? Object.entries(dataResult).map(([key, value]) => (
-                                <tr key={key}>
-                                    <td className="px-4 py-3 text-sm font-medium text-gray-900">{key}</td>
-                                    <td className="px-4 py-3 text-sm text-gray-500">{typeof value === 'object' ? JSON.stringify(value) : value}</td>
-                                </tr>
-                            )) : null}
-                        </tbody>
-                    </table>
-                </div>
-            )}
-        </div>
-    )
-}
+const fetcher = async (url) => {
+  const res = await fetch(url);
+  if (!res.ok) {
+    throw new Error(`An error occurred while fetching data: ${res.statusText}`);
+  }
+  return res.json();
+};
+
+const AccesoCom = ({ searchIndex }) => {
+  console.log('AccesoCom: searchIndex:', searchIndex);
+
+  const apiUrlEndpoint = `/api/getDataAcceso?searchValue=${searchIndex}`;
+  const { data, error } = useSWR(apiUrlEndpoint, fetcher);
+
+  console.log('AccesoCom: data:', data);
+  console.log('AccesoCom: error:', error);
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
+
+  if (!data) {
+    return <div>Cargando...</div>;
+  }
+
+  const dataResult = data.names && data.names.length > 0 && data.names[0].length > 0 ? data.names[0][0] : null;
+
+  console.log('AccesoCom: dataResult:', dataResult);
+
+  if (!dataResult) {
+    return <div>Error: No se encontraron datos para esta consulta.</div>;
+  }
+
+  return (
+    <div className="flex flex-col space-y-0">
+      <div className="px-4 sm:px-0">
+        <h3 className="text-base font-semibold leading-7 text-gray-900">Información Acceso</h3>
+      </div>
+      <div className="mt-6 border-t border-blue-100">
+        <table className="w-full">
+          <tbody className="divide-y divide-blue-100">
+            {Object.keys(dataResult).map((key) => (
+              <tr key={key}>
+                <td className="px-4 py-3 text-sm font-medium text-gray-900">{key}:</td>
+                <td className="px-4 py-3 text-sm text-gray-500">
+                  {typeof dataResult[key] === 'object' ? JSON.stringify(dataResult[key]) : dataResult[key]}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+};
 
 export default AccesoCom;
-
 
   /*
   {dataResult ? dataResult.map((user, index) => (

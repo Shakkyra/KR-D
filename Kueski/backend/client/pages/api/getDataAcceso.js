@@ -7,7 +7,7 @@ export default async function handler(req, res) {
     const searchValue = req.query.searchValue || "";
     // Modificar la consulta para filtrar por el valor del parámetro de búsqueda
     //const query = "SELECT USER_NAME, FIRST_LAST_NAME FROM USERS WHERE USER_ID = ?";
-    const query = "CALL sql9615348.USER_INFO(?);";
+    const query = "CALL sql9615348.USER_INFO(1);";
     const [data] = await dbconnection.execute(query, [searchValue]);
     dbconnection.end();
     res.status(200).json({ names: data });
