@@ -2,6 +2,7 @@ import React from "react";
 import Popup from "./Popup";
 
 const Oposicion = () => {
+    
     return(
         <div className="flex flex-col space-y-0">
             <div className="px-4 sm:px-0">
