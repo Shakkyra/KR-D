@@ -16,24 +16,24 @@ const Oposicion = ({searchIndex}) => {
       getPageData();
     }, [searchIndex]);
 
-    const [oposicion1, setOposicion1] = useState(true);
-    const [oposicion2, setOposicion2] = useState(true);
-    const [oposicion3, setOposicion3] = useState(true);
-    const [oposicion4, setOposicion4] = useState(true);
-    const [oposicion5, setOposicion5] = useState(true);
-    const [oposicion6, setOposicion6] = useState(true);
-    const [oposicion7, setOposicion7] = useState(true);
-    const [oposicion8, setOposicion8] = useState(true);
-    const [oposicion9, setOposicion9] = useState(true);
-    const [oposicion10, setOposicion10] = useState(true);
-    const [oposicion11, setOposicion11] = useState(true);
-    const [oposicion12, setOposicion12] = useState(true);
-    const [oposicion13, setOposicion13] = useState(true);
-    const [oposicion14, setOposicion14] = useState(true);
-    const [oposicion15, setOposicion15] = useState(true);
-    const [oposicion16, setOposicion16] = useState(true);
-    const [oposicion17, setOposicion17] = useState(true);
-
+    const [oposicion1, setOposicion1] = useState(dataResult.OPPOSITION_TYPE_1);
+    const [oposicion2, setOposicion2] = useState(dataResult.OPPOSITION_TYPE_2);
+    const [oposicion3, setOposicion3] = useState(dataResult.OPPOSITION_TYPE_3);
+    const [oposicion4, setOposicion4] = useState(dataResult.OPPOSITION_TYPE_4);
+    const [oposicion5, setOposicion5] = useState(dataResult.OPPOSITION_TYPE_5);
+    const [oposicion6, setOposicion6] = useState(dataResult.OPPOSITION_TYPE_6);
+    const [oposicion7, setOposicion7] = useState(dataResult.OPPOSITION_TYPE_7);
+    const [oposicion8, setOposicion8] = useState(dataResult.OPPOSITION_TYPE_8);
+    const [oposicion9, setOposicion9] = useState(dataResult.OPPOSITION_TYPE_9);
+    const [oposicion10, setOposicion10] = useState(dataResult.OPPOSITION_TYPE_10);
+    const [oposicion11, setOposicion11] = useState(dataResult.OPPOSITION_TYPE_11);
+    const [oposicion12, setOposicion12] = useState(dataResult.OPPOSITION_TYPE_12);
+    const [oposicion13, setOposicion13] = useState(dataResult.OPPOSITION_TYPE_13);
+    const [oposicion14, setOposicion14] = useState(dataResult.OPPOSITION_TYPE_14);
+    const [oposicion15, setOposicion15] = useState(dataResult.OPPOSITION_TYPE_15);
+    const [oposicion16, setOposicion16] = useState(dataResult.OPPOSITION_TYPE_16);
+    const [oposicion17, setOposicion17] = useState(dataResult.OPPOSITION_TYPE_17);
+    console.log("Oposicion getDataOposicion",dataResult.OPPOSITION_TYPE_1);
     const putDatos = () => {
         axios.post('/api/putArcoOposicion', {
             _id: searchIndex,
@@ -90,7 +90,10 @@ const Oposicion = ({searchIndex}) => {
                                 <input type="checkbox" value="" onChange={(event)=>setOposicion2(event.target.checked)} defaultChecked={options.OPPOSITION_TYPE_2===1} class="sr-only peer"></input>
                                 <div class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
                                 </label>
-
+                                <p>{console.log("boton 1",oposicion1)}</p>
+                                <p>{console.log("boton 2",oposicion2)}</p>
+                                <p>{console.log("boton 3",oposicion3)}</p>
+                                <p>{console.log("boton 4",oposicion4)}</p>
 
                             </div>
 
