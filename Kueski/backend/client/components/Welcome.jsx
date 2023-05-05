@@ -43,7 +43,7 @@ const Welcome = () => {
                     
                     href="/ajustes"
                     >
-                    Ajustes
+                    FAQ
                     </a>
                 </div>
             </div>
