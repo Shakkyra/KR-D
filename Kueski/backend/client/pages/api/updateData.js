@@ -29,4 +29,5 @@ export default async function updateData(req,res){
   
   await dbconnection.execute(query);
   dbconnection.end(); 
+  res.status(200).json({ Result: 'Success!' });
 }
