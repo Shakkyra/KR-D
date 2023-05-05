@@ -3,7 +3,7 @@ import Popup from "./Popup";
 
 const Oposicion = ({searchIndex}) => {
     const [dataResult, setdataResult] = useState([]);
-    
+    //ete
     useEffect(() => {
       async function getPageData(){
         const apiUrlEndpoint = `/api/getDataOposicion?searchValue=${searchIndex}`;
