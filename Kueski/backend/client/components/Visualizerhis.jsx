@@ -51,7 +51,7 @@ const Visualizerhis = ({searchValue, onButtonClick}) => {
                                 <td className="whitespace-nowrap px-6 py-4">{result.SECOND_LAST_NAME}</td>
                                 <td className="whitespace-nowrap px-6 py-4">{result.FECHA}</td>
                                 <td className="whitespace-nowrap px-4 py-4">
-                                    <Actionshis onButtonClick={onButtonClick} />
+                                <Actionshis idrequest={result.ID_REQUEST}/>
                                 </td>
                             </tr>
                         ))}
