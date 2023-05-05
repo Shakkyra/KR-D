@@ -3,7 +3,8 @@ import { useEffect, useState} from "react";
 import axios from 'axios';
 
 
-const RectificacionCom = ({searchIndex},{_name}) => {
+const RectificacionCom = ({searchIndex}) => {
+    
     const [dataResult, setdataResult] = useState([]);
     useEffect(() => {
         async function getPageData(){
@@ -19,7 +20,7 @@ const RectificacionCom = ({searchIndex},{_name}) => {
         getPageData();
     }, []);
 
-    const [nombre, setNombre] = useState(_name);
+    const [nombre, setNombre] = useState('');
     const [primerApellido, setPrimerApellido] = useState('');
     const [segudnodApellido, setSegudnodApellido] = useState('');
     const [fechaNacimiento, setFechaNacimiento] = useState('');
@@ -29,6 +30,7 @@ const RectificacionCom = ({searchIndex},{_name}) => {
     const [telefono, setTelefono] = useState('');
     const [correo, setCorreo] = useState('');
     const [curp, setCurp] = useState('');
+
     const enviarDatos1 = () => {
         axios.post('/api/updateData', {
             _id: searchIndex,
@@ -83,6 +85,18 @@ const RectificacionCom = ({searchIndex},{_name}) => {
     };
 
     useEffect(()=>{
+        async function fetchData() {
+            try {
+                const response = await fetch(`/api/informacionRectificacion?searchValue=${searchValue}`);
+                const data = await response.json();
+                setNombre(data.names[0].USER_NAME);
+                setPrimerApellido(data.names[0].FIRST_LAST_NAME);
+                setSegudnodApellido(data.names[0].SECOND_LAST_NAME);
+            } catch (error) {
+                console.error(error);
+            }
+        }
+        fetchData();
 
     },[]);
 
@@ -102,7 +116,7 @@ const RectificacionCom = ({searchIndex},{_name}) => {
                                 <div className="px-4 py-2 sm:col-span-2 sm:grid sm:grid-cols-2">                           
                                     <dt className="text-sm font-medium leading-6 text-gray-900 sm:col-span-2">Nombre</dt>
                                     <div className="relative mt-2 rounded-md shadow-sm">
-                                        <input type="text" name="nombre" onChange={(event) => setNombre(event.target.value)} id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder={nombre}/>
+                                        <input type="text" name="nombre" onChange={(event) => setNombre(event.target.value)} id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" value={nombre}/>
                                     </div>
                                 </div>
                                 <div className="px-4 py-3 sm:col-span-2 sm:grid sm:grid-cols-2">
@@ -114,50 +128,50 @@ const RectificacionCom = ({searchIndex},{_name}) => {
                                 <div className="px-4 py-3 sm:col-span-2 sm:grid sm:grid-cols-2">
                                     <dt className="text-sm font-medium leading-6 text-gray-900 sm:col-span-2">Segundo Apellido</dt>
                                     <div className="relative mt-2 rounded-md shadow-sm">
-                                        <input type="text" name="segudnodApellido" onChange={(event) => setSegudnodApellido(event.target.value)} id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder="Segundo Apellido"/>
+                                        <input type="text" name="segudnodApellido" onChange={(event) => setSegudnodApellido(event.target.value)} id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder={segudnodApellido}/>
                                     </div>
                                 </div>
                                 <div className="px-4 py-3 sm:col-span-2 sm:grid sm:grid-cols-2">
                                     <dt className="text-sm font-medium leading-6 text-gray-900 sm:col-span-2">Fecha de Nacimiento</dt>
                                     <div className="relative mt-2 rounded-md shadow-sm">
-                                        <input type="text" name="fechaNacimiento" onChange={(event)=>setFechaNacimiento(event.target.value)} id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder="Fecha de Nacimiento"/>
+                                        <input type="text" name="fechaNacimiento" onChange={(event)=>setFechaNacimiento(event.target.value)} id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder={fechaNacimiento}/>
                                     </div>
                                 </div>
                                 <div className="px-4 py-3 sm:col-span-2 sm:grid sm:grid-cols-2">
                                     <dt className="text-sm font-medium leading-6 text-gray-900 sm:col-span-2">Nacionalidad</dt>
                                     <div className="relative mt-2 rounded-md shadow-sm">
-                                        <input type="text" name="nacionalidad" onChange={(event)=>setNacionalidad(event.target.value)} id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder="Nacionalidad"/>
+                                        <input type="text" name="nacionalidad" onChange={(event)=>setNacionalidad(event.target.value)} id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder={nacionalidad}/>
                                     </div>
                                 </div>
                                 <div className="px-4 py-3 sm:col-span-2 sm:grid sm:grid-cols-2">
                                     <dt className="text-sm font-medium leading-6 text-gray-900 sm:col-span-2">Estado de Nacimiento</dt>
                                     <div className="relative mt-2 rounded-md shadow-sm">
-                                        <input type="text" name="estadoNacimiento" onChange={(event)=>setEstdoNacimiento(event.target.value)} id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder="Guanajuato"/>
+                                        <input type="text" name="estadoNacimiento" onChange={(event)=>setEstdoNacimiento(event.target.value)} id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder={estadoNacimiento}/>
                                     </div>
                                 </div>  
                                 <div className="px-4 py-3 sm:col-span-2 sm:grid sm:grid-cols-2">
                                     <dt className="text-sm font-medium leading-6 text-gray-900 sm:col-span-2">Actividad economica</dt>
                                     <div className="relative mt-2 rounded-md shadow-sm">
-                                        <input type="text" name="actividadEconomica" onChange={(event)=>setActividadEconomica(event.target.value)} id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder="Empleo"/>
+                                        <input type="text" name="actividadEconomica" onChange={(event)=>setActividadEconomica(event.target.value)} id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder={activdadEconomica}/>
                                     </div>
                                 </div>                  
                                 <div className="px-4 py-3 sm:col-span-2 sm:grid sm:grid-cols-2">
                                     <dt className="text-sm font-medium leading-6 text-gray-900 sm:col-span-2">Numero de telefono</dt>
                                     <div className="relative mt-2 rounded-md shadow-sm">
-                                        <input type="text" name="telefono" onChange={(event)=>setTelefono(event.target.value)} id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder="33 181 45 78"/>
+                                        <input type="text" name="telefono" onChange={(event)=>setTelefono(event.target.value)} id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder={telefono}/>
                                     </div>
                                 </div>
                                 <div className="px-4 py-3 sm:col-span-2 sm:grid sm:grid-cols-2">
                                     <dt className="text-sm font-medium leading-6 text-gray-900 sm:col-span-2">Correo electronico</dt>
                                     <div className="relative mt-2 rounded-md shadow-sm">
-                                        <input type="text" name="correo" onChange={(event)=>setCorreo(event.target.value)} id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder="magot@gmail.com"/>
+                                        <input type="text" name="correo" onChange={(event)=>setCorreo(event.target.value)} id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder={correo}/>
                                     </div>
                                 </div>
 
                                 <div className="px-4 py-3 sm:col-span-2 sm:grid sm:grid-cols-2">
                                     <dt className="text-sm font-medium leading-6 text-gray-900 sm:col-span-2">CURP</dt>
                                     <div className="relative mt-2 rounded-md shadow-sm">
-                                        <input type="text" name="curp" onChange={(event)=>setCurp(event.target.value)} id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder="CURP"/>
+                                        <input type="text" name="curp" onChange={(event)=>setCurp(event.target.value)} id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder={curp}/>
                                     </div>
                                 </div> 
                                 <div className="px-4 py-3 pt-10">
@@ -182,7 +196,7 @@ const RectificacionCom = ({searchIndex},{_name}) => {
                                     <div className="sm:grid sm:grid-cols-2">
                                         <dt className="text-sm font-medium leading-6 text-gray-900 sm:col-span-2">País</dt>
                                         <div className="relative mt-2 rounded-md shadow-sm">
-                                            <input type="text" name="pais" onChange={(event) => setPais(event.target.value)} id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder="País"/>
+                                            <input type="text" name="pais" onChange={(event) => setPais(event.target.value)} id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder={pais}/>
                                         </div>
                                     </div>
                                 </div>
@@ -190,7 +204,7 @@ const RectificacionCom = ({searchIndex},{_name}) => {
                                     <div className="sm:grid sm:grid-cols-2">
                                         <dt className="text-sm font-medium leading-6 text-gray-900 sm:col-span-2">Estado</dt>
                                         <div className="relative mt-2 rounded-md shadow-sm">
-                                            <input type="text" name="estado" onChange={(event) => setEstado(event.target.value)} id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder="Estado"/>
+                                            <input type="text" name="estado" onChange={(event) => setEstado(event.target.value)} id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder={estado}/>
                                         </div>
                                     </div>
                                 </div>
@@ -198,27 +212,27 @@ const RectificacionCom = ({searchIndex},{_name}) => {
                                     <div className="sm:grid sm:grid-cols-2">
                                         <dt className="text-sm font-medium leading-6 text-gray-900 sm:col-span-2">Ciudad</dt>
                                         <div className="relative mt-2 rounded-md shadow-sm">
-                                            <input type="text" name="ciudad" onChange={(event) => setCiudad(event.target.value)} id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder="Ciudad"/>
+                                            <input type="text" name="ciudad" onChange={(event) => setCiudad(event.target.value)} id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder={ciudad}/>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="px-4 py-3 sm:col-span-2 sm:grid sm:grid-cols-2">
                                     <dt className="text-sm font-medium leading-6 text-gray-900 sm:col-span-2">Colonia</dt>
                                     <div className="relative mt-2 rounded-md shadow-sm">
-                                        <input type="text" name="colonia" onChange={(event) => setColonia(event.target.value)} id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder="Colonia"/>
+                                        <input type="text" name="colonia" onChange={(event) => setColonia(event.target.value)} id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder={colonia}/>
                                     </div>
                                 </div>
                                 <div className="px-4 py-3 sm:col-span-2 sm:grid sm:grid-cols-2">
                                     <dt className="text-sm font-medium leading-6 text-gray-900 sm:col-span-2">Calle</dt>
                                     <div className="relative mt-2 rounded-md shadow-sm">
-                                        <input type="text" name="calle" onChange={(event) => setCalle(event.target.value)} id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder="Calle"/>
+                                        <input type="text" name="calle" onChange={(event) => setCalle(event.target.value)} id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder={calle}/>
                                     </div>
                                 </div>
                                 <div className="px-4 py-3 sm:col-span-2">
                                     <div className="sm:grid sm:grid-cols-2">
                                         <dt className="text-sm font-medium leading-6 text-gray-900 sm:col-span-2">C.P.</dt>
                                         <div className="relative mt-2 rounded-md shadow-sm">
-                                            <input type="text" name="codigoPostal" onChange={(event) => setCodigoPostal(event.target.value)} id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder="C.P."/>
+                                            <input type="text" name="codigoPostal" onChange={(event) => setCodigoPostal(event.target.value)} id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder={codigoPostal}/>
                                         </div>
                                     </div>
                                 </div>                        
@@ -226,7 +240,7 @@ const RectificacionCom = ({searchIndex},{_name}) => {
                                     <div className="sm:grid sm:grid-cols-2">
                                         <dt className="text-sm font-medium leading-6 text-gray-900 sm:col-span-2">Num. Exterior</dt>
                                         <div className="relative mt-2 rounded-md shadow-sm">
-                                            <input type="text" name="numeroExterior" onChange={(event) => setNumeroExterior(event.target.value)} id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder="Num. Exterior"/>
+                                            <input type="text" name="numeroExterior" onChange={(event) => setNumeroExterior(event.target.value)} id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder={numeroExterior}/>
                                         </div>
                                     </div>
                                 </div>
@@ -234,7 +248,7 @@ const RectificacionCom = ({searchIndex},{_name}) => {
                                     <div className="sm:grid sm:grid-cols-2">
                                         <dt className="text-sm font-medium leading-6 text-gray-900 sm:col-span-2">Num. Interior</dt>
                                         <div className="relative mt-2 rounded-md shadow-sm">
-                                            <input type="text" name="numeroInterior" id="price" onChange={(event) => setNumeroInterior(event.target.value)} className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder="Num. Interior"/>
+                                            <input type="text" name="numeroInterior" id="price" onChange={(event) => setNumeroInterior(event.target.value)} className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder={numeroExterior}/>
                                         </div>
                                     </div>                         
                                 </div>
@@ -259,14 +273,14 @@ const RectificacionCom = ({searchIndex},{_name}) => {
                                 <div className="px-4 py-3 sm:col-span-2 sm:grid sm:grid-cols-2">
                                     <dt className="text-sm font-medium leading-6 text-gray-900 sm:col-span-2">Tipo de Identificación</dt>
                                     <div className="relative mt-2 rounded-md shadow-sm">
-                                        <input type="text" name="tipoIdentificacion" onChange={(event) => setTipoIdentificacion(event.target.value)} id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder="Pasaporte">
+                                        <input type="text" name="tipoIdentificacion" onChange={(event) => setTipoIdentificacion(event.target.value)} id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder={tipoIdentificacion}>
                                         </input>
                                     </div>
                                 </div>
                                 <div className="px-4 py-3 sm:col-span-2 sm:grid sm:grid-cols-2">
                                     <dt className="text-sm font-medium leading-6 text-gray-900 sm:col-span-2">Numero de Identificación</dt>
                                     <div className="relative mt-2 rounded-md shadow-sm">
-                                        <input type="text" name="numeroIdentificacion" onChange={(event) => setNumeroIdentificacion(event.target.value)} id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder="SHA09172940">
+                                        <input type="text" name="numeroIdentificacion" onChange={(event) => setNumeroIdentificacion(event.target.value)} id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder={numeroIdentificacion}>
                                         </input>
                                     </div>
                                 </div>

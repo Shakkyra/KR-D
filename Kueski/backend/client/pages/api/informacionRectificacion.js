@@ -9,11 +9,11 @@ export default async function infoRect(req, res) {
         // Modificar la consulta para filtrar por el valor del parámetro de búsqueda
         //change query
         //const query = "SELECT ID_REQUEST, USER_ID, TYPE_REQUEST, FECHA FROM ARCO_REQUEST WHERE USER_ID LIKE ?";
-        const {_id} = req.body;
-        const query = `SELECT USER_NAME,FIRST_LAST_NAME,SECOND_LAST_NAME,BORN_DATE,NACIONALITY,STATE_OF_BIRTH,ECONOMIC_ACTIVITY,CURP,PHONE_NUMER,EMAIL FROM USERS WHERE USER_ID LIKE ${_id};`;
-        const values = [];
+        const query = `SELECT USER_NAME,FIRST_LAST_NAME,SECOND_LAST_NAME,BORN_DATE,NACIONALITY,STATE_OF_BIRTH,ECONOMIC_ACTIVITY,CURP,PHONE_NUMER,EMAIL FROM USERS WHERE USER_ID LIKE ?;`;
+        const values = [`%${searchValue}%`];
         const [data] = await dbconnection.execute(query, values);
         dbconnection.end();
+        console.log(data);
     
         res.status(200).json({ names: data }); 
       } catch (error) {
