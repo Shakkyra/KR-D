@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Header from '../../components/Header';
 import { useRouter } from 'next/router';
-import Historialcom from '@/components/Historialcom';
+import Historialcom from '@/components/HistorialCom';
 {/* Pagina de Acceso */}
 
 const Historial = () => {
