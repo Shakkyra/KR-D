@@ -7,8 +7,8 @@ export default async function handler(req, res) {
         _id,
         _oposicion1
       } = req.body;
-      const query2 = `CALL sql9615348.OPP_SINGLE('${_id}','${_oposicion1}');`;
-      const query = "CALL sql9615348.OPP(1,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1);";
+      const query2 = `CALL sql9615348.OPP_SINGLE('${_id}',${_oposicion1});`;
+      const query = `CALL sql9615348.OPP('${_id}',1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1);`;
       console.log("Valor oposicion en endpoint ",_oposicion1);
       dbconnection.execute(query2);
       dbconnection.end();

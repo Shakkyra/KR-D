@@ -1,5 +1,4 @@
 import React,{useState, useEffect} from "react";
-import Popup from "./Popup";
 import axios from "axios";
 
 const Oposicion = ({searchIndex}) => {
@@ -15,7 +14,7 @@ const Oposicion = ({searchIndex}) => {
       }
       getPageData();
     }, [searchIndex]);
-
+    console.log("Oposicion getDataOposicion",dataResult.OPPOSITION_TYPE_1);
     const [oposicion1, setOposicion1] = useState(dataResult.OPPOSITION_TYPE_1);
 
     const putDatos = () => {
@@ -38,7 +37,7 @@ const Oposicion = ({searchIndex}) => {
                         <div className="sm:grid sm:grid-cols-4">
 
                             <div className="px-4 py-3 sm:col-span-4">
-                                <dt className="text-sm font-medium leading-6 text-gray-900">Primarias - Finalidad de uso de datos: Prestación de servicios</dt>
+                                <dt className="text-sm font-medium leading-6 text-gray-900">Desea oponerse al uso de sus datos</dt>
 
                             </div>
                             {dataResult.map((options, index)=>(
@@ -50,7 +49,8 @@ const Oposicion = ({searchIndex}) => {
                                     <div class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
                                     </label>
                                     </div>
-
+                                    <p>{console.log("boton 1 oposicion1",oposicion1)}</p>
+                                    <p>{console.log("boton 1 setOposicion1",setOposicion1)}</p>
                                     <div className="px-4 py-3">
                                         <button type="submit" 
                                         className="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">
