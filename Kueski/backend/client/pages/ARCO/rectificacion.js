@@ -1,11 +1,12 @@
 import React from 'react';
+import { useEffect, useState} from "react";
 import Head from 'next/head';
 import Header from '../../components/Header';
 import { useRouter } from 'next/router';
 import RectificacionCom from '@/components/RectificacionCom';
 {/* Pagina de Acceso */}
 
-const Acceso = () => {
+const rectificacion = () => {
   const router = useRouter();
   const { userid } = router.query;
 
@@ -29,4 +30,4 @@ const Acceso = () => {
   );
 };
 
-export default Acceso;
+export default rectificacion;

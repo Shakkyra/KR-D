@@ -1,6 +1,6 @@
 import dbConnection from "@/db";
 
-export default async function handler(req, res) {
+export default async function infoRect(req, res) {
     try {
       const dbconnection = await dbConnection();
         // Obtener el valor del parámetro de búsqueda
@@ -9,14 +9,14 @@ export default async function handler(req, res) {
         // Modificar la consulta para filtrar por el valor del parámetro de búsqueda
         //change query
         //const query = "SELECT ID_REQUEST, USER_ID, TYPE_REQUEST, FECHA FROM ARCO_REQUEST WHERE USER_ID LIKE ?";
-        const query = "SELECT USERS.USER_ID, USERS.FIRST_LAST_NAME, USERS.SECOND_LAST_NAME, USERS.USER_NAME, ARCO_REQUEST.TYPE_REQUEST, ARCO_REQUEST.FECHA, ARCO_REQUEST.ID_REQUEST FROM USERS JOIN ARCO_REQUEST ON USERS.USER_ID = ARCO_REQUEST.USER_ID;";
-        const values = [];
+        const query = `SELECT USER_NAME,FIRST_LAST_NAME,SECOND_LAST_NAME,BORN_DATE,NACIONALITY,STATE_OF_BIRTH,ECONOMIC_ACTIVITY,CURP,PHONE_NUMER,EMAIL FROM USERS WHERE USER_ID LIKE ?;`;
+        const values = [`%${searchValue}%`];
         const [data] = await dbconnection.execute(query, values);
         dbconnection.end();
+        console.log(data);
     
         res.status(200).json({ names: data }); 
       } catch (error) {
         res.status(500).json({ error: error.message });
       }
   }
-  
