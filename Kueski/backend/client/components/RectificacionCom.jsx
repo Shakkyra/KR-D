@@ -3,7 +3,7 @@ import { useEffect, useState} from "react";
 import axios from 'axios';
 
 
-const RectificacionCom = ({searchIndex}) => {
+const RectificacionCom = ({searchIndex},{_name}) => {
     const [dataResult, setdataResult] = useState([]);
     useEffect(() => {
         async function getPageData(){
@@ -19,7 +19,7 @@ const RectificacionCom = ({searchIndex}) => {
         getPageData();
     }, []);
 
-    const [nombre, setNombre] = useState('');
+    const [nombre, setNombre] = useState(_name);
     const [primerApellido, setPrimerApellido] = useState('');
     const [segudnodApellido, setSegudnodApellido] = useState('');
     const [fechaNacimiento, setFechaNacimiento] = useState('');
@@ -82,6 +82,10 @@ const RectificacionCom = ({searchIndex}) => {
         .catch(err => console.log(err));
     };
 
+    useEffect(()=>{
+
+    },[]);
+
     return(
         <div>
             <div className="px-4 sm:px-0">
@@ -98,13 +102,13 @@ const RectificacionCom = ({searchIndex}) => {
                                 <div className="px-4 py-2 sm:col-span-2 sm:grid sm:grid-cols-2">                           
                                     <dt className="text-sm font-medium leading-6 text-gray-900 sm:col-span-2">Nombre</dt>
                                     <div className="relative mt-2 rounded-md shadow-sm">
-                                        <input type="text" name="nombre" onChange={(event) => setNombre(event.target.value)} id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder="Nombre"/>
+                                        <input type="text" name="nombre" onChange={(event) => setNombre(event.target.value)} id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder={nombre}/>
                                     </div>
                                 </div>
                                 <div className="px-4 py-3 sm:col-span-2 sm:grid sm:grid-cols-2">
                                     <dt className="text-sm font-medium leading-6 text-gray-900 sm:col-span-2">Primer Apellido</dt>
                                     <div className="relative mt-2 rounded-md shadow-sm">
-                                        <input type="text" name="primerApellido" onChange={(event) => setPrimerApellido(event.target.value)} id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder="Primer Apellido"/>
+                                        <input type="text" name="primerApellido" onChange={(event) => setPrimerApellido(event.target.value)} id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder={primerApellido}/>
                                     </div>
                                 </div>
                                 <div className="px-4 py-3 sm:col-span-2 sm:grid sm:grid-cols-2">

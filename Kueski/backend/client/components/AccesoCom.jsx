@@ -44,9 +44,9 @@ const AccesoCom = ({ searchIndex }) => {
           <tbody className="divide-y divide-blue-100">
             {Object.keys(dataResult).map((key) => (
               <tr key={key}>
-                <td className="px-4 py-3 text-sm font-medium text-gray-900">{key}:</td>
+                
                 <td className="px-4 py-3 text-sm text-gray-500">
-                  {typeof dataResult[key] === 'object' ? JSON.stringify(dataResult[key]) : dataResult[key]}
+                {typeof dataResult[key] === 'object' ? JSON.stringify(dataResult[key]) : dataResult[key]}
                 </td>
               </tr>
             ))}
