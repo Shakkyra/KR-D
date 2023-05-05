@@ -18,14 +18,16 @@ const rectificacion = () => {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/kueskiLogo.png' />
       </Head>
-      <Header />
-      <h1 className='p-4'>Rectificación</h1>
-      <div className='p-4'>
-          <div className='flex flex-col'>
-            <h2>UserID: {userid}</h2>
-          </div>
-      </div>
-      <RectificacionCom searchIndex={userid}/>
+      <main className='bg-gray-100 min-h-screen'>
+        <Header />
+        <h1 className='p-4'>Rectificación</h1>
+        <div className='p-4'>
+            <div className='flex flex-col'>
+              <h2>UserID: {userid}</h2>
+            </div>
+        </div>
+        <RectificacionCom searchIndex={userid}/>
+      </main>
     </>
   );
 };

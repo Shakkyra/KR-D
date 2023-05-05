@@ -3,8 +3,6 @@ import Head from 'next/head';
 import Header from '../../components/Header';
 import { useRouter } from 'next/router';
 import Historialcom from '@/components/HistorialCom';
-{/* Pagina de Acceso */}
-
 const Historial = () => {
   const router = useRouter();
   const { idrequest } = router.query;
@@ -17,15 +15,17 @@ const Historial = () => {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/kueskiLogo.png' />
       </Head>
-      <Header />
-      <h1 className='p-4'>Acceso</h1>
-      <div className='p-4'>
-          {/* Agregamos las clases flex flex-col items-center para crear un contenedor flexible vertical y centrado */}
-          <div className='flex flex-col'>
-            <h2>UserID: {idrequest}</h2>
-          </div>
-      </div>
-      <Historialcom searchIndex={idrequest}/>
+      <main className='bg-gray-100 min-h-screen'>
+        <Header />
+        <h1 className='p-4'>Acceso</h1>
+        <div className='p-4'>
+            {/* Agregamos las clases flex flex-col items-center para crear un contenedor flexible vertical y centrado */}
+            <div className='flex flex-col'>
+              <h2>UserID: {idrequest}</h2>
+            </div>
+        </div>
+        <Historialcom searchIndex={idrequest}/>
+      </main>
     </>
   );
 };

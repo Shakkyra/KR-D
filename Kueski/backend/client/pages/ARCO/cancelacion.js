@@ -17,16 +17,16 @@ const Cancelacion = () => {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/kueskiLogo.png' />
       </Head>
+      <main className='bg-gray-100 min-h-screen'>
       <Header />
-      <h1 className='text-lg font-bold p-4'>Cancelación</h1>
-      <div className='p-4'>
-        {/* Agregamos las clases flex flex-col items-center para crear un contenedor flexible vertical y centrado */}
-        {/*<h2>UserID: {userid}</h2>*/}
-        <div className='flex flex-col items-center'>
-          <Advertencia />
-          <CancelacionCom searchIndex={userid} />
+        <h1 className='text-lg font-bold p-4'>Cancelación</h1>
+        <div className='p-4'>
+          <div className='flex flex-col items-center'>
+            <Advertencia />
+            <CancelacionCom searchIndex={userid} />
+          </div>
         </div>
-      </div>
+      </main>
     </>
   );
 };
