@@ -23,7 +23,7 @@ export default async function handler(req, res) {
         _oposicion16,
         _oposicion17,
       } = req.body;
-      const query2 = `CALL sql9615348.OPP(
+      const query2 = `CALL sql9615348.REC_USER(
         '${_id}',
         '${_oposicion1}',
         '${_oposicion2}',
@@ -43,9 +43,8 @@ export default async function handler(req, res) {
         '${_oposicion16}',
         '${_oposicion17}');`;
       const query = "CALL sql9615348.OPP(1,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1);";
-      dbconnection.execute(query2);
+      dbconnection.execute(query);
       dbconnection.end();
-      res.status(200).json({ Status: "Success!" });
     } catch (error) {
       res.status(500).json({ error: error.message });
     }
