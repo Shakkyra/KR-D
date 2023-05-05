@@ -103,88 +103,70 @@ const RectificacionCom = ({searchIndex}) => {
     return(
         <div>
             <div className="px-4 sm:px-0">
-                <h3 className="p-4 text-base font-semibold leading-7 text-gray-900">Rectificación</h3>
+                <h3 className="text-base font-semibold leading-7 text-gray-900">Rectificación</h3>
             </div>
-            <div className="mt-6 border-t border-blue-100">
-                <dl className="divide-y divide-blue-100">
-                    
-                    <div className="sm:grid sm:grid-cols-6">
-
-                    <div className="px-4 py-3 sm:col-span-6">
-                            <dt className="text-sm font-medium leading-6 text-gray-900">Inforamción Personal</dt>
-                        </div>
-                        
-                        <div className="px-4 py-2 sm:col-span-2 sm:grid sm:grid-cols-2">                           
-                            <dt className="text-sm font-medium leading-6 text-gray-900 sm:col-span-2">Nombre</dt>
-                            <div className="relative mt-2 rounded-md shadow-sm">
-                                <input type="text" name="nombre" id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder="Nombre">
-                                </input>
-                            </div>
-                        </div>
-
-                        <div className="px-4 py-3 sm:col-span-2 sm:grid sm:grid-cols-2">
-                            <dt className="text-sm font-medium leading-6 text-gray-900 sm:col-span-2">Primer Apellido</dt>
-                            <div className="relative mt-2 rounded-md shadow-sm">
-                                <input type="text" name="PApellido" id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder="Primer Apellido">
-                                </input>
-                            </div>
-                        </div>
-
-                        <div className="px-4 py-3 sm:col-span-2 sm:grid sm:grid-cols-2">
-                            <dt className="text-sm font-medium leading-6 text-gray-900 sm:col-span-2">Segundo Apellido</dt>
-                            <div className="relative mt-2 rounded-md shadow-sm">
-                                <input type="text" name="SApellido" id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder="Segundo Apellido">
-                                </input>
-                            </div>
-                        </div>
-
-                        <div className="px-4 py-3 sm:col-span-2 sm:grid sm:grid-cols-2">
-                            <dt className="text-sm font-medium leading-6 text-gray-900 sm:col-span-2">Fecha de Nacimiento</dt>
-                            <div className="relative mt-2 rounded-md shadow-sm">
-                                <input type="text" name="FNacimiento" id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder="Fecha de Nacimiento">
-                                </input>
-                            </div>
-                        </div>
-
-                        <div className="px-4 py-3 sm:col-span-2 sm:grid sm:grid-cols-2">
-                            <dt className="text-sm font-medium leading-6 text-gray-900 sm:col-span-2">Nacionalidad</dt>
-                            <div className="relative mt-2 rounded-md shadow-sm">
-                                <input type="text" name="nacionalidad" id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder="Nacionalidad">
-                                </input>
-                            </div>
-                        </div>
-
-                        <div className="px-4 py-3 sm:col-span-2 sm:grid sm:grid-cols-2">
-                            <dt className="text-sm font-medium leading-6 text-gray-900 sm:col-span-2">Estado de Nacimiento</dt>
-                            <div className="relative mt-2 rounded-md shadow-sm">
-                                <input type="text" name="ENacimiento" id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder="Guanajuato">
-                                </input>
-                            </div>
-                        </div>  
-
-                        <div className="px-4 py-3 sm:col-span-2 sm:grid sm:grid-cols-2">
-                            <dt className="text-sm font-medium leading-6 text-gray-900 sm:col-span-2">Actividad economica</dt>
-                            <div className="relative mt-2 rounded-md shadow-sm">
-                                <input type="text" name="Aeconomica" id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder="Empleo">
-                                </input>
-                            </div>
-                        </div>                  
-
-                        <div className="px-4 py-3 sm:col-span-2 sm:grid sm:grid-cols-2">
-                            <dt className="text-sm font-medium leading-6 text-gray-900 sm:col-span-2">Numero de telefono</dt>
-                            <div className="relative mt-2 rounded-md shadow-sm">
-                                <input type="text" name="telefono" id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder="33 181 45 78">
-                                </input>
-                            </div>
-                        </div>
-
-                        <div className="px-4 py-3 sm:col-span-2 sm:grid sm:grid-cols-2">
-                            <dt className="text-sm font-medium leading-6 text-gray-900 sm:col-span-2">Correo electronico</dt>
-                            <div className="relative mt-2 rounded-md shadow-sm">
-                                <input type="text" name="correo" id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder="magot@gmail.com">
-                                </input>
-                            </div>
-                        </div>
+            <form onSubmit={enviarDatos1}>
+                <div className="flex flex-col space-y-0">
+                    <div className="mt-6 border-t border-blue-100">
+                        <dl className="divide-y divide-blue-100">
+                            <div className="sm:grid sm:grid-cols-6">
+                                <div className="px-4 py-3 sm:col-span-6">
+                                    <dt className="text-sm font-medium leading-6 text-gray-900">Inforamción Personal</dt>
+                                </div>
+                                <div className="px-4 py-2 sm:col-span-2 sm:grid sm:grid-cols-2">                           
+                                    <dt className="text-sm font-medium leading-6 text-gray-900 sm:col-span-2">Nombre</dt>
+                                    <div className="relative mt-2 rounded-md shadow-sm">
+                                        <input type="text" name="nombre" onChange={(event) => setNombre(event.target.value)} id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" value={nombre}/>
+                                    </div>
+                                </div>
+                                <div className="px-4 py-3 sm:col-span-2 sm:grid sm:grid-cols-2">
+                                    <dt className="text-sm font-medium leading-6 text-gray-900 sm:col-span-2">Primer Apellido</dt>
+                                    <div className="relative mt-2 rounded-md shadow-sm">
+                                        <input type="text" name="primerApellido" onChange={(event) => setPrimerApellido(event.target.value)} id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder={primerApellido}/>
+                                    </div>
+                                </div>
+                                <div className="px-4 py-3 sm:col-span-2 sm:grid sm:grid-cols-2">
+                                    <dt className="text-sm font-medium leading-6 text-gray-900 sm:col-span-2">Segundo Apellido</dt>
+                                    <div className="relative mt-2 rounded-md shadow-sm">
+                                        <input type="text" name="segudnodApellido" onChange={(event) => setSegudnodApellido(event.target.value)} id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder={segudnodApellido}/>
+                                    </div>
+                                </div>
+                                <div className="px-4 py-3 sm:col-span-2 sm:grid sm:grid-cols-2">
+                                    <dt className="text-sm font-medium leading-6 text-gray-900 sm:col-span-2">Fecha de Nacimiento</dt>
+                                    <div className="relative mt-2 rounded-md shadow-sm">
+                                        <input type="text" name="fechaNacimiento" onChange={(event)=>setFechaNacimiento(event.target.value)} id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder={fechaNacimiento}/>
+                                    </div>
+                                </div>
+                                <div className="px-4 py-3 sm:col-span-2 sm:grid sm:grid-cols-2">
+                                    <dt className="text-sm font-medium leading-6 text-gray-900 sm:col-span-2">Nacionalidad</dt>
+                                    <div className="relative mt-2 rounded-md shadow-sm">
+                                        <input type="text" name="nacionalidad" onChange={(event)=>setNacionalidad(event.target.value)} id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder={nacionalidad}/>
+                                    </div>
+                                </div>
+                                <div className="px-4 py-3 sm:col-span-2 sm:grid sm:grid-cols-2">
+                                    <dt className="text-sm font-medium leading-6 text-gray-900 sm:col-span-2">Estado de Nacimiento</dt>
+                                    <div className="relative mt-2 rounded-md shadow-sm">
+                                        <input type="text" name="estadoNacimiento" onChange={(event)=>setEstdoNacimiento(event.target.value)} id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder={estadoNacimiento}/>
+                                    </div>
+                                </div>  
+                                <div className="px-4 py-3 sm:col-span-2 sm:grid sm:grid-cols-2">
+                                    <dt className="text-sm font-medium leading-6 text-gray-900 sm:col-span-2">Actividad economica</dt>
+                                    <div className="relative mt-2 rounded-md shadow-sm">
+                                        <input type="text" name="actividadEconomica" onChange={(event)=>setActividadEconomica(event.target.value)} id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder={activdadEconomica}/>
+                                    </div>
+                                </div>                  
+                                <div className="px-4 py-3 sm:col-span-2 sm:grid sm:grid-cols-2">
+                                    <dt className="text-sm font-medium leading-6 text-gray-900 sm:col-span-2">Numero de telefono</dt>
+                                    <div className="relative mt-2 rounded-md shadow-sm">
+                                        <input type="text" name="telefono" onChange={(event)=>setTelefono(event.target.value)} id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder={telefono}/>
+                                    </div>
+                                </div>
+                                <div className="px-4 py-3 sm:col-span-2 sm:grid sm:grid-cols-2">
+                                    <dt className="text-sm font-medium leading-6 text-gray-900 sm:col-span-2">Correo electronico</dt>
+                                    <div className="relative mt-2 rounded-md shadow-sm">
+                                        <input type="text" name="correo" onChange={(event)=>setCorreo(event.target.value)} id="price" className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-white-600 sm:text-sm sm:leading-6" placeholder={correo}/>
+                                    </div>
+                                </div>
 
                                 <div className="px-4 py-3 sm:col-span-2 sm:grid sm:grid-cols-2">
                                     <dt className="text-sm font-medium leading-6 text-gray-900 sm:col-span-2">CURP</dt>
